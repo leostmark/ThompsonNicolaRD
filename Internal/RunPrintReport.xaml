@@ -1,0 +1,76 @@
+﻿<Activity mc:Ignorable="sap" x:Class="{x:Null}" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:cwa="clr-namespace:CityOfKamloops.Workflows.Activities;assembly=Geocortex.Projects.CityOfKamloops.Workflows" xmlns:cwd="clr-namespace:CityOfKamloops.Workflows.Data;assembly=Geocortex.Projects.CityOfKamloops.Workflows" xmlns:eacg="clr-namespace:ESRI.ArcGIS.Client.Geometry;assembly=ESRI.ArcGIS.Client" xmlns:eact="clr-namespace:ESRI.ArcGIS.Client.Tasks;assembly=ESRI.ArcGIS.Client" xmlns:gfc="clr-namespace:Geocortex.Forms.Client;assembly=Geocortex.EssentialsWpfApi" xmlns:ggg="clr-namespace:Geocortex.Gis.Geometries;assembly=Geocortex.Gis" xmlns:gr="clr-namespace:Geocortex.Reporting;assembly=Geocortex.Reporting" xmlns:gwa="clr-namespace:Geocortex.Workflow.Activities;assembly=Geocortex.Workflow" xmlns:gwa1="clr-namespace:Geocortex.Workflow.Activities;assembly=Geocortex.Workflow.Activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:s1="clr-namespace:System;assembly=System" xmlns:s2="clr-namespace:System;assembly=System.Core" xmlns:s3="clr-namespace:System;assembly=System.ServiceModel" xmlns:sa="clr-namespace:System.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Core" xmlns:scg1="clr-namespace:System.Collections.Generic;assembly=System" xmlns:scg2="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:scg3="clr-namespace:System.Collections.Generic;assembly=System.ServiceModel" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:sxs="clr-namespace:System.Xml.Serialization;assembly=System.Xml" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="WorkflowContainerName" Type="InArgument(x:String)" />
+    <x:Property Name="WorkflowTitle" Type="InArgument(x:String)" />
+    <x:Property Name="RootUrl" Type="InArgument(x:String)" />
+    <x:Property Name="MainReportTemplateUri" Type="InArgument(x:String)" />
+    <x:Property Name="SubReportTemplateUri" Type="InArgument(x:String)" />
+    <x:Property Name="ParentSubReportName" Type="InArgument(x:String)" />
+    <x:Property Name="FeatureMapHeight" Type="InArgument(x:Int32)" />
+    <x:Property Name="FeatureMapWidth" Type="InArgument(x:Int32)" />
+  </x:Members>
+  <sap:VirtualizedContainerService.HintSize>392,959</sap:VirtualizedContainerService.HintSize>
+  <mva:VisualBasic.Settings>Assembly references and imported namespaces serialized as XML namespaces</mva:VisualBasic.Settings>
+  <Sequence sap:VirtualizedContainerService.HintSize="352,919" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="featureMapUrl" />
+      <Variable x:TypeArguments="scg2:List(cwd:LocationReport)" Name="locations" />
+      <Variable x:TypeArguments="sd:DataSet" Name="theDataSet" />
+      <Variable x:TypeArguments="s:Byte[]" Name="reportBytesArray" />
+      <Variable x:TypeArguments="x:String" Name="reportUrl" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg2:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg2:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <gwa1:ConfigureWorkflowContainer sap:VirtualizedContainerService.HintSize="330,186" IsBusy="[True]" Message="Downloading..." ShowContainer="[False]" Title="[WorkflowTitle]" WorkflowContainerName="[WorkflowContainerName]" />
+    <gwa1:DynamicExternal DisplayName="Get Exported Map Image Url" ExternalId="POIPreSettingPrintReportId" sap:VirtualizedContainerService.HintSize="330,51">
+      <gwa1:DynamicExternal.InArguments>
+        <gwa:ArgumentWrapper x:TypeArguments="InArgument" IsRequired="False" Name="Height">
+          <gwa:ArgumentWrapper.Argument>
+            <InArgument x:TypeArguments="x:Int32">[FeatureMapHeight]</InArgument>
+          </gwa:ArgumentWrapper.Argument>
+        </gwa:ArgumentWrapper>
+        <gwa:ArgumentWrapper x:TypeArguments="InArgument" IsRequired="False" Name="Width">
+          <gwa:ArgumentWrapper.Argument>
+            <InArgument x:TypeArguments="x:Int32">[FeatureMapWidth]</InArgument>
+          </gwa:ArgumentWrapper.Argument>
+        </gwa:ArgumentWrapper>
+      </gwa1:DynamicExternal.InArguments>
+      <gwa1:DynamicExternal.OutArguments>
+        <gwa:ArgumentWrapper x:TypeArguments="OutArgument" IsRequired="False" Name="FeatureMapUrl">
+          <gwa:ArgumentWrapper.Argument>
+            <OutArgument x:TypeArguments="x:String">[featureMapUrl]</OutArgument>
+          </gwa:ArgumentWrapper.Argument>
+        </gwa:ArgumentWrapper>
+      </gwa1:DynamicExternal.OutArguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg2:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg2:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </gwa1:DynamicExternal>
+    <gwa1:DynamicExternal DisplayName="Get Location of Report Data" ExternalId="SetPrintReportInputsActivityId" sap:VirtualizedContainerService.HintSize="330,51">
+      <gwa1:DynamicExternal.OutArguments>
+        <gwa:ArgumentWrapper x:TypeArguments="OutArgument" IsRequired="False" Name="Locations">
+          <gwa:ArgumentWrapper.Argument>
+            <OutArgument x:TypeArguments="scg2:List(cwd:LocationReport)">[locations]</OutArgument>
+          </gwa:ArgumentWrapper.Argument>
+        </gwa:ArgumentWrapper>
+      </gwa1:DynamicExternal.OutArguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg2:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg2:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </gwa1:DynamicExternal>
+    <gwa1:Log sap:VirtualizedContainerService.HintSize="330,61" Message="[String.Format(&quot;RunPrintReport.xaml: featureMapUrl: ({0}), Number of Locations: ({1}), Main Report Template Uri: ({2}), SubReport TemplateUri: ({3}), Parent Sub Report Name: ({4})&quot;, featureMapUrl, locations.Count.ToString(), mainReportTemplateUri, subReportTemplateUri,  parentSubReportName)]" />
+    <cwa:POIConvertToDataSetPrintReportCodeActivity DisplayName="Generate Report Data" FeatureMapUrl="[featureMapUrl]" sap:VirtualizedContainerService.HintSize="330,22" Locations="[locations]" MainReportTemplateUri="[mainReportTemplateUri]" ParentSubReportName="[parentSubReportName]" ReportData="[reportBytesArray]" SubReportTemplateUri="[subReportTemplateUri]" />
+    <cwa:POIGeneratePrintReportCodeActivity DisplayName="Create the Report Url" sap:VirtualizedContainerService.HintSize="330,22" ReportData="[reportBytesArray]" ReportUrl="[reportUrl]" />
+    <gwa1:Log sap:VirtualizedContainerService.HintSize="330,61" Message="[String.Format(&quot;Quick Search Report Url: ({0})&quot;, reportUrl)]" />
+    <gwa1:TransferToClient x:TypeArguments="x:String" Data="[String.Format(&quot;{0}{1}&quot;, rootUrl, reportUrl)]" DisplayName="Send the Url to the client" ExternalId="GetGeneratedReportUrlActivityId" sap:VirtualizedContainerService.HintSize="330,61" />
+  </Sequence>
+</Activity>

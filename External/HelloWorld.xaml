@@ -1,0 +1,21 @@
+﻿<Activity mc:Ignorable="sap" x:Class="{x:Null}" sap:VirtualizedContainerService.HintSize="526,533" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:eacg="clr-namespace:ESRI.ArcGIS.Client.Geometry;assembly=ESRI.ArcGIS.Client" xmlns:gwa="clr-namespace:Geocortex.Workflow.Activities;assembly=Geocortex.Workflow.Activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:mvc="clr-namespace:Microsoft.VisualBasic.CompilerServices;assembly=Microsoft.VisualBasic" xmlns:s="clr-namespace:System;assembly=System" xmlns:s1="clr-namespace:System;assembly=mscorlib" xmlns:s2="clr-namespace:System;assembly=System.Core" xmlns:s3="clr-namespace:System;assembly=System.ServiceModel" xmlns:s4="clr-namespace:System;assembly=System.Web.Services" xmlns:sa="clr-namespace:System.Activities;assembly=System.Activities" xmlns:sad="clr-namespace:System.Activities.Debugger;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Sequence sap:VirtualizedContainerService.HintSize="486,493" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="result" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <gwa:Prompt DefaultText="Hello World" Description="Please enter a value below.  It will be returned to you as an alert." sap:VirtualizedContainerService.HintSize="464,128" Result="[result]" Title="Hello World Workflow Sample" />
+    <If Condition="[Not (result = Nothing)]" sap:VirtualizedContainerService.HintSize="464,201">
+      <If.Then>
+        <gwa:Alert sap:VirtualizedContainerService.HintSize="219,100" Text="[&quot;You entered: &quot; + result]" Title="Workflow Sample" />
+      </If.Then>
+      <If.Else>
+        <gwa:Alert sap:VirtualizedContainerService.HintSize="220,100" Text="You cancelled." Title="Workflow Sample" />
+      </If.Else>
+    </If>
+  </Sequence>
+</Activity>

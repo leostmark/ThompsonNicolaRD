@@ -1,0 +1,74 @@
+﻿<Activity mc:Ignorable="sap sads" x:Class="{x:Null}" sap:VirtualizedContainerService.HintSize="1128,1445" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:eac="clr-namespace:ESRI.ArcGIS.Client;assembly=ESRI.ArcGIS.Client"
+ xmlns:eacg="clr-namespace:ESRI.ArcGIS.Client.Geometry;assembly=ESRI.ArcGIS.Client"
+ xmlns:eact="clr-namespace:ESRI.ArcGIS.Client.Tasks;assembly=ESRI.ArcGIS.Client"
+ xmlns:gce="clr-namespace:Geocortex.Core.Extensions;assembly=Geocortex.Core"
+ xmlns:gcx="http://apis.geocortex.com/2009"
+ xmlns:gfc="clr-namespace:Geocortex.Forms.Client;assembly=Geocortex.EssentialsWpfApi"
+ xmlns:gfci="clr-namespace:Geocortex.Forms.Client.Items;assembly=Geocortex.EssentialsWpfApi"
+ xmlns:gr="clr-namespace:Geocortex.Reporting;assembly=Geocortex.Reporting"
+ xmlns:gwa="clr-namespace:Geocortex.Workflow.Activities;assembly=Geocortex.Workflow"
+ xmlns:gwa1="clr-namespace:Geocortex.Workflow.Activities;assembly=Geocortex.Workflow.Activities"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
+ xmlns:s="clr-namespace:System;assembly=System.Core"
+ xmlns:s1="clr-namespace:System;assembly=System"
+ xmlns:s2="clr-namespace:System;assembly=mscorlib"
+ xmlns:s3="clr-namespace:System;assembly=System.Drawing.Design"
+ xmlns:s4="clr-namespace:System;assembly=System.ServiceModel"
+ xmlns:s5="clr-namespace:System;assembly=System.Design"
+ xmlns:s6="clr-namespace:System;assembly=System.Web.Services"
+ xmlns:sa="clr-namespace:System.Activities;assembly=System.Activities"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:scg1="clr-namespace:System.Collections.Generic;assembly=System"
+ xmlns:scg2="clr-namespace:System.Collections.Generic;assembly=System.Core"
+ xmlns:scg3="clr-namespace:System.Collections.Generic;assembly=System.ServiceModel"
+ xmlns:sl="clr-namespace:System.Linq;assembly=System.Core"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Sequence sap:VirtualizedContainerService.HintSize="1088,1365" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Boolean" Default="True" Name="disagreeChecked" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <While sap:VirtualizedContainerService.HintSize="1066,1241" Condition="[disagreeChecked]">
+      <gwa1:DisplayForm FormDefinition="&lt;FormDefinition xmlns=&quot;http://schemas.datacontract.org/2004/07/Geocortex.Forms.Client&quot; xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;ContainerFormItem xmlns:a=&quot;http://schemas.datacontract.org/2004/07/Geocortex.Forms.Client.Items&quot;&gt;&lt;a:ArgumentName/&gt;&lt;a:ItemID&gt;Group1&lt;/a:ItemID&gt;&lt;a:ToolTip/&gt;&lt;a:ValidationItems xmlns:b=&quot;http://schemas.datacontract.org/2004/07/Geocortex.Forms.Client.Items.Validation&quot;/&gt;&lt;a:Description&gt;ATTENTION:  Please read the Terms of Use before using this web site.  By using this web site, you acknowledge and accept these terms.&amp;#xD;&#xA;&amp;#xD;&#xA;Welcome to Thompson-Nicola Regional District’s (“TNRD”) Interactive Web Mapping site.  The mapping, tabular, attribute information, and supporting data and documentation (the “data”) on this web site is provided as a public service by TNRD, 300 – 465 Victoria Street, Kamloops, British Columbia, V2C 2A9, on the following terms:&amp;#xD;&#xA;&amp;#xD;&#xA;TERMS OF USE&amp;#xD;&#xA;&amp;#xD;&#xA;In consideration of TNRD granting access to the data on this web site, any person receiving, viewing or making use of the data (a “User”) acknowledges and agrees to the following Terms of Use: &amp;#xD;&#xA;&amp;#xD;&#xA;1. Any maps or mapping information included in the data shall under no circumstance constitute a legal survey document;&amp;#xD;&#xA;&amp;#xD;&#xA;2. Maps, reports and data may be printed or downloaded for a User’s convenience, to be used for general reference only, without claims of completeness or accuracy;&amp;#xD;&#xA;&amp;#xD;&#xA;3. The data and maps provided by TNRD are derived and combined from numerous sources, and are subject to change at any time without notice;&amp;#xD;&#xA;&amp;#xD;&#xA;4. While efforts are made to verify the supplied data are accurate and up-to-date, it is not possible to maintain absolute accuracy.  The data are provided on an &quot;as is&quot;, “as available” and “with all faults” basis with no warranty of any kind;&amp;#xD;&#xA;&amp;#xD;&#xA;5. Any determination of topography or contours, or any depiction of physical improvements, property lines or boundaries, are solely for general information and shall not be used, or relied upon, in the design, modification, or construction of improvements to real property or for wetland or flood plain determination.  Data are not a legal representation of information depicted as such, has no legal bearing on the true shape, size, location, or existence of the real property depicted;&amp;#xD;&#xA;  &amp;#xD;&#xA;6. Neither TNRD nor its member municipalities shall be liable for any damages or losses arising from any errors, inaccuracies, or omissions in the data, or from any misuse, misinterpretation, or misapplication thereof, whether due to the negligence of TNRD or its member municipalities, or otherwise; &amp;#xD;&#xA;&amp;#xD;&#xA;7. A User assumes full responsibility for any risk associated with the use or misuse of the data and agrees to indemnify and hold harmless TNRD and its member municipalities from any and all damages or losses whether arising directly or indirectly from the release or use of the data.  In all cases Users are directed to the primary or originating source for record verification (e.g. BC Assessment Authority for assessment records, Provincial Agricultural Land Commission for ALR lands);&amp;#xD;&#xA;&amp;#xD;&#xA;8. The data are not intended to be used as a substitute for specific advice from a qualified professional.  Before acting upon information in this site, it is strongly recommended that you independently verify the data, and where necessary, obtain professional advice;&amp;#xD;&#xA;&amp;#xD;&#xA;9. Links and references to any other web sites are provided for information only and listing shall not be taken as endorsement of any kind. TNRD is not responsible for the content or reliability of the linked web sites and does not endorse the content, products, services or views expressed within them;&amp;#xD;&#xA;&amp;#xD;&#xA;10. A User shall not resell, market, or release the data to third parties; and&amp;#xD;&#xA;&amp;#xD;&#xA;11. The data shall remain the property of the TNRD, its member municipalities and/or suppliers.&amp;#xD;&#xA;&lt;/a:Description&gt;&lt;a:FormItems&gt;&lt;a:FormItem i:type=&quot;a:ContainerFormItem&quot;&gt;&lt;a:ArgumentName/&gt;&lt;a:ItemID&gt;Group2&lt;/a:ItemID&gt;&lt;a:ToolTip/&gt;&lt;a:ValidationItems xmlns:b=&quot;http://schemas.datacontract.org/2004/07/Geocortex.Forms.Client.Items.Validation&quot;/&gt;&lt;a:Description/&gt;&lt;a:FormItems&gt;&lt;a:FormItem i:type=&quot;a:RadioButtonFormItem&quot;&gt;&lt;a:ArgumentName&gt;agreeChecked&lt;/a:ArgumentName&gt;&lt;a:ItemID&gt;RadioButton1&lt;/a:ItemID&gt;&lt;a:ToolTip/&gt;&lt;a:ValidationItems xmlns:b=&quot;http://schemas.datacontract.org/2004/07/Geocortex.Forms.Client.Items.Validation&quot;/&gt;&lt;a:Checked&gt;true&lt;/a:Checked&gt;&lt;a:GroupName&gt;grpDisclaimer&lt;/a:GroupName&gt;&lt;a:Text&gt;I Accept&lt;/a:Text&gt;&lt;a:TextLocation&gt;Right&lt;/a:TextLocation&gt;&lt;/a:FormItem&gt;&lt;a:FormItem i:type=&quot;a:RadioButtonFormItem&quot;&gt;&lt;a:ArgumentName&gt;disagreeChecked&lt;/a:ArgumentName&gt;&lt;a:ItemID&gt;RadioButton2&lt;/a:ItemID&gt;&lt;a:ToolTip/&gt;&lt;a:ValidationItems xmlns:b=&quot;http://schemas.datacontract.org/2004/07/Geocortex.Forms.Client.Items.Validation&quot;/&gt;&lt;a:Checked&gt;false&lt;/a:Checked&gt;&lt;a:GroupName&gt;grpDisclaimer&lt;/a:GroupName&gt;&lt;a:Text&gt;I Do Not Accept&lt;/a:Text&gt;&lt;a:TextLocation&gt;Right&lt;/a:TextLocation&gt;&lt;/a:FormItem&gt;&lt;/a:FormItems&gt;&lt;a:MaxWidth&gt;INF&lt;/a:MaxWidth&gt;&lt;a:Orientation&gt;Horizontal&lt;/a:Orientation&gt;&lt;/a:FormItem&gt;&lt;/a:FormItems&gt;&lt;a:MaxWidth&gt;INF&lt;/a:MaxWidth&gt;&lt;a:Orientation&gt;Vertical&lt;/a:Orientation&gt;&lt;/ContainerFormItem&gt;&lt;KnownTypes xmlns:a=&quot;http://schemas.microsoft.com/2003/10/Serialization/Arrays&quot;&gt;&lt;a:string&gt;Geocortex.Forms.Client.Items.ContainerFormItem&lt;/a:string&gt;&lt;a:string&gt;Geocortex.Forms.Client.Items.RadioButtonFormItem&lt;/a:string&gt;&lt;/KnownTypes&gt;&lt;MaxHeight&gt;800&lt;/MaxHeight&gt;&lt;MaxWidth&gt;1000&lt;/MaxWidth&gt;&lt;Title&gt;Disclaimer&lt;/Title&gt;&lt;Version&gt;1.1&lt;/Version&gt;&lt;/FormDefinition&gt;" sap:VirtualizedContainerService.HintSize="1040,1088" WorkflowContainerName="ModalWindowNoCloseButton">
+        <gwa1:DisplayForm.Body>
+          <ActivityAction x:TypeArguments="gcx:FormDefinition">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="gcx:FormDefinition" Name="form" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="RuntimeModifications" sap:VirtualizedContainerService.HintSize="200,49">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </Sequence>
+          </ActivityAction>
+        </gwa1:DisplayForm.Body>
+        <gwa1:DisplayForm.Buttons>
+          <gcx:FormButton CausesValidation="False" IsDefault="True" Label="OK" Value="OK" />
+        </gwa1:DisplayForm.Buttons>
+        <gwa1:DisplayForm.FormOutArguments>
+          <gwa:ArgumentWrapper x:TypeArguments="OutArgument" IsRequired="False" Name="agreeChecked">
+            <gwa:ArgumentWrapper.Argument>
+              <OutArgument x:TypeArguments="x:Boolean" />
+            </gwa:ArgumentWrapper.Argument>
+          </gwa:ArgumentWrapper>
+          <gwa:ArgumentWrapper x:TypeArguments="OutArgument" IsRequired="False" Name="disagreeChecked">
+            <gwa:ArgumentWrapper.Argument>
+              <OutArgument x:TypeArguments="x:Boolean">[disagreeChecked]</OutArgument>
+            </gwa:ArgumentWrapper.Argument>
+          </gwa:ArgumentWrapper>
+        </gwa1:DisplayForm.FormOutArguments>
+      </gwa1:DisplayForm>
+    </While>
+  </Sequence>
+</Activity>

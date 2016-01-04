@@ -1,0 +1,46 @@
+﻿<Activity mc:Ignorable="sap" x:Class="{x:Null}" sap:VirtualizedContainerService.HintSize="345,834" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:cw="clr-namespace:CityOfKamloops.Workflows;assembly=Geocortex.Projects.CityOfKamloops.Workflows" xmlns:cwa="clr-namespace:CityOfKamloops.Workflows.Activities;assembly=Geocortex.Projects.CityOfKamloops.Workflows" xmlns:eacg="clr-namespace:ESRI.ArcGIS.Client.Geometry;assembly=ESRI.ArcGIS.Client" xmlns:eact="clr-namespace:ESRI.ArcGIS.Client.Tasks;assembly=ESRI.ArcGIS.Client" xmlns:ggg="clr-namespace:Geocortex.Gis.Geometries;assembly=Geocortex.Gis" xmlns:gwa="clr-namespace:Geocortex.Workflow.Activities;assembly=Geocortex.Workflow" xmlns:gwa1="clr-namespace:Geocortex.Workflow.Activities;assembly=Geocortex.Workflow.Activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=System" xmlns:s1="clr-namespace:System;assembly=mscorlib" xmlns:s2="clr-namespace:System;assembly=System.Core" xmlns:s3="clr-namespace:System;assembly=System.ServiceModel" xmlns:s4="clr-namespace:System;assembly=System.Web.Services" xmlns:sa="clr-namespace:System.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System" xmlns:scg1="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:scg2="clr-namespace:System.Collections.Generic;assembly=System.Core" xmlns:scg3="clr-namespace:System.Collections.Generic;assembly=System.ServiceModel" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <sap:WorkflowViewStateService.ViewState>
+    <scg1:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+    </scg1:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence DisplayName="Master Sequence" sap:VirtualizedContainerService.HintSize="305,794" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="cw:QuickSearchConfig" Name="varQuickSearchConfig" />
+      <Variable x:TypeArguments="scg1:List(cw:searchCategory)" Name="varQuickSearchCategories" />
+      <Variable x:TypeArguments="x:String" Name="varDefaultMapServerUrl" />
+      <Variable x:TypeArguments="cw:searchCategory" Name="varSearchCategory" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg1:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg1:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <gwa1:Log sap:VirtualizedContainerService.HintSize="283,59" Message="[String.Format(&quot;RunPOIAdminCaching.xaml: Start&quot;)]" />
+    <cwa:POIGetConfigFileCodeActivity DisplayName="Build Quick Search Config object" sap:VirtualizedContainerService.HintSize="283,22" QuickSearchConfig="[varQuickSearchConfig]" QuickSearchMappingFileName="C:\Program Files (x86)\Latitude Geographics\Geocortex Essentials\Default\REST Elements\Sites\Resources\Workflows\quick-search-config.xml" />
+    <cwa:POIGetConfigSearchCategoriesCodeActivity DefaultMapServerUrl="[varDefaultMapServerUrl]" sap:VirtualizedContainerService.HintSize="283,22" QuickSearchCategories="[varQuickSearchCategories]" QuickSearchConfig="[varQuickSearchConfig]" />
+    <gwa1:Log sap:VirtualizedContainerService.HintSize="283,59" Message="[String.Format(&quot;RunPOIAdminCaching.xaml: Map Service Url: ({0})&quot;, varDefaultMapServerUrl)]" />
+    <ForEach x:TypeArguments="cw:searchCategory" DisplayName="ForEach&lt;searchCategory&gt;" sap:VirtualizedContainerService.HintSize="283,348" Values="[varQuickSearchCategories]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg1:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg1:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ActivityAction x:TypeArguments="cw:searchCategory">
+        <ActivityAction.Argument>
+          <DelegateInArgument x:TypeArguments="cw:searchCategory" Name="qsc" />
+        </ActivityAction.Argument>
+        <Sequence DisplayName="ForEach Sequence" sap:VirtualizedContainerService.HintSize="253,245">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg1:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg1:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <gwa1:Log sap:VirtualizedContainerService.HintSize="231,59" Message="[String.Format(&quot;RunPOIAdminCaching.xaml: Layer Name: ({0})&quot;, qsc.layerName)]" />
+          <cwa:POIAdminCacheCategoriesCodeActivity DefaultMapserverUrl="[varDefaultMapServerUrl]" sap:VirtualizedContainerService.HintSize="231,22" RootFolderCached="c:\\temp" SearchCategory="[qsc]" />
+        </Sequence>
+      </ActivityAction>
+    </ForEach>
+  </Sequence>
+</Activity>

@@ -1,0 +1,23 @@
+﻿<Activity mc:Ignorable="sap" x:Class="{x:Null}" sap:VirtualizedContainerService.HintSize="544,388" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:cw="clr-namespace:CityOfKamloops.Workflows;assembly=Geocortex.Projects.CityOfKamloops.Workflows" xmlns:cwa="clr-namespace:CityOfKamloops.Workflows.Activities;assembly=Geocortex.Projects.CityOfKamloops.Workflows" xmlns:eacg="clr-namespace:ESRI.ArcGIS.Client.Geometry;assembly=ESRI.ArcGIS.Client" xmlns:eact="clr-namespace:ESRI.ArcGIS.Client.Tasks;assembly=ESRI.ArcGIS.Client" xmlns:ggg="clr-namespace:Geocortex.Gis.Geometries;assembly=Geocortex.Gis" xmlns:gwa="clr-namespace:Geocortex.Workflow.Activities;assembly=Geocortex.Workflow" xmlns:gwa1="clr-namespace:Geocortex.Workflow.Activities;assembly=Geocortex.Workflow.Activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=System" xmlns:s1="clr-namespace:System;assembly=mscorlib" xmlns:s2="clr-namespace:System;assembly=System.Core" xmlns:s3="clr-namespace:System;assembly=System.ServiceModel" xmlns:sa="clr-namespace:System.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Sequence sap:VirtualizedContainerService.HintSize="504,348" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="cw:QuickSearchConfig" Name="quickSearchConfigFile" />
+      <Variable x:TypeArguments="x:String" Default="Workflow" Name="containerName" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <cwa:POIGetConfigFileCodeActivity sap:VirtualizedContainerService.HintSize="482,22" QuickSearchConfig="[quickSearchConfigFile]" QuickSearchMappingFileName="C:\Program Files (x86)\Latitude Geographics\Geocortex Essentials\Default\REST Elements\Sites\Resources\Workflows\quick-search-config.xml" />
+    <gwa1:DynamicExternal ExternalId="POIGetConfigActivityId" sap:VirtualizedContainerService.HintSize="482,162">
+      <gwa1:DynamicExternal.InArguments>
+        <gwa:ArgumentWrapper x:TypeArguments="InArgument" IsRequired="False" Name="QuickSearchConfig">
+          <gwa:ArgumentWrapper.Argument>
+            <InArgument x:TypeArguments="cw:QuickSearchConfig">[quickSearchConfigFile]</InArgument>
+          </gwa:ArgumentWrapper.Argument>
+        </gwa:ArgumentWrapper>
+      </gwa1:DynamicExternal.InArguments>
+    </gwa1:DynamicExternal>
+  </Sequence>
+</Activity>

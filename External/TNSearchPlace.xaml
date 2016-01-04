@@ -1,0 +1,542 @@
+﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="ActivityBuilder" mva:VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+ xmlns:eacg="clr-namespace:ESRI.ArcGIS.Client.Geometry;assembly=ESRI.ArcGIS.Client"
+ xmlns:eact="clr-namespace:ESRI.ArcGIS.Client.Tasks;assembly=ESRI.ArcGIS.Client"
+ xmlns:esri="http://schemas.esri.com/arcgis/client/2009"
+ xmlns:gcx="http://apis.geocortex.com/2009"
+ xmlns:gfc="clr-namespace:Geocortex.Forms.Client;assembly=Geocortex.EssentialsWpfApi"
+ xmlns:ggg="clr-namespace:Geocortex.Gis.Geometries;assembly=Geocortex.Gis"
+ xmlns:gwa="clr-namespace:Geocortex.Workflow.Activities;assembly=Geocortex.Workflow"
+ xmlns:gwa1="clr-namespace:Geocortex.Workflow.Activities;assembly=Geocortex.Workflow.Activities"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
+ xmlns:mvc="clr-namespace:Microsoft.VisualBasic.CompilerServices;assembly=Microsoft.VisualBasic"
+ xmlns:s="clr-namespace:System;assembly=System"
+ xmlns:s1="clr-namespace:System;assembly=mscorlib"
+ xmlns:s2="clr-namespace:System;assembly=System.Core"
+ xmlns:s3="clr-namespace:System;assembly=System.ServiceModel"
+ xmlns:s4="clr-namespace:System;assembly=System.DirectoryServices"
+ xmlns:s5="clr-namespace:System;assembly=System.Web.Services"
+ xmlns:s6="clr-namespace:System;assembly=System.AddIn"
+ xmlns:s7="clr-namespace:System;assembly=System.Design"
+ xmlns:s8="clr-namespace:System;assembly=System.Drawing.Design"
+ xmlns:sa="clr-namespace:System.Activities;assembly=System.Activities"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Windows.Controls</x:String>
+      <x:String>System.Windows.Documents</x:String>
+      <x:String>System.Windows.Shapes</x:String>
+      <x:String>System.Windows.Shell</x:String>
+      <x:String>System.Windows.Navigation</x:String>
+      <x:String>System.Windows.Data</x:String>
+      <x:String>System.Windows</x:String>
+      <x:String>System.Windows.Controls.Primitives</x:String>
+      <x:String>System.Windows.Media.Animation</x:String>
+      <x:String>System.Windows.Input</x:String>
+      <x:String>System.Windows.Media</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Windows.Media.Effects</x:String>
+      <x:String>System.Windows.Media.Imaging</x:String>
+      <x:String>System.Windows.Media.Media3D</x:String>
+      <x:String>System.Windows.Automation</x:String>
+      <x:String>System.Windows.Media.TextFormatting</x:String>
+      <x:String>System.Windows.Ink</x:String>
+      <x:String>System.Windows.Forms.Integration</x:String>
+      <x:String>ESRI.ArcGIS.Client.Geometry</x:String>
+      <x:String>ESRI.ArcGIS.Client.Tasks</x:String>
+      <x:String>ESRI.ArcGIS.Client</x:String>
+      <x:String>ESRI.ArcGIS.Client.Symbols</x:String>
+      <x:String>ESRI.ArcGIS.Client.ValueConverters</x:String>
+      <x:String>ESRI.ArcGIS.Client.AdvancedSymbology</x:String>
+      <x:String>Geocortex.Resources.Client</x:String>
+      <x:String>Geocortex.Essentials.Client</x:String>
+      <x:String>Geocortex.Workflow.Client</x:String>
+      <x:String>Geocortex.Client</x:String>
+      <x:String>Geocortex.Forms.Client</x:String>
+      <x:String>Geocortex.Gis.Geometries</x:String>
+      <x:String>Geocortex.Workflow.Activities</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>Geocortex.Forms.Client.Items</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>WindowsFormsIntegration</AssemblyReference>
+      <AssemblyReference>ESRI.ArcGIS.Client</AssemblyReference>
+      <AssemblyReference>Geocortex.EssentialsWpfApi</AssemblyReference>
+      <AssemblyReference>Geocortex.Gis</AssemblyReference>
+      <AssemblyReference>Geocortex.Workflow</AssemblyReference>
+      <AssemblyReference>Geocortex.Workflow.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.DirectoryServices</AssemblyReference>
+      <AssemblyReference>System.Web.Services</AssemblyReference>
+      <AssemblyReference>System.AddIn</AssemblyReference>
+      <AssemblyReference>System.Design</AssemblyReference>
+      <AssemblyReference>System.Drawing.Design</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Reactive.Core</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_3" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="name" />
+      <Variable x:TypeArguments="esri:FeatureSet" Name="query_result" />
+      <Variable x:TypeArguments="x:String" Name="btnValue" />
+    </Sequence.Variables>
+    <Flowchart sap2010:WorkflowViewState.IdRef="Flowchart_1">
+      <Flowchart.Variables>
+        <Variable x:TypeArguments="x:String" Name="PlaceLayerID" />
+        <Variable x:TypeArguments="x:String" Name="MapServiceUrl" />
+        <Variable x:TypeArguments="esri:Envelope" Name="resultsExtent" />
+        <Variable x:TypeArguments="x:Double" Name="mapScale" />
+        <Variable x:TypeArguments="x:String" Default="PLACE_NAMES" Name="placeField" />
+      </Flowchart.Variables>
+      <Flowchart.StartNode>
+        <FlowStep x:Name="__ReferenceID7" sap2010:WorkflowViewState.IdRef="FlowStep_16">
+          <gwa1:ConfigureWorkflowContainer IconUri="/Resources/Images/ParcelByID.png" sap2010:WorkflowViewState.IdRef="ConfigureWorkflowContainer_1" IsBusy="[True]" Message="Loading..." ShowContainer="[True]" Title="Search for a place" WorkflowContainerName="Default" />
+          <FlowStep.Next>
+            <FlowStep x:Name="__ReferenceID8" sap2010:WorkflowViewState.IdRef="FlowStep_15">
+              <gwa1:GetMapServiceInfo DisplayName="GetPlaceLayerInfo" sap2010:WorkflowViewState.IdRef="GetMapServiceInfo_1" LayerId="[PlaceLayerID]" LayerName="Places_72K" MapServiceId="1" MapServiceUrl="[MapServiceUrl]" />
+              <FlowStep.Next>
+                <FlowStep x:Name="__ReferenceID1" sap2010:WorkflowViewState.IdRef="FlowStep_14">
+                  <gwa1:DisplayForm ButtonResultValue="[btnValue]" DisplayName="Search for a place" FormDefinition="&lt;FormDefinition xmlns=&quot;http://schemas.datacontract.org/2004/07/Geocortex.Forms.Client&quot; xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;ContainerFormItem xmlns:a=&quot;http://schemas.datacontract.org/2004/07/Geocortex.Forms.Client.Items&quot;&gt;&lt;a:ArgumentName/&gt;&lt;a:IsVisible&gt;true&lt;/a:IsVisible&gt;&lt;a:ItemID&gt;Group1&lt;/a:ItemID&gt;&lt;a:ToolTip/&gt;&lt;a:ValidationItems xmlns:b=&quot;http://schemas.datacontract.org/2004/07/Geocortex.Forms.Client.Items.Validation&quot;/&gt;&lt;a:Description&gt;Enter a place name.&amp;#xD;&#xA;&amp;#xD;&#xA;As you type, a filtered list of matching place names will display to help you find an exact match. &amp;#xD;&#xA;&amp;#xD;&#xA;Choose a name from the list, or enter a partial name to find multiple results.&amp;#xD;&#xA;&amp;#xD;&#xA;(Example: Albreda)&lt;/a:Description&gt;&lt;a:FormItems&gt;&lt;a:FormItem i:type=&quot;a:AutoCompleteBoxFormItem&quot;&gt;&lt;a:ArgumentName&gt;place&lt;/a:ArgumentName&gt;&lt;a:IsVisible&gt;true&lt;/a:IsVisible&gt;&lt;a:ItemID&gt;AutoCompleteBox1&lt;/a:ItemID&gt;&lt;a:ToolTip&gt;Enter the name of a place&lt;/a:ToolTip&gt;&lt;a:ValidationItems xmlns:b=&quot;http://schemas.datacontract.org/2004/07/Geocortex.Forms.Client.Items.Validation&quot;/&gt;&lt;a:DefaultText/&gt;&lt;a:InputScope&gt;Default&lt;/a:InputScope&gt;&lt;a:Label&gt;&lt;a:ArgumentName/&gt;&lt;a:IsVisible&gt;true&lt;/a:IsVisible&gt;&lt;a:ItemID i:nil=&quot;true&quot;/&gt;&lt;a:ToolTip/&gt;&lt;a:ValidationItems xmlns:b=&quot;http://schemas.datacontract.org/2004/07/Geocortex.Forms.Client.Items.Validation&quot;/&gt;&lt;a:LabelForItemID&gt;AutoCompleteBox1&lt;/a:LabelForItemID&gt;&lt;a:Text&gt;Place name:&lt;/a:Text&gt;&lt;/a:Label&gt;&lt;a:TextboxWidth&gt;150&lt;/a:TextboxWidth&gt;&lt;a:FilterByInputGeometry&gt;false&lt;/a:FilterByInputGeometry&gt;&lt;a:LayerSourceJson i:nil=&quot;true&quot;/&gt;&lt;a:MinimumPopulateDelay&gt;200&lt;/a:MinimumPopulateDelay&gt;&lt;a:MinimumPrefixLength&gt;1&lt;/a:MinimumPrefixLength&gt;&lt;a:ProxyUrl/&gt;&lt;a:QueryDisplayOutputField&gt;PLACE_NAMES&lt;/a:QueryDisplayOutputField&gt;&lt;a:QueryServiceUrl/&gt;&lt;a:QueryValueOutputField/&gt;&lt;a:QueryWhereClause&gt;UPPER(PLACE_NAMES) Like UPPER('{0}%')&lt;/a:QueryWhereClause&gt;&lt;a:Token/&gt;&lt;/a:FormItem&gt;&lt;/a:FormItems&gt;&lt;a:MaxWidth&gt;INF&lt;/a:MaxWidth&gt;&lt;a:Orientation&gt;Vertical&lt;/a:Orientation&gt;&lt;a:VisibleControlID i:nil=&quot;true&quot;/&gt;&lt;a:VisibleControlValue i:nil=&quot;true&quot;/&gt;&lt;/ContainerFormItem&gt;&lt;KnownTypes xmlns:a=&quot;http://schemas.microsoft.com/2003/10/Serialization/Arrays&quot;&gt;&lt;a:string&gt;Geocortex.Forms.Client.Items.ContainerFormItem&lt;/a:string&gt;&lt;a:string&gt;Geocortex.Forms.Client.Items.AutoCompleteBoxFormItem&lt;/a:string&gt;&lt;/KnownTypes&gt;&lt;MaxHeight&gt;800&lt;/MaxHeight&gt;&lt;MaxWidth&gt;350&lt;/MaxWidth&gt;&lt;Title&gt;Search for a place by name&lt;/Title&gt;&lt;Version&gt;1.0&lt;/Version&gt;&lt;/FormDefinition&gt;" sap2010:WorkflowViewState.IdRef="DisplayForm_1" WorkflowContainerName="Default">
+                    <gwa1:DisplayForm.Body>
+                      <ActivityAction x:TypeArguments="gcx:FormDefinition">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="gcx:FormDefinition" Name="form" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="RuntimeModifications" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                          <Assign sap2010:WorkflowViewState.IdRef="Assign_1">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[form.Find(Of AutoCompleteBoxFormItem)("AutoCompleteBox1").QueryServiceUrl]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">[MapServiceUrl + "/" + PlaceLayerID]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </Sequence>
+                      </ActivityAction>
+                    </gwa1:DisplayForm.Body>
+                    <gwa1:DisplayForm.Buttons>
+                      <gcx:FormButton CausesValidation="True" IsDefault="False" Label="Search" Value="Search" />
+                    </gwa1:DisplayForm.Buttons>
+                    <gwa1:DisplayForm.FormOutArguments>
+                      <gwa:ArgumentWrapper x:TypeArguments="OutArgument" IsRequired="False" Name="place">
+                        <gwa:ArgumentWrapper.Argument>
+                          <OutArgument x:TypeArguments="x:String">[name]</OutArgument>
+                        </gwa:ArgumentWrapper.Argument>
+                      </gwa:ArgumentWrapper>
+                    </gwa1:DisplayForm.FormOutArguments>
+                  </gwa1:DisplayForm>
+                  <FlowStep.Next>
+                    <FlowDecision x:Name="__ReferenceID4" Condition="[btnValue = &quot;Search&quot;]" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
+                      <FlowDecision.True>
+                        <FlowStep x:Name="__ReferenceID9" sap2010:WorkflowViewState.IdRef="FlowStep_12">
+                          <gwa1:Log sap2010:WorkflowViewState.IdRef="Log_1" Message="[placeField + &quot; like '&quot; + name + &quot;%' in &quot; + MapServiceUrl + &quot;/&quot; + PlaceLayerID + &quot;/query&quot;]" />
+                          <FlowStep.Next>
+                            <FlowStep x:Name="__ReferenceID2" sap2010:WorkflowViewState.IdRef="FlowStep_11">
+                              <gwa1:QueryTask DisplayName="Query Places Layer" sap2010:WorkflowViewState.IdRef="QueryTask_1" MaxAllowableOffset="0" OutFields="*" QueryServiceUrl="[MapServiceUrl + &quot;/&quot; + PlaceLayerID + &quot;/query&quot;]" Results="[query_result]" ReturnGeometry="True" SpatialRelationship="esriSpatialRelIntersects" Where="[&quot;UPPER(&quot; + placeField + &quot;) like UPPER('&quot; + name + &quot;%')&quot;]" />
+                              <FlowStep.Next>
+                                <FlowDecision x:Name="__ReferenceID5" Condition="[query_result.Features.Count &gt; 0]" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
+                                  <FlowDecision.True>
+                                    <FlowDecision x:Name="__ReferenceID10" Condition="[query_result.Features.Count &gt; 1]" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+                                      <FlowDecision.True>
+                                        <FlowStep x:Name="__ReferenceID0" sap2010:WorkflowViewState.IdRef="FlowStep_1">
+                                          <gwa1:SelectFeatures ClearCollectionFirst="True" CollectionName="[&quot;Search places by name: &quot; &amp; name]" FeatureSet="[query_result]" sap2010:WorkflowViewState.IdRef="SelectFeatures_1" LayerId="[PlaceLayerID]" MapServiceId="1" />
+                                        </FlowStep>
+                                      </FlowDecision.True>
+                                      <FlowDecision.False>
+                                        <FlowStep x:Name="__ReferenceID12" sap2010:WorkflowViewState.IdRef="FlowStep_9">
+                                          <Assign sap2010:WorkflowViewState.IdRef="Assign_2">
+                                            <Assign.To>
+                                              <OutArgument x:TypeArguments="esri:Envelope">[resultsExtent]</OutArgument>
+                                            </Assign.To>
+                                            <Assign.Value>
+                                              <InArgument x:TypeArguments="esri:Envelope">[query_result.Features(0).Geometry.Extent]</InArgument>
+                                            </Assign.Value>
+                                          </Assign>
+                                          <FlowStep.Next>
+                                            <FlowStep x:Name="__ReferenceID15" sap2010:WorkflowViewState.IdRef="FlowStep_8">
+                                              <Assign sap2010:WorkflowViewState.IdRef="Assign_3">
+                                                <Assign.To>
+                                                  <OutArgument x:TypeArguments="x:Double">[resultsExtent.xmin]</OutArgument>
+                                                </Assign.To>
+                                                <Assign.Value>
+                                                  <InArgument x:TypeArguments="x:Double">[resultsExtent.xmin-100]</InArgument>
+                                                </Assign.Value>
+                                              </Assign>
+                                              <FlowStep.Next>
+                                                <FlowStep x:Name="__ReferenceID16" sap2010:WorkflowViewState.IdRef="FlowStep_7">
+                                                  <Assign sap2010:WorkflowViewState.IdRef="Assign_4">
+                                                    <Assign.To>
+                                                      <OutArgument x:TypeArguments="x:Double">[resultsExtent.xmax]</OutArgument>
+                                                    </Assign.To>
+                                                    <Assign.Value>
+                                                      <InArgument x:TypeArguments="x:Double">[resultsExtent.xmax+100]</InArgument>
+                                                    </Assign.Value>
+                                                  </Assign>
+                                                  <FlowStep.Next>
+                                                    <FlowStep x:Name="__ReferenceID17" sap2010:WorkflowViewState.IdRef="FlowStep_6">
+                                                      <Assign sap2010:WorkflowViewState.IdRef="Assign_5">
+                                                        <Assign.To>
+                                                          <OutArgument x:TypeArguments="x:Double">[resultsExtent.ymin]</OutArgument>
+                                                        </Assign.To>
+                                                        <Assign.Value>
+                                                          <InArgument x:TypeArguments="x:Double">[resultsExtent.ymin-100]</InArgument>
+                                                        </Assign.Value>
+                                                      </Assign>
+                                                      <FlowStep.Next>
+                                                        <FlowStep x:Name="__ReferenceID18" sap2010:WorkflowViewState.IdRef="FlowStep_5">
+                                                          <Assign sap2010:WorkflowViewState.IdRef="Assign_6">
+                                                            <Assign.To>
+                                                              <OutArgument x:TypeArguments="x:Double">[resultsExtent.ymax]</OutArgument>
+                                                            </Assign.To>
+                                                            <Assign.Value>
+                                                              <InArgument x:TypeArguments="x:Double">[resultsExtent.ymax+100]</InArgument>
+                                                            </Assign.Value>
+                                                          </Assign>
+                                                          <FlowStep.Next>
+                                                            <FlowStep x:Name="__ReferenceID11" sap2010:WorkflowViewState.IdRef="FlowStep_4">
+                                                              <gwa1:SetMapExtent Extent="[resultsExtent]" sap2010:WorkflowViewState.IdRef="SetMapExtent_1" />
+                                                              <FlowStep.Next>
+                                                                <FlowStep x:Name="__ReferenceID13" sap2010:WorkflowViewState.IdRef="FlowStep_3">
+                                                                  <gwa1:GetMapInfo Height="{x:Null}" Width="{x:Null}" Extent="[resultsExtent]" sap2010:WorkflowViewState.IdRef="GetMapInfo_1" Scale="[mapScale]" />
+                                                                  <FlowStep.Next>
+                                                                    <FlowStep x:Name="__ReferenceID14" sap2010:WorkflowViewState.IdRef="FlowStep_2">
+                                                                      <gwa1:SetMapExtent Extent="[resultsExtent.expand(72224/mapScale)]" sap2010:WorkflowViewState.IdRef="SetMapExtent_2" />
+                                                                      <FlowStep.Next>
+                                                                        <x:Reference>__ReferenceID0</x:Reference>
+                                                                      </FlowStep.Next>
+                                                                    </FlowStep>
+                                                                  </FlowStep.Next>
+                                                                </FlowStep>
+                                                              </FlowStep.Next>
+                                                            </FlowStep>
+                                                          </FlowStep.Next>
+                                                        </FlowStep>
+                                                      </FlowStep.Next>
+                                                    </FlowStep>
+                                                  </FlowStep.Next>
+                                                </FlowStep>
+                                              </FlowStep.Next>
+                                            </FlowStep>
+                                          </FlowStep.Next>
+                                        </FlowStep>
+                                      </FlowDecision.False>
+                                    </FlowDecision>
+                                  </FlowDecision.True>
+                                  <FlowDecision.False>
+                                    <FlowStep x:Name="__ReferenceID6" sap2010:WorkflowViewState.IdRef="FlowStep_10">
+                                      <gwa1:DisplayForm FormDefinition="&lt;FormDefinition xmlns=&quot;http://schemas.datacontract.org/2004/07/Geocortex.Forms.Client&quot; xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;ContainerFormItem xmlns:a=&quot;http://schemas.datacontract.org/2004/07/Geocortex.Forms.Client.Items&quot;&gt;&lt;a:ArgumentName/&gt;&lt;a:ItemID&gt;Group1&lt;/a:ItemID&gt;&lt;a:ToolTip/&gt;&lt;a:ValidationItems xmlns:b=&quot;http://schemas.datacontract.org/2004/07/Geocortex.Forms.Client.Items.Validation&quot;/&gt;&lt;a:Description&gt;No places were found that match the specified criterion.&lt;/a:Description&gt;&lt;a:FormItems/&gt;&lt;a:MaxWidth&gt;INF&lt;/a:MaxWidth&gt;&lt;a:Orientation&gt;Vertical&lt;/a:Orientation&gt;&lt;/ContainerFormItem&gt;&lt;KnownTypes xmlns:a=&quot;http://schemas.microsoft.com/2003/10/Serialization/Arrays&quot;&gt;&lt;a:string&gt;Geocortex.Forms.Client.Items.ContainerFormItem&lt;/a:string&gt;&lt;/KnownTypes&gt;&lt;MaxHeight&gt;800&lt;/MaxHeight&gt;&lt;MaxWidth&gt;1000&lt;/MaxWidth&gt;&lt;Title&gt;No Features Found&lt;/Title&gt;&lt;Version&gt;1.0&lt;/Version&gt;&lt;/FormDefinition&gt;" sap2010:WorkflowViewState.IdRef="DisplayForm_2" WorkflowContainerName="Default">
+                                        <gwa1:DisplayForm.Body>
+                                          <ActivityAction x:TypeArguments="gcx:FormDefinition">
+                                            <ActivityAction.Argument>
+                                              <DelegateInArgument x:TypeArguments="gcx:FormDefinition" Name="form" />
+                                            </ActivityAction.Argument>
+                                            <Sequence DisplayName="RuntimeModifications" sap2010:WorkflowViewState.IdRef="Sequence_2" />
+                                          </ActivityAction>
+                                        </gwa1:DisplayForm.Body>
+                                        <gwa1:DisplayForm.Buttons>
+                                          <gcx:FormButton CausesValidation="False" IsDefault="False" Label="Back" Value="Back" />
+                                        </gwa1:DisplayForm.Buttons>
+                                      </gwa1:DisplayForm>
+                                      <FlowStep.Next>
+                                        <x:Reference>__ReferenceID1</x:Reference>
+                                      </FlowStep.Next>
+                                    </FlowStep>
+                                  </FlowDecision.False>
+                                </FlowDecision>
+                              </FlowStep.Next>
+                            </FlowStep>
+                          </FlowStep.Next>
+                        </FlowStep>
+                      </FlowDecision.True>
+                      <FlowDecision.False>
+                        <FlowStep x:Name="__ReferenceID3" sap2010:WorkflowViewState.IdRef="FlowStep_13">
+                          <gwa1:ServerPlaceHolder Description="User Cancelled" DisplayName="User Cancelled" sap2010:WorkflowViewState.IdRef="ServerPlaceHolder_1" />
+                        </FlowStep>
+                      </FlowDecision.False>
+                    </FlowDecision>
+                  </FlowStep.Next>
+                </FlowStep>
+              </FlowStep.Next>
+            </FlowStep>
+          </FlowStep.Next>
+        </FlowStep>
+      </Flowchart.StartNode>
+      <x:Reference>__ReferenceID1</x:Reference>
+      <x:Reference>__ReferenceID2</x:Reference>
+      <x:Reference>__ReferenceID0</x:Reference>
+      <x:Reference>__ReferenceID3</x:Reference>
+      <x:Reference>__ReferenceID4</x:Reference>
+      <x:Reference>__ReferenceID5</x:Reference>
+      <x:Reference>__ReferenceID6</x:Reference>
+      <x:Reference>__ReferenceID7</x:Reference>
+      <x:Reference>__ReferenceID8</x:Reference>
+      <x:Reference>__ReferenceID9</x:Reference>
+      <x:Reference>__ReferenceID10</x:Reference>
+      <x:Reference>__ReferenceID11</x:Reference>
+      <x:Reference>__ReferenceID12</x:Reference>
+      <x:Reference>__ReferenceID13</x:Reference>
+      <x:Reference>__ReferenceID14</x:Reference>
+      <x:Reference>__ReferenceID15</x:Reference>
+      <x:Reference>__ReferenceID16</x:Reference>
+      <x:Reference>__ReferenceID17</x:Reference>
+      <x:Reference>__ReferenceID18</x:Reference>
+    </Flowchart>
+    <sads:DebugSymbol.Symbol>d4IBQzpcUHJvZ3JhbSBGaWxlcyAoeDg2KVxMYXRpdHVkZSBHZW9ncmFwaGljc1xHZW9jb3J0ZXggRXNzZW50aWFsc1xQdWJsaWNcUkVTVCBFbGVtZW50c1xTaXRlc1xSZXNvdXJjZXNcV29ya2Zsb3dzXFROU2VhcmNoUGxhY2UueGFtbEZpA7kCDgIBAW8FtwIRAgECdTZ1QwIBA3kLeY8CAgFXfA984AECAVB/E5sBJgIBQ50BRZ0BZgIBQZkCG5kCpQECAUCgARugAdwBAgE6owEfowG5AwIBLqUBUaUBdwIBLf8BJ4sCOgIBKacBVqcBfAIBKK8BK7YBNAIBJLkBL8ABOAIBIcMBM8oBPAIBHs0BN9QBQAIBG9cBO94BRAIBGOEBP+EBngECARXkAUPkAdQBAgEQ5wFH5wG9AQIBDKoBK6oBmQICAQR5rgF5ugECAV15nQF5pQECAVx5gwJ5jAICAVt5yQF50QECAVp5NHlWAgFZedgBeewBAgFYfIUBfJUBAgFVfKABfKwBAgFUfLoBfL0BAgFTfMwBfN0BAgFRf3R/tRgCAU9//Bh/hRkCAU5/N39DAgFMlwFDlwFJAgFKhQEZjgEkAgFEoAFVoAHZAQIBO6MBnwGjAaIBAgE5owG8AqMB1gICATijAYECowGRAgIBN6MB3QKjAbYDAgE0owGRAaMBlAECATOjAaECowGnAgIBMqMBswGjAfgBAgEv/wFI/wGNCQIBLP8B1An/Ad0JAgErhQIthQKJAQIBKrQBW7QBhQECASexAVyxAWsCASW+AVq+AXICASO7AVu7AW8CASLIAV7IAXYCASDFAV/FAXMCAR/SAWLSAXoCAR3PAWPPAXcCARzcAWbcAX4CARrZAWfZAXsCARnhAVnhAWoCARbkAX7kAY8BAgET5AHFAeQB0QECARHnAWHnAYkBAgENqgH1AaoBhQICAQqqAWuqAZ0BAgEIqgGpAaoBuQECAQeqAZMCqgGWAgIBBqoBVaoBWwIBBYYBG40BJAIBRYsBRosBagIBR4gBR4gBkgECAUY=</sads:DebugSymbol.Symbol>
+  </Sequence>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="ConfigureWorkflowContainer_1" sap:VirtualizedContainerService.HintSize="200,49" />
+      <sap2010:ViewStateData Id="GetMapServiceInfo_1" sap:VirtualizedContainerService.HintSize="200,49" />
+      <sap2010:ViewStateData Id="Assign_1" sap:VirtualizedContainerService.HintSize="242,59" />
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="200,49">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="DisplayForm_1" sap:VirtualizedContainerService.HintSize="378,616" />
+      <sap2010:ViewStateData Id="Log_1" sap:VirtualizedContainerService.HintSize="200,49" />
+      <sap2010:ViewStateData Id="QueryTask_1" sap:VirtualizedContainerService.HintSize="200,49" />
+      <sap2010:ViewStateData Id="SelectFeatures_1" sap:VirtualizedContainerService.HintSize="200,49" />
+      <sap2010:ViewStateData Id="FlowStep_1">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">170,995.5</av:Point>
+            <av:Size x:Key="ShapeSize">200,49</av:Size>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Assign_2" sap:VirtualizedContainerService.HintSize="242,57" />
+      <sap2010:ViewStateData Id="Assign_3" sap:VirtualizedContainerService.HintSize="242,57" />
+      <sap2010:ViewStateData Id="Assign_4" sap:VirtualizedContainerService.HintSize="242,57" />
+      <sap2010:ViewStateData Id="Assign_5" sap:VirtualizedContainerService.HintSize="242,57" />
+      <sap2010:ViewStateData Id="Assign_6" sap:VirtualizedContainerService.HintSize="242,57" />
+      <sap2010:ViewStateData Id="SetMapExtent_1" sap:VirtualizedContainerService.HintSize="200,49" />
+      <sap2010:ViewStateData Id="GetMapInfo_1" sap:VirtualizedContainerService.HintSize="200,49" />
+      <sap2010:ViewStateData Id="SetMapExtent_2" sap:VirtualizedContainerService.HintSize="200,49" />
+      <sap2010:ViewStateData Id="FlowStep_2">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">390,909</av:Point>
+            <av:Size x:Key="ShapeSize">200,49</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">490,958 490,988 270,988 270,995.5</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowStep_3">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">410,839</av:Point>
+            <av:Size x:Key="ShapeSize">200,49</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">510,888 490,888 490,909</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowStep_4">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">410,765.5</av:Point>
+            <av:Size x:Key="ShapeSize">200,49</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">510,814.5 510,839</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowStep_5">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">79,891.5</av:Point>
+            <av:Size x:Key="ShapeSize">242,57</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">200,948.5 510,948.5 510,765.5</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowStep_6">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">79,821.5</av:Point>
+            <av:Size x:Key="ShapeSize">242,57</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">200,878.5 200,891.5</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowStep_7">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">119,741.5</av:Point>
+            <av:Size x:Key="ShapeSize">242,57</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">240,798.5 200,798.5 200,821.5</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowStep_8">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">9,661.5</av:Point>
+            <av:Size x:Key="ShapeSize">242,57</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">130,718.5 240,718.5 240,741.5</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowStep_9">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">369,681.5</av:Point>
+            <av:Size x:Key="ShapeSize">242,57</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">490,738.5 130,738.5 130,661.5</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowDecision_1" sap:VirtualizedContainerService.HintSize="60,75">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">220,612.5</av:Point>
+            <av:Size x:Key="ShapeSize">60,75</av:Size>
+            <av:PointCollection x:Key="TrueConnector">220,650 0,650 0,965.5 270,965.5 270,995.5</av:PointCollection>
+            <av:PointCollection x:Key="FalseConnector">280,650 310,650 310,710 369,710</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="200,49">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="DisplayForm_2" sap:VirtualizedContainerService.HintSize="200,49" />
+      <sap2010:ViewStateData Id="FlowStep_10">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">350,584.5</av:Point>
+            <av:Size x:Key="ShapeSize">200,49</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">550,609 640,609 640,240 400,240</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowDecision_2" sap:VirtualizedContainerService.HintSize="70,87">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">270,512.5</av:Point>
+            <av:Size x:Key="ShapeSize">70,87</av:Size>
+            <av:PointCollection x:Key="TrueConnector">270,556 265,556 265,612.5</av:PointCollection>
+            <av:PointCollection x:Key="FalseConnector">340,556 450,556 450,584.5</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowStep_11">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">220,435.5</av:Point>
+            <av:Size x:Key="ShapeSize">200,49</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">320,484.5 305,484.5 305,512.5</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowStep_12">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">10,345.5</av:Point>
+            <av:Size x:Key="ShapeSize">200,49</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">110,394.5 110,424.5 320,424.5 320,435.5</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="ServerPlaceHolder_1" sap:VirtualizedContainerService.HintSize="200,49" />
+      <sap2010:ViewStateData Id="FlowStep_13">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">430,304.5</av:Point>
+            <av:Size x:Key="ShapeSize">200,49</av:Size>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowDecision_3" sap:VirtualizedContainerService.HintSize="70,87">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">270,292.5</av:Point>
+            <av:Size x:Key="ShapeSize">70,87</av:Size>
+            <av:PointCollection x:Key="FalseConnector">340,336 370,336 370,329 430,329</av:PointCollection>
+            <av:PointCollection x:Key="TrueConnector">270,336 110,336 110,345.5</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowStep_14">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">200,215.5</av:Point>
+            <av:Size x:Key="ShapeSize">200,49</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">300,264.5 300,292.5 305,292.5</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowStep_15">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">200,145.5</av:Point>
+            <av:Size x:Key="ShapeSize">200,49</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">300,194.5 300,215.5</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowStep_16">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">190,65.5</av:Point>
+            <av:Size x:Key="ShapeSize">200,49</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">290,114.5 290,144.5 300,144.5 300,145.5</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Flowchart_1" sap:VirtualizedContainerService.HintSize="658,1084">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <av:Point x:Key="ShapeLocation">80,2.5</av:Point>
+            <av:Size x:Key="ShapeSize">60,75</av:Size>
+            <x:Double x:Key="Width">644</x:Double>
+            <av:PointCollection x:Key="ConnectorLocation">110,77.5 110,107.5 170,107.5 170,47.5 290,47.5 290,65.5</av:PointCollection>
+            <x:Double x:Key="Height">1048</x:Double>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Sequence_3" sap:VirtualizedContainerService.HintSize="680,1208">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="ActivityBuilder_1" sap:VirtualizedContainerService.HintSize="720,1288" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</Activity>

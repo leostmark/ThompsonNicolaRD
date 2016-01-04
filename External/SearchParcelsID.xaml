@@ -1,0 +1,147 @@
+﻿<Activity mc:Ignorable="sap" x:Class="{x:Null}" sap:VirtualizedContainerService.HintSize="756,887" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:eacg="clr-namespace:ESRI.ArcGIS.Client.Geometry;assembly=ESRI.ArcGIS.Client" xmlns:eact="clr-namespace:ESRI.ArcGIS.Client.Tasks;assembly=ESRI.ArcGIS.Client" xmlns:esri="http://schemas.esri.com/arcgis/client/2009" xmlns:gcx="http://apis.geocortex.com/2009" xmlns:gfc="clr-namespace:Geocortex.Forms.Client;assembly=Geocortex.EssentialsWpfApi" xmlns:ggg="clr-namespace:Geocortex.Gis.Geometries;assembly=Geocortex.Gis" xmlns:gwa="clr-namespace:Geocortex.Workflow.Activities;assembly=Geocortex.Workflow" xmlns:gwa1="clr-namespace:Geocortex.Workflow.Activities;assembly=Geocortex.Workflow.Activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:mvc="clr-namespace:Microsoft.VisualBasic.CompilerServices;assembly=Microsoft.VisualBasic" xmlns:s="clr-namespace:System;assembly=System" xmlns:s1="clr-namespace:System;assembly=mscorlib" xmlns:s2="clr-namespace:System;assembly=System.Core" xmlns:s3="clr-namespace:System;assembly=System.ServiceModel" xmlns:s4="clr-namespace:System;assembly=System.DirectoryServices" xmlns:s5="clr-namespace:System;assembly=System.Web.Services" xmlns:s6="clr-namespace:System;assembly=System.AddIn" xmlns:sa="clr-namespace:System.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Sequence sap:VirtualizedContainerService.HintSize="716,847" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="pid" />
+      <Variable x:TypeArguments="esri:FeatureSet" Name="query_result" />
+      <Variable x:TypeArguments="x:String" Name="btnValue" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Flowchart sap:VirtualizedContainerService.HintSize="694,723">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
+          <av:Size x:Key="ShapeSize">60,75</av:Size>
+          <x:Double x:Key="Width">680.07109982808424</x:Double>
+          <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,107.5 300,114.5</av:PointCollection>
+          <x:Double x:Key="Height">686.92</x:Double>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Flowchart.StartNode>
+        <FlowStep x:Name="__ReferenceID7">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">200,114.5</av:Point>
+              <av:Size x:Key="ShapeSize">200,51</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">300,165.5 300,195.5 300,204.5</av:PointCollection>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <gwa1:ConfigureWorkflowContainer sap:VirtualizedContainerService.HintSize="200,51" IconUri="/Resources/Images/ParcelByID.png" IsBusy="[True]" Message="Loading..." ShowContainer="[True]" Title="Search Parcels by ID" WorkflowContainerName="Default" />
+          <FlowStep.Next>
+            <FlowStep x:Name="__ReferenceID0">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <av:Point x:Key="ShapeLocation">200,204.5</av:Point>
+                  <av:Size x:Key="ShapeSize">200,51</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">300,255.5 300,285.5 300,292.5</av:PointCollection>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <gwa1:DisplayForm ButtonResultValue="[btnValue]" DisplayName="Search Parcel By ID Form" FormDefinition="&lt;FormDefinition xmlns=&quot;http://schemas.datacontract.org/2004/07/Geocortex.Forms.Client&quot; xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;ContainerFormItem xmlns:a=&quot;http://schemas.datacontract.org/2004/07/Geocortex.Forms.Client.Items&quot;&gt;&lt;a:ArgumentName/&gt;&lt;a:ItemID&gt;Group1&lt;/a:ItemID&gt;&lt;a:ToolTip/&gt;&lt;a:ValidationItems xmlns:b=&quot;http://schemas.datacontract.org/2004/07/Geocortex.Forms.Client.Items.Validation&quot;/&gt;&lt;a:Description&gt;Enter a parcel ID. &amp;#xD;&#xA;&amp;#xD;&#xA;As you type, a filtered list of matching IDs will display to help you find an exact match. &amp;#xD;&#xA;&amp;#xD;&#xA;Choose an ID from the list, or enter a partial ID to find multiple results.&amp;#xD;&#xA;&amp;#xD;&#xA;(Example: 00170139).&lt;/a:Description&gt;&lt;a:FormItems&gt;&lt;a:FormItem i:type=&quot;a:AutoCompleteBoxFormItem&quot;&gt;&lt;a:ArgumentName&gt;pid&lt;/a:ArgumentName&gt;&lt;a:ItemID&gt;AutoCompleteBox1&lt;/a:ItemID&gt;&lt;a:ToolTip&gt;Enter the parcel ID&lt;/a:ToolTip&gt;&lt;a:ValidationItems xmlns:b=&quot;http://schemas.datacontract.org/2004/07/Geocortex.Forms.Client.Items.Validation&quot;/&gt;&lt;a:DefaultText/&gt;&lt;a:InputScope&gt;Default&lt;/a:InputScope&gt;&lt;a:Label&gt;&lt;a:ArgumentName/&gt;&lt;a:ItemID i:nil=&quot;true&quot;/&gt;&lt;a:ToolTip/&gt;&lt;a:ValidationItems xmlns:b=&quot;http://schemas.datacontract.org/2004/07/Geocortex.Forms.Client.Items.Validation&quot;/&gt;&lt;a:LabelForItemID&gt;AutoCompleteBox1&lt;/a:LabelForItemID&gt;&lt;a:Text&gt;Parcel ID:&lt;/a:Text&gt;&lt;/a:Label&gt;&lt;a:TextboxWidth&gt;150&lt;/a:TextboxWidth&gt;&lt;a:FilterByInputGeometry&gt;false&lt;/a:FilterByInputGeometry&gt;&lt;a:MinimumPopulateDelay&gt;200&lt;/a:MinimumPopulateDelay&gt;&lt;a:MinimumPrefixLength&gt;1&lt;/a:MinimumPrefixLength&gt;&lt;a:QueryDisplayOutputField&gt;PID&lt;/a:QueryDisplayOutputField&gt;&lt;a:QueryServiceUrl&gt;http://sampleserver1.geocortex.com/ArcGIS/rest/services/CharlotteOperational/MapServer/4&lt;/a:QueryServiceUrl&gt;&lt;a:QueryWhereClause&gt;PID Like '{0}%'&lt;/a:QueryWhereClause&gt;&lt;/a:FormItem&gt;&lt;/a:FormItems&gt;&lt;a:MaxWidth&gt;INF&lt;/a:MaxWidth&gt;&lt;a:Orientation&gt;Vertical&lt;/a:Orientation&gt;&lt;/ContainerFormItem&gt;&lt;KnownTypes xmlns:a=&quot;http://schemas.microsoft.com/2003/10/Serialization/Arrays&quot;&gt;&lt;a:string&gt;Geocortex.Forms.Client.Items.ContainerFormItem&lt;/a:string&gt;&lt;a:string&gt;Geocortex.Forms.Client.Items.AutoCompleteBoxFormItem&lt;/a:string&gt;&lt;/KnownTypes&gt;&lt;MaxHeight&gt;800&lt;/MaxHeight&gt;&lt;MaxWidth&gt;350&lt;/MaxWidth&gt;&lt;Title&gt;Search Parcels by ID&lt;/Title&gt;&lt;Version&gt;1.0&lt;/Version&gt;&lt;/FormDefinition&gt;" sap:VirtualizedContainerService.HintSize="200,51" WorkflowContainerName="Default">
+                <gwa1:DisplayForm.Buttons>
+                  <gcx:FormButton CausesValidation="True" Label="Search" Value="Search" />
+                </gwa1:DisplayForm.Buttons>
+                <gwa1:DisplayForm.FormOutArguments>
+                  <gwa:ArgumentWrapper x:TypeArguments="OutArgument" IsRequired="False" Name="pid">
+                    <gwa:ArgumentWrapper.Argument>
+                      <OutArgument x:TypeArguments="x:String">[pid]</OutArgument>
+                    </gwa:ArgumentWrapper.Argument>
+                  </gwa:ArgumentWrapper>
+                </gwa1:DisplayForm.FormOutArguments>
+              </gwa1:DisplayForm>
+              <FlowStep.Next>
+                <FlowDecision x:Name="__ReferenceID4" Condition="[btnValue = &quot;Search&quot;]" sap:VirtualizedContainerService.HintSize="60,75">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <av:Point x:Key="ShapeLocation">270,292.5</av:Point>
+                      <av:Size x:Key="ShapeSize">60,75</av:Size>
+                      <av:PointCollection x:Key="FalseConnector">330,330 360,330 430,330</av:PointCollection>
+                      <av:PointCollection x:Key="TrueConnector">270,330 240,330 240,394.5 300,394.5 300,424.5</av:PointCollection>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <FlowDecision.True>
+                    <FlowStep x:Name="__ReferenceID1">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <av:Point x:Key="ShapeLocation">200,424.5</av:Point>
+                          <av:Size x:Key="ShapeSize">200,51</av:Size>
+                          <av:PointCollection x:Key="ConnectorLocation">300,475.5 300,505.5 300,512.5</av:PointCollection>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <gwa1:QueryTask DisplayName="Query Parcel Layer" sap:VirtualizedContainerService.HintSize="200,51" MaxAllowableOffset="0" OutFields="&quot;*&quot;" QueryServiceUrl="http://sampleserver1.geocortex.com/ArcGIS/rest/services/CharlotteOperational/MapServer/4" Results="[query_result]" ReturnGeometry="False" SpatialRelationship="esriSpatialRelIntersects" Where="[&quot;PID like '&quot; &amp; pid &amp; &quot;%'&quot;]" />
+                      <FlowStep.Next>
+                        <FlowDecision x:Name="__ReferenceID5" Condition="[query_result.Features.Count &gt; 0]" sap:VirtualizedContainerService.HintSize="60,75">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <av:Point x:Key="ShapeLocation">270,512.5</av:Point>
+                              <av:Size x:Key="ShapeSize">60,75</av:Size>
+                              <av:PointCollection x:Key="TrueConnector">270,550 150,550 150,584.5</av:PointCollection>
+                              <av:PointCollection x:Key="FalseConnector">330,550 450,550 450,584.5</av:PointCollection>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <FlowDecision.True>
+                            <FlowStep x:Name="__ReferenceID2">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <av:Point x:Key="ShapeLocation">50,584.5</av:Point>
+                                  <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <gwa1:SelectFeatures ClearCollectionFirst="False" CollectionName="[&quot;Search Parcels by ID: &quot; &amp; pid]" FeatureSet="[query_result]" sap:VirtualizedContainerService.HintSize="200,51" LayerId="4" MapServiceId="0" />
+                            </FlowStep>
+                          </FlowDecision.True>
+                          <FlowDecision.False>
+                            <FlowStep x:Name="__ReferenceID6">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <av:Point x:Key="ShapeLocation">350,584.5</av:Point>
+                                  <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                  <av:PointCollection x:Key="ConnectorLocation">550,610 640,610 640,230 400,230</av:PointCollection>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <gwa1:DisplayForm FormDefinition="&lt;FormDefinition xmlns=&quot;http://schemas.datacontract.org/2004/07/Geocortex.Forms.Client&quot; xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;ContainerFormItem xmlns:a=&quot;http://schemas.datacontract.org/2004/07/Geocortex.Forms.Client.Items&quot;&gt;&lt;a:ArgumentName/&gt;&lt;a:ItemID&gt;Group1&lt;/a:ItemID&gt;&lt;a:ToolTip/&gt;&lt;a:ValidationItems xmlns:b=&quot;http://schemas.datacontract.org/2004/07/Geocortex.Forms.Client.Items.Validation&quot;/&gt;&lt;a:Description&gt;No parcels were found that match the specified criteria.&lt;/a:Description&gt;&lt;a:FormItems/&gt;&lt;a:MaxWidth&gt;INF&lt;/a:MaxWidth&gt;&lt;a:Orientation&gt;Vertical&lt;/a:Orientation&gt;&lt;/ContainerFormItem&gt;&lt;KnownTypes xmlns:a=&quot;http://schemas.microsoft.com/2003/10/Serialization/Arrays&quot;&gt;&lt;a:string&gt;Geocortex.Forms.Client.Items.ContainerFormItem&lt;/a:string&gt;&lt;/KnownTypes&gt;&lt;MaxHeight&gt;800&lt;/MaxHeight&gt;&lt;MaxWidth&gt;1000&lt;/MaxWidth&gt;&lt;Title&gt;No Features Found&lt;/Title&gt;&lt;Version&gt;1.0&lt;/Version&gt;&lt;/FormDefinition&gt;" sap:VirtualizedContainerService.HintSize="200,51" WorkflowContainerName="Default">
+                                <gwa1:DisplayForm.Buttons>
+                                  <gcx:FormButton CausesValidation="False" Label="Back" Value="Back" />
+                                </gwa1:DisplayForm.Buttons>
+                              </gwa1:DisplayForm>
+                              <FlowStep.Next>
+                                <x:Reference>__ReferenceID0</x:Reference>
+                              </FlowStep.Next>
+                            </FlowStep>
+                          </FlowDecision.False>
+                        </FlowDecision>
+                      </FlowStep.Next>
+                    </FlowStep>
+                  </FlowDecision.True>
+                  <FlowDecision.False>
+                    <FlowStep x:Name="__ReferenceID3">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <av:Point x:Key="ShapeLocation">430,304.5</av:Point>
+                          <av:Size x:Key="ShapeSize">200,51</av:Size>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <gwa1:ServerPlaceHolder Description="User Cancelled" DisplayName="User Cancelled" sap:VirtualizedContainerService.HintSize="200,51" />
+                    </FlowStep>
+                  </FlowDecision.False>
+                </FlowDecision>
+              </FlowStep.Next>
+            </FlowStep>
+          </FlowStep.Next>
+        </FlowStep>
+      </Flowchart.StartNode>
+      <x:Reference>__ReferenceID0</x:Reference>
+      <x:Reference>__ReferenceID1</x:Reference>
+      <x:Reference>__ReferenceID2</x:Reference>
+      <x:Reference>__ReferenceID3</x:Reference>
+      <x:Reference>__ReferenceID4</x:Reference>
+      <x:Reference>__ReferenceID5</x:Reference>
+      <x:Reference>__ReferenceID6</x:Reference>
+      <x:Reference>__ReferenceID7</x:Reference>
+    </Flowchart>
+  </Sequence>
+</Activity>

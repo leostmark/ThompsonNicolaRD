@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quick-search-config
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation=".\quick-search-config.xsd">
+
+  <quick-search
+    id="facility"
+    title="Find Location/Facility"
+    defaultMapServerUrl="http://gis-extmap1.admin.tnrd.bc.ca/arcgis/rest/services/DynamicMap/MapServer">
+
+    <quick-search-category
+      additional-fields="Location,WebsiteURL"
+      buffer="500.0"
+      idField-name="OBJECTID"
+      field-name="LibType"
+      group="Libraries"
+      layer-name="Library Services"
+      title="Library Services"/>
+
+    <quick-search-category
+      additional-fields="Name,WebsiteURL"
+      buffer="500.0"
+      idField-name="OBJECTID"
+      field-name="Type"
+      group="Refuse and Disposal Sites"
+      layer-name="Waste Disposal and Recycling"
+      title="Refuse and Disposal Sites"/>
+
+     <quick-search-category
+      additional-fields="FacilityName,WebsiteURL"
+      buffer="500.0"
+      idField-name="OBJECTID"
+      field-name="FacilityType"
+      group="Emergency Services"
+      layer-name="Emergency Response"
+      title="Emergency Services and Local Authority Offices"/>
+
+  </quick-search>
+
+</quick-search-config>

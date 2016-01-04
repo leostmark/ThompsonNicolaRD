@@ -1,0 +1,382 @@
+﻿<Activity mc:Ignorable="sap" x:Class="{x:Null}" sap:VirtualizedContainerService.HintSize="837,1372" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:eac="clr-namespace:ESRI.ArcGIS.Client;assembly=ESRI.ArcGIS.Client" xmlns:eacg="clr-namespace:ESRI.ArcGIS.Client.Geometry;assembly=ESRI.ArcGIS.Client" xmlns:eact="clr-namespace:ESRI.ArcGIS.Client.Tasks;assembly=ESRI.ArcGIS.Client" xmlns:esri="http://schemas.esri.com/arcgis/client/2009" xmlns:gcx="http://apis.geocortex.com/2009" xmlns:gfc="clr-namespace:Geocortex.Forms.Client;assembly=Geocortex.EssentialsWpfApi" xmlns:ggg="clr-namespace:Geocortex.Gis.Geometries;assembly=Geocortex.Gis" xmlns:gwa="clr-namespace:Geocortex.Workflow.Activities;assembly=Geocortex.Workflow" xmlns:gwa1="clr-namespace:Geocortex.Workflow.Activities;assembly=Geocortex.Workflow.Activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:mvc="clr-namespace:Microsoft.VisualBasic.CompilerServices;assembly=Microsoft.VisualBasic" xmlns:s="clr-namespace:System;assembly=System" xmlns:s1="clr-namespace:System;assembly=mscorlib" xmlns:s2="clr-namespace:System;assembly=System.Core" xmlns:s3="clr-namespace:System;assembly=System.ServiceModel" xmlns:s4="clr-namespace:System;assembly=System.DirectoryServices" xmlns:s5="clr-namespace:System;assembly=System.Web.Services" xmlns:s6="clr-namespace:System;assembly=System.AddIn" xmlns:s7="clr-namespace:System;assembly=System.Drawing.Design" xmlns:s8="clr-namespace:System;assembly=System.Design" xmlns:sa="clr-namespace:System.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:scg1="clr-namespace:System.Collections.Generic;assembly=System" xmlns:scg2="clr-namespace:System.Collections.Generic;assembly=System.Core" xmlns:scg3="clr-namespace:System.Collections.Generic;assembly=System.ServiceModel" xmlns:sw="clr-namespace:System.Windows;assembly=PresentationFramework" xmlns:sw1="clr-namespace:System.Windows;assembly=WindowsBase" xmlns:sw2="clr-namespace:System.Windows;assembly=PresentationCore" xmlns:sw3="clr-namespace:System.Windows;assembly=UIAutomationTypes" xmlns:swt="clr-namespace:System.Windows.Threading;assembly=WindowsBase" xmlns:swt1="clr-namespace:System.Windows.Threading;assembly=System.Windows.Presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Sequence sap:VirtualizedContainerService.HintSize="797,1332" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="name" />
+      <Variable x:TypeArguments="esri:FeatureSet" Name="query_result" />
+      <Variable x:TypeArguments="x:String" Name="btnValue" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Flowchart sap:VirtualizedContainerService.HintSize="775,1208">
+      <Flowchart.Variables>
+        <Variable x:TypeArguments="x:String" Name="RoadLayerID" />
+        <Variable x:TypeArguments="x:String" Name="MapServiceUrl" />
+        <Variable x:TypeArguments="x:String" Name="community" />
+        <Variable x:TypeArguments="esri:GraphicsLayer" Name="graphicsLayer" />
+        <Variable x:TypeArguments="x:Boolean" Name="resultsDiffer" />
+        <Variable x:TypeArguments="esri:Envelope" Name="resultsExtent" />
+        <Variable x:TypeArguments="x:Double" Name="mapScale" />
+        <Variable x:TypeArguments="x:String" Default="StreetName" Name="streetField" />
+        <Variable x:TypeArguments="x:String" Default="City_Left" Name="communityField" />
+      </Flowchart.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <av:Point x:Key="ShapeLocation">260,2.5</av:Point>
+          <av:Size x:Key="ShapeSize">60,75</av:Size>
+          <x:Double x:Key="Width">761</x:Double>
+          <av:PointCollection x:Key="ConnectorLocation">290,77.5 290,95.5 300,95.5</av:PointCollection>
+          <x:Double x:Key="Height">1172</x:Double>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Flowchart.StartNode>
+        <FlowStep x:Name="__ReferenceID8">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">200,95.5</av:Point>
+              <av:Size x:Key="ShapeSize">200,49</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">300,144.5 300,165.5</av:PointCollection>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <gwa1:ConfigureWorkflowContainer sap:VirtualizedContainerService.HintSize="200,49" IconUri="/Resources/Images/ParcelByID.png" IsBusy="[True]" Message="Loading..." ShowContainer="[True]" Title="Search for a road by name" WorkflowContainerName="Default" />
+          <FlowStep.Next>
+            <FlowStep x:Name="__ReferenceID9">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <av:Point x:Key="ShapeLocation">200,165.5</av:Point>
+                  <av:Size x:Key="ShapeSize">200,49</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">300,214.5 300,235.5</av:PointCollection>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <gwa1:GetMapServiceInfo DisplayName="GetRoadLayerInfo" sap:VirtualizedContainerService.HintSize="200,49" LayerId="[RoadLayerID]" LayerName="Roads_4K" MapServiceId="1" MapServiceUrl="[MapServiceUrl]" />
+              <FlowStep.Next>
+                <FlowStep x:Name="__ReferenceID2">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <av:Point x:Key="ShapeLocation">200,235.5</av:Point>
+                      <av:Size x:Key="ShapeSize">200,49</av:Size>
+                      <av:PointCollection x:Key="ConnectorLocation">300,284.5 300,292.5</av:PointCollection>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <gwa1:DisplayForm ButtonResultValue="[btnValue]" DisplayName="Search for a road by name" FormDefinition="&lt;FormDefinition xmlns=&quot;http://schemas.datacontract.org/2004/07/Geocortex.Forms.Client&quot; xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;ContainerFormItem xmlns:a=&quot;http://schemas.datacontract.org/2004/07/Geocortex.Forms.Client.Items&quot;&gt;&lt;a:ArgumentName/&gt;&lt;a:ItemID&gt;Group1&lt;/a:ItemID&gt;&lt;a:ToolTip/&gt;&lt;a:ValidationItems xmlns:b=&quot;http://schemas.datacontract.org/2004/07/Geocortex.Forms.Client.Items.Validation&quot;/&gt;&lt;a:Description&gt;Enter a road name and community name.&amp;#xD;&#xA;&amp;#xD;&#xA;As you type, a filtered list of matching names will display to help you find an exact match.&amp;#xD;&#xA;&amp;#xD;&#xA;Choose a name from the list, or enter a partial name to find multiple results.&amp;#xD;&#xA;&amp;#xD;&#xA;Example:&amp;#xD;&#xA;Wyndhaven Dr&amp;#xD;&#xA;Clearwater&lt;/a:Description&gt;&lt;a:FormItems&gt;&lt;a:FormItem i:type=&quot;a:AutoCompleteBoxFormItem&quot;&gt;&lt;a:ArgumentName&gt;name&lt;/a:ArgumentName&gt;&lt;a:ItemID&gt;AutoCompleteBox1&lt;/a:ItemID&gt;&lt;a:ToolTip&gt;Enter the road name&lt;/a:ToolTip&gt;&lt;a:ValidationItems xmlns:b=&quot;http://schemas.datacontract.org/2004/07/Geocortex.Forms.Client.Items.Validation&quot;/&gt;&lt;a:DefaultText/&gt;&lt;a:InputScope&gt;Default&lt;/a:InputScope&gt;&lt;a:Label&gt;&lt;a:ArgumentName/&gt;&lt;a:ItemID i:nil=&quot;true&quot;/&gt;&lt;a:ToolTip/&gt;&lt;a:ValidationItems xmlns:b=&quot;http://schemas.datacontract.org/2004/07/Geocortex.Forms.Client.Items.Validation&quot;/&gt;&lt;a:LabelForItemID&gt;AutoCompleteBox1&lt;/a:LabelForItemID&gt;&lt;a:Text&gt;Road name:&lt;/a:Text&gt;&lt;/a:Label&gt;&lt;a:TextboxWidth&gt;150&lt;/a:TextboxWidth&gt;&lt;a:FilterByInputGeometry&gt;false&lt;/a:FilterByInputGeometry&gt;&lt;a:MinimumPopulateDelay&gt;200&lt;/a:MinimumPopulateDelay&gt;&lt;a:MinimumPrefixLength&gt;1&lt;/a:MinimumPrefixLength&gt;&lt;a:ProxyUrl/&gt;&lt;a:QueryDisplayOutputField&gt;StreetName&lt;/a:QueryDisplayOutputField&gt;&lt;a:QueryServiceUrl&gt;http://gis-map1.admin.tnrd.bc.ca:6080/arcgis/rest/services/Basemap_Cache/MapServer/40&lt;/a:QueryServiceUrl&gt;&lt;a:QueryValueOutputField/&gt;&lt;a:QueryWhereClause&gt;Upper(StreetName) Like Upper('{0}%')&lt;/a:QueryWhereClause&gt;&lt;a:Token/&gt;&lt;/a:FormItem&gt;&lt;a:FormItem i:type=&quot;a:AutoCompleteBoxFormItem&quot;&gt;&lt;a:ArgumentName&gt;community&lt;/a:ArgumentName&gt;&lt;a:ItemID&gt;AutoCompleteBox2&lt;/a:ItemID&gt;&lt;a:ToolTip&gt;Enter the community name&lt;/a:ToolTip&gt;&lt;a:ValidationItems xmlns:b=&quot;http://schemas.datacontract.org/2004/07/Geocortex.Forms.Client.Items.Validation&quot;/&gt;&lt;a:DefaultText/&gt;&lt;a:InputScope&gt;Default&lt;/a:InputScope&gt;&lt;a:Label&gt;&lt;a:ArgumentName/&gt;&lt;a:ItemID/&gt;&lt;a:ToolTip/&gt;&lt;a:ValidationItems xmlns:b=&quot;http://schemas.datacontract.org/2004/07/Geocortex.Forms.Client.Items.Validation&quot;/&gt;&lt;a:LabelForItemID&gt;AutoCompleteBox2&lt;/a:LabelForItemID&gt;&lt;a:Text&gt;Community:&lt;/a:Text&gt;&lt;/a:Label&gt;&lt;a:TextboxWidth&gt;150&lt;/a:TextboxWidth&gt;&lt;a:FilterByInputGeometry&gt;false&lt;/a:FilterByInputGeometry&gt;&lt;a:MinimumPopulateDelay&gt;200&lt;/a:MinimumPopulateDelay&gt;&lt;a:MinimumPrefixLength&gt;1&lt;/a:MinimumPrefixLength&gt;&lt;a:ProxyUrl/&gt;&lt;a:QueryDisplayOutputField&gt;City_Left&lt;/a:QueryDisplayOutputField&gt;&lt;a:QueryServiceUrl&gt;http://gis-map1.admin.tnrd.bc.ca:6080/arcgis/rest/services/Basemap_Cache/MapServer/40&lt;/a:QueryServiceUrl&gt;&lt;a:QueryValueOutputField/&gt;&lt;a:QueryWhereClause&gt;Upper(City_Left) Like Upper('{0}%')&lt;/a:QueryWhereClause&gt;&lt;a:Token/&gt;&lt;/a:FormItem&gt;&lt;/a:FormItems&gt;&lt;a:MaxWidth&gt;INF&lt;/a:MaxWidth&gt;&lt;a:Orientation&gt;Vertical&lt;/a:Orientation&gt;&lt;/ContainerFormItem&gt;&lt;KnownTypes xmlns:a=&quot;http://schemas.microsoft.com/2003/10/Serialization/Arrays&quot;&gt;&lt;a:string&gt;Geocortex.Forms.Client.Items.ContainerFormItem&lt;/a:string&gt;&lt;a:string&gt;Geocortex.Forms.Client.Items.AutoCompleteBoxFormItem&lt;/a:string&gt;&lt;/KnownTypes&gt;&lt;MaxHeight&gt;800&lt;/MaxHeight&gt;&lt;MaxWidth&gt;350&lt;/MaxWidth&gt;&lt;Title&gt;Search for a road by name&lt;/Title&gt;&lt;Version&gt;1.0&lt;/Version&gt;&lt;/FormDefinition&gt;" sap:VirtualizedContainerService.HintSize="200,49" WorkflowContainerName="Default">
+                    <gwa1:DisplayForm.Body>
+                      <ActivityAction x:TypeArguments="gcx:FormDefinition">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="gcx:FormDefinition" Name="form" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="RuntimeModifications" sap:VirtualizedContainerService.HintSize="200,49">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Sequence>
+                      </ActivityAction>
+                    </gwa1:DisplayForm.Body>
+                    <gwa1:DisplayForm.Buttons>
+                      <gcx:FormButton CausesValidation="True" IsDefault="False" Label="Search" Value="Search" />
+                    </gwa1:DisplayForm.Buttons>
+                    <gwa1:DisplayForm.FormOutArguments>
+                      <gwa:ArgumentWrapper x:TypeArguments="OutArgument" IsRequired="False" Name="name">
+                        <gwa:ArgumentWrapper.Argument>
+                          <OutArgument x:TypeArguments="x:String">[name]</OutArgument>
+                        </gwa:ArgumentWrapper.Argument>
+                      </gwa:ArgumentWrapper>
+                      <gwa:ArgumentWrapper x:TypeArguments="OutArgument" IsRequired="False" Name="community">
+                        <gwa:ArgumentWrapper.Argument>
+                          <OutArgument x:TypeArguments="x:String">[community]</OutArgument>
+                        </gwa:ArgumentWrapper.Argument>
+                      </gwa:ArgumentWrapper>
+                    </gwa1:DisplayForm.FormOutArguments>
+                  </gwa1:DisplayForm>
+                  <FlowStep.Next>
+                    <FlowDecision x:Name="__ReferenceID5" Condition="[btnValue = &quot;Search&quot;]" sap:VirtualizedContainerService.HintSize="60,75">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <av:Point x:Key="ShapeLocation">270,292.5</av:Point>
+                          <av:Size x:Key="ShapeSize">60,75</av:Size>
+                          <av:PointCollection x:Key="FalseConnector">330,330 360,330 360,329 430,329</av:PointCollection>
+                          <av:PointCollection x:Key="TrueConnector">270,330 240,330 240,394.5 300,394.5 300,424.5</av:PointCollection>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <FlowDecision.True>
+                        <FlowStep x:Name="__ReferenceID3">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <av:Point x:Key="ShapeLocation">200,424.5</av:Point>
+                              <av:Size x:Key="ShapeSize">200,49</av:Size>
+                              <av:PointCollection x:Key="ConnectorLocation">300,473.5 340,473.5 340,482.5</av:PointCollection>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <gwa1:QueryTask DisplayName="Query Road Layer" sap:VirtualizedContainerService.HintSize="200,49" MaxAllowableOffset="0" OutFields="[streetField + &quot;, &quot; + communityField]" QueryServiceUrl="[MapServiceUrl + &quot;/&quot; + RoadLayerID + &quot;/query&quot;]" Results="[query_result]" ReturnGeometry="True" SpatialRelationship="esriSpatialRelIntersects" Where="[&quot;UPPER(&quot; + streetField + &quot;) like UPPER('&quot; + name + &quot;%') and UPPER(&quot; + communityField + &quot;) like UPPER('&quot; + community + &quot;%')&quot;]" />
+                          <FlowStep.Next>
+                            <FlowDecision x:Name="__ReferenceID6" Condition="[query_result.Features.Count &gt; 0]" sap:VirtualizedContainerService.HintSize="60,75">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <av:Point x:Key="ShapeLocation">310,482.5</av:Point>
+                                  <av:Size x:Key="ShapeSize">60,75</av:Size>
+                                  <av:PointCollection x:Key="TrueConnector">310,520 310,571.5</av:PointCollection>
+                                  <av:PointCollection x:Key="FalseConnector">370,520 400,520 400,475.5 530,475.5 530,505.5</av:PointCollection>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <FlowDecision.True>
+                                <FlowStep x:Name="__ReferenceID15">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <av:Point x:Key="ShapeLocation">189,571.5</av:Point>
+                                      <av:Size x:Key="ShapeSize">242,57</av:Size>
+                                      <av:PointCollection x:Key="ConnectorLocation">310,628.5 305,628.5 305,652.5</av:PointCollection>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Assign sap:VirtualizedContainerService.HintSize="242,57">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="esri:Envelope">[resultsExtent]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="esri:Envelope">[query_result.Features(0).Geometry.Extent]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <FlowStep.Next>
+                                    <FlowDecision x:Name="__ReferenceID10" Condition="[query_result.Features.Count &gt; 1]" sap:VirtualizedContainerService.HintSize="60,75">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <av:Point x:Key="ShapeLocation">290,652.5</av:Point>
+                                          <av:Size x:Key="ShapeSize">60,75</av:Size>
+                                          <av:PointCollection x:Key="TrueConnector">290,690 130,690 130,731.5</av:PointCollection>
+                                          <av:PointCollection x:Key="FalseConnector">350,690 380,690 380,763.5 390,763.5</av:PointCollection>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <FlowDecision.True>
+                                        <FlowStep x:Name="__ReferenceID12">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <av:Point x:Key="ShapeLocation">9,731.5</av:Point>
+                                              <av:Size x:Key="ShapeSize">242,57</av:Size>
+                                              <av:PointCollection x:Key="ConnectorLocation">130,788.5 130,818.5 130,821.5</av:PointCollection>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <Assign sap:VirtualizedContainerService.HintSize="242,57">
+                                            <Assign.To>
+                                              <OutArgument x:TypeArguments="x:String">[name]</OutArgument>
+                                            </Assign.To>
+                                            <Assign.Value>
+                                              <InArgument x:TypeArguments="x:String">[cstr(query_result.Features(0).Attributes(streetField))]</InArgument>
+                                            </Assign.Value>
+                                          </Assign>
+                                          <FlowStep.Next>
+                                            <FlowStep x:Name="__ReferenceID13">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <av:Point x:Key="ShapeLocation">9,821.5</av:Point>
+                                                  <av:Size x:Key="ShapeSize">242,57</av:Size>
+                                                  <av:PointCollection x:Key="ConnectorLocation">130,878.5 130,908.5 120,908.5 120,925.5</av:PointCollection>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <Assign sap:VirtualizedContainerService.HintSize="242,57">
+                                                <Assign.To>
+                                                  <OutArgument x:TypeArguments="x:String">[community]</OutArgument>
+                                                </Assign.To>
+                                                <Assign.Value>
+                                                  <InArgument x:TypeArguments="x:String">[cstr(query_result.Features(0).Attributes(communityField))]</InArgument>
+                                                </Assign.Value>
+                                              </Assign>
+                                              <FlowStep.Next>
+                                                <FlowStep x:Name="__ReferenceID11">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <av:Point x:Key="ShapeLocation">20,925.5</av:Point>
+                                                      <av:Size x:Key="ShapeSize">200,49</av:Size>
+                                                      <av:PointCollection x:Key="ConnectorLocation">120,974.5 120,1004.5 115,1004.5 115,1052.5</av:PointCollection>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <ForEach x:TypeArguments="esri:Graphic" DisplayName="ForEach&lt;Graphic&gt;" sap:VirtualizedContainerService.HintSize="516,525" Values="[query_result.Features]">
+                                                    <ActivityAction x:TypeArguments="esri:Graphic">
+                                                      <ActivityAction.Argument>
+                                                        <DelegateInArgument x:TypeArguments="esri:Graphic" Name="item" />
+                                                      </ActivityAction.Argument>
+                                                      <Sequence DisplayName="featuresSequence" sap:VirtualizedContainerService.HintSize="486,422">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                        <If Condition="[not resultsDiffer]" sap:VirtualizedContainerService.HintSize="464,201">
+                                                          <If.Then>
+                                                            <Assign sap:VirtualizedContainerService.HintSize="291,100">
+                                                              <Assign.To>
+                                                                <OutArgument x:TypeArguments="x:Boolean">[resultsDiffer]</OutArgument>
+                                                              </Assign.To>
+                                                              <Assign.Value>
+                                                                <InArgument x:TypeArguments="x:Boolean" xml:space="preserve">[(cstr(item.Attributes(streetField)) &lt;&gt; name) or
+(cstr(item.Attributes(communityField)) &lt;&gt; community)]</InArgument>
+                                                              </Assign.Value>
+                                                            </Assign>
+                                                          </If.Then>
+                                                        </If>
+                                                        <Assign sap:VirtualizedContainerService.HintSize="464,57">
+                                                          <Assign.To>
+                                                            <OutArgument x:TypeArguments="esri:Envelope">[resultsExtent]</OutArgument>
+                                                          </Assign.To>
+                                                          <Assign.Value>
+                                                            <InArgument x:TypeArguments="esri:Envelope">[item.Geometry.Extent.Union(resultsExtent)]</InArgument>
+                                                          </Assign.Value>
+                                                        </Assign>
+                                                      </Sequence>
+                                                    </ActivityAction>
+                                                  </ForEach>
+                                                  <FlowStep.Next>
+                                                    <FlowDecision x:Name="__ReferenceID14" Condition="[resultsDiffer]" sap:VirtualizedContainerService.HintSize="60,75">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <av:Point x:Key="ShapeLocation">100,1052.5</av:Point>
+                                                          <av:Size x:Key="ShapeSize">60,75</av:Size>
+                                                          <av:PointCollection x:Key="TrueConnector">100,1090 80,1090 80,1035.5 380,1035.5 380,1095.5</av:PointCollection>
+                                                          <av:PointCollection x:Key="FalseConnector">160,1090 190,1090 190,1157.5 610,1157.5 610,709 490,709 490,739</av:PointCollection>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                      <FlowDecision.True>
+                                                        <FlowStep x:Name="__ReferenceID0">
+                                                          <sap:WorkflowViewStateService.ViewState>
+                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                              <av:Point x:Key="ShapeLocation">280,1095.5</av:Point>
+                                                              <av:Size x:Key="ShapeSize">200,49</av:Size>
+                                                            </scg:Dictionary>
+                                                          </sap:WorkflowViewStateService.ViewState>
+                                                          <gwa1:SelectFeatures ClearCollectionFirst="True" CollectionName="[&quot;Search roads by name: &quot; &amp; name]" FeatureSet="[query_result]" sap:VirtualizedContainerService.HintSize="200,49" LayerId="[RoadLayerID]" MapServiceId="1" />
+                                                        </FlowStep>
+                                                      </FlowDecision.True>
+                                                      <FlowDecision.False>
+                                                        <FlowStep x:Name="__ReferenceID1">
+                                                          <sap:WorkflowViewStateService.ViewState>
+                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                              <av:Point x:Key="ShapeLocation">390,739</av:Point>
+                                                              <av:Size x:Key="ShapeSize">200,49</av:Size>
+                                                              <av:PointCollection x:Key="ConnectorLocation">490,788 490,795.5</av:PointCollection>
+                                                            </scg:Dictionary>
+                                                          </sap:WorkflowViewStateService.ViewState>
+                                                          <gwa1:SetMapExtent Extent="[resultsExtent]" sap:VirtualizedContainerService.HintSize="200,49" />
+                                                          <FlowStep.Next>
+                                                            <FlowStep x:Name="__ReferenceID17">
+                                                              <sap:WorkflowViewStateService.ViewState>
+                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                  <av:Point x:Key="ShapeLocation">390,795.5</av:Point>
+                                                                  <av:Size x:Key="ShapeSize">200,49</av:Size>
+                                                                  <av:PointCollection x:Key="ConnectorLocation">490,844.5 490,874.5 470,874.5 470,875.5</av:PointCollection>
+                                                                </scg:Dictionary>
+                                                              </sap:WorkflowViewStateService.ViewState>
+                                                              <gwa1:GetMapInfo Height="{x:Null}" Width="{x:Null}" Extent="[resultsExtent]" sap:VirtualizedContainerService.HintSize="200,49" Scale="[mapScale]" />
+                                                              <FlowStep.Next>
+                                                                <FlowStep x:Name="__ReferenceID16">
+                                                                  <sap:WorkflowViewStateService.ViewState>
+                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                      <av:Point x:Key="ShapeLocation">370,875.5</av:Point>
+                                                                      <av:Size x:Key="ShapeSize">200,49</av:Size>
+                                                                      <av:PointCollection x:Key="ConnectorLocation">470,924.5 470,1065.5 380,1065.5 380,1095.5</av:PointCollection>
+                                                                    </scg:Dictionary>
+                                                                  </sap:WorkflowViewStateService.ViewState>
+                                                                  <gwa1:SetMapExtent Extent="[resultsExtent.expand(4514/mapScale)]" sap:VirtualizedContainerService.HintSize="200,49" />
+                                                                  <FlowStep.Next>
+                                                                    <x:Reference>__ReferenceID0</x:Reference>
+                                                                  </FlowStep.Next>
+                                                                </FlowStep>
+                                                              </FlowStep.Next>
+                                                            </FlowStep>
+                                                          </FlowStep.Next>
+                                                        </FlowStep>
+                                                      </FlowDecision.False>
+                                                    </FlowDecision>
+                                                  </FlowStep.Next>
+                                                </FlowStep>
+                                              </FlowStep.Next>
+                                            </FlowStep>
+                                          </FlowStep.Next>
+                                        </FlowStep>
+                                      </FlowDecision.True>
+                                      <FlowDecision.False>
+                                        <x:Reference>__ReferenceID1</x:Reference>
+                                      </FlowDecision.False>
+                                    </FlowDecision>
+                                  </FlowStep.Next>
+                                </FlowStep>
+                              </FlowDecision.True>
+                              <FlowDecision.False>
+                                <FlowStep x:Name="__ReferenceID7">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <av:Point x:Key="ShapeLocation">430,505.5</av:Point>
+                                      <av:Size x:Key="ShapeSize">200,49</av:Size>
+                                      <av:PointCollection x:Key="ConnectorLocation">630,530 660,530 660,260 400,260</av:PointCollection>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <gwa1:DisplayForm FormDefinition="&lt;FormDefinition xmlns=&quot;http://schemas.datacontract.org/2004/07/Geocortex.Forms.Client&quot; xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;ContainerFormItem xmlns:a=&quot;http://schemas.datacontract.org/2004/07/Geocortex.Forms.Client.Items&quot;&gt;&lt;a:ArgumentName/&gt;&lt;a:ItemID&gt;Group1&lt;/a:ItemID&gt;&lt;a:ToolTip/&gt;&lt;a:ValidationItems xmlns:b=&quot;http://schemas.datacontract.org/2004/07/Geocortex.Forms.Client.Items.Validation&quot;/&gt;&lt;a:Description&gt;No roads were found that match the specified criteria.&lt;/a:Description&gt;&lt;a:FormItems/&gt;&lt;a:MaxWidth&gt;INF&lt;/a:MaxWidth&gt;&lt;a:Orientation&gt;Vertical&lt;/a:Orientation&gt;&lt;/ContainerFormItem&gt;&lt;KnownTypes xmlns:a=&quot;http://schemas.microsoft.com/2003/10/Serialization/Arrays&quot;&gt;&lt;a:string&gt;Geocortex.Forms.Client.Items.ContainerFormItem&lt;/a:string&gt;&lt;/KnownTypes&gt;&lt;MaxHeight&gt;800&lt;/MaxHeight&gt;&lt;MaxWidth&gt;1000&lt;/MaxWidth&gt;&lt;Title&gt;No Features Found&lt;/Title&gt;&lt;Version&gt;1.0&lt;/Version&gt;&lt;/FormDefinition&gt;" sap:VirtualizedContainerService.HintSize="200,49" WorkflowContainerName="Default">
+                                    <gwa1:DisplayForm.Body>
+                                      <ActivityAction x:TypeArguments="gcx:FormDefinition">
+                                        <ActivityAction.Argument>
+                                          <DelegateInArgument x:TypeArguments="gcx:FormDefinition" Name="form" />
+                                        </ActivityAction.Argument>
+                                        <Sequence DisplayName="RuntimeModifications" sap:VirtualizedContainerService.HintSize="200,49">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </Sequence>
+                                      </ActivityAction>
+                                    </gwa1:DisplayForm.Body>
+                                    <gwa1:DisplayForm.Buttons>
+                                      <gcx:FormButton CausesValidation="False" IsDefault="False" Label="Back" Value="Back" />
+                                    </gwa1:DisplayForm.Buttons>
+                                  </gwa1:DisplayForm>
+                                  <FlowStep.Next>
+                                    <x:Reference>__ReferenceID2</x:Reference>
+                                  </FlowStep.Next>
+                                </FlowStep>
+                              </FlowDecision.False>
+                            </FlowDecision>
+                          </FlowStep.Next>
+                        </FlowStep>
+                      </FlowDecision.True>
+                      <FlowDecision.False>
+                        <FlowStep x:Name="__ReferenceID4">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <av:Point x:Key="ShapeLocation">430,304.5</av:Point>
+                              <av:Size x:Key="ShapeSize">200,49</av:Size>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <gwa1:ServerPlaceHolder Description="User Cancelled" DisplayName="User Cancelled" sap:VirtualizedContainerService.HintSize="200,49" />
+                        </FlowStep>
+                      </FlowDecision.False>
+                    </FlowDecision>
+                  </FlowStep.Next>
+                </FlowStep>
+              </FlowStep.Next>
+            </FlowStep>
+          </FlowStep.Next>
+        </FlowStep>
+      </Flowchart.StartNode>
+      <x:Reference>__ReferenceID2</x:Reference>
+      <x:Reference>__ReferenceID3</x:Reference>
+      <x:Reference>__ReferenceID0</x:Reference>
+      <x:Reference>__ReferenceID4</x:Reference>
+      <x:Reference>__ReferenceID5</x:Reference>
+      <x:Reference>__ReferenceID6</x:Reference>
+      <x:Reference>__ReferenceID7</x:Reference>
+      <x:Reference>__ReferenceID8</x:Reference>
+      <x:Reference>__ReferenceID9</x:Reference>
+      <x:Reference>__ReferenceID10</x:Reference>
+      <x:Reference>__ReferenceID11</x:Reference>
+      <x:Reference>__ReferenceID12</x:Reference>
+      <x:Reference>__ReferenceID13</x:Reference>
+      <x:Reference>__ReferenceID14</x:Reference>
+      <x:Reference>__ReferenceID15</x:Reference>
+      <x:Reference>__ReferenceID16</x:Reference>
+      <x:Reference>__ReferenceID17</x:Reference>
+      <x:Reference>__ReferenceID1</x:Reference>
+    </Flowchart>
+  </Sequence>
+</Activity>

@@ -1,0 +1,73 @@
+﻿<Activity mc:Ignorable="sap" x:Class="{x:Null}" sap:VirtualizedContainerService.HintSize="571,1740" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:cw="clr-namespace:CityOfKamloops.Workflows;assembly=Geocortex.Projects.CityOfKamloops.Workflows" xmlns:cwa="clr-namespace:CityOfKamloops.Workflows.Activities;assembly=Geocortex.Projects.CityOfKamloops.Workflows" xmlns:eacg="clr-namespace:ESRI.ArcGIS.Client.Geometry;assembly=ESRI.ArcGIS.Client" xmlns:eact="clr-namespace:ESRI.ArcGIS.Client.Tasks;assembly=ESRI.ArcGIS.Client" xmlns:ggg="clr-namespace:Geocortex.Gis.Geometries;assembly=Geocortex.Gis" xmlns:gpctwa="clr-namespace:Geocortex.Projects.CoLG.TempestConnector.Workflows.Activities;assembly=Geocortex.Projects.CityOfKamloops.Workflows" xmlns:gwa="clr-namespace:Geocortex.Workflow.Activities;assembly=Geocortex.Workflow" xmlns:gwa1="clr-namespace:Geocortex.Workflow.Activities;assembly=Geocortex.Workflow.Activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:s1="clr-namespace:System;assembly=System" xmlns:s2="clr-namespace:System;assembly=System.Core" xmlns:s3="clr-namespace:System;assembly=System.ServiceModel" xmlns:s4="clr-namespace:System;assembly=System.Web.Services" xmlns:sa="clr-namespace:System.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Sequence DisplayName="MasterSequence" sap:VirtualizedContainerService.HintSize="531,1700" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="varGroupName" />
+      <Variable x:TypeArguments="x:String" Name="varCategoryName" />
+      <Variable x:TypeArguments="cw:PointsOfInterest" Name="varPOIs" />
+      <Variable x:TypeArguments="x:String" Default="Workflow" Name="containerName" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <gwa1:DynamicExternal ExternalId="POISelectCategoryActivityId" sap:VirtualizedContainerService.HintSize="509,183">
+      <gwa1:DynamicExternal.OutArguments>
+        <gwa:ArgumentWrapper x:TypeArguments="OutArgument" IsRequired="False" Name="CategoryName">
+          <gwa:ArgumentWrapper.Argument>
+            <OutArgument x:TypeArguments="x:String">[varCategoryName]</OutArgument>
+          </gwa:ArgumentWrapper.Argument>
+        </gwa:ArgumentWrapper>
+        <gwa:ArgumentWrapper x:TypeArguments="OutArgument" IsRequired="False" Name="GroupName">
+          <gwa:ArgumentWrapper.Argument>
+            <OutArgument x:TypeArguments="x:String">[varGroupName]</OutArgument>
+          </gwa:ArgumentWrapper.Argument>
+        </gwa:ArgumentWrapper>
+      </gwa1:DynamicExternal.OutArguments>
+    </gwa1:DynamicExternal>
+    <gwa1:Log sap:VirtualizedContainerService.HintSize="509,59" Message="[String.Format(&quot;GetQuickSearchCategoryCache.xaml: Category Name: ({0}), Group Name: ({1})&quot;, varCategoryName, varGroupName)]" />
+    <cwa:POIGetCachedCategoryCodeActivity CategoryName="[varCategoryName]" GroupName="[varGroupName]" sap:VirtualizedContainerService.HintSize="509,22" POIs="[varPOIs]" RootFolderCached="c://temp" />
+    <If Condition="[Not(varPOIs Is Nothing)]" sap:VirtualizedContainerService.HintSize="509,990">
+      <If.Then>
+        <gwa1:Log sap:VirtualizedContainerService.HintSize="231,889" Message="GetQuickSearchCategoryCache.xaml: Cached POI exists." />
+      </If.Then>
+      <If.Else>
+        <Sequence DisplayName="POISequence" sap:VirtualizedContainerService.HintSize="253,889">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="cw:QuickSearchConfig" Name="varQuickSearchConfig" />
+            <Variable x:TypeArguments="x:String" Name="varMapServerUrl" />
+            <Variable x:TypeArguments="x:String" Name="varLayerId" />
+            <Variable x:TypeArguments="x:String" Name="varIdFieldName" />
+            <Variable x:TypeArguments="x:String" Name="varWhereClause" />
+            <Variable x:TypeArguments="x:String" Name="varFieldName" />
+            <Variable x:TypeArguments="x:String" Default="C:\Program Files (x86)\Latitude Geographics\Geocortex Essentials\Web380\REST Elements\Sites\Resources\CityOfKamloops\Workflows\quick-search-config.xml" Name="quickSearchMappingFileName" />
+          </Sequence.Variables>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <gwa1:Log sap:VirtualizedContainerService.HintSize="231,59" Message="GetQuickSearchCategoryCache.xaml: Caching File is not existing. So require to create it." />
+          <cwa:POIGetConfigFileCodeActivity sap:VirtualizedContainerService.HintSize="231,22" QuickSearchConfig="[varQuickSearchConfig]" QuickSearchMappingFileName="C:\Program Files (x86)\Latitude Geographics\Geocortex Essentials\Default\REST Elements\Sites\Resources\Workflows\quick-search-config.xml" />
+          <cwa:POIGetMapServerUrlCodeActivity GroupName="[varGroupName]" sap:VirtualizedContainerService.HintSize="231,22" LayerName="[varCategoryName]" MapserverUrl="[varMapServerUrl]" QuickSearchConfig="[varQuickSearchConfig]" />
+          <gwa1:Log sap:VirtualizedContainerService.HintSize="231,59" Message="[&quot;map service url = &quot; &amp; varMapserverUrl]" />
+          <cwa:GetLayerIdByNameCodeActivity sap:VirtualizedContainerService.HintSize="231,22" LayerId="[varLayerId]" LayerName="[varCategoryName]" MapserverUrl="[varMapServerUrl]" />
+          <gwa1:Log sap:VirtualizedContainerService.HintSize="231,59" Message="[&quot;Layer ID = &quot; &amp; varLayerId]" />
+          <cwa:POIGetQueryTaskInputsCodeActivity FieldName="[varFieldName]" GroupName="[varGroupName]" sap:VirtualizedContainerService.HintSize="231,22" IDFieldName="[varIdFieldName]" LayerName="[varCategoryName]" QuickSearchConfig="[varQuickSearchConfig]" WhereClause="[varWhereClause]" />
+          <gwa1:Log sap:VirtualizedContainerService.HintSize="231,59" Message="[&quot;(Field Name, field ID, where) = &quot; &amp; &quot;(&quot; &amp; varFieldName &amp; &quot;, &quot; &amp; varIdFieldName &amp; &quot;, &quot; &amp; varWhereClause &amp; &quot;)&quot;]" />
+          <cwa:POICacheCategoryCalloutsCodeActivity CategoryName="[varCategoryName]" FieldName="[varFieldName]" GroupName="[varGroupName]" sap:VirtualizedContainerService.HintSize="231,22" IDFieldName="[varIdFieldName]" LayerId="[varLayerId]" MapserverUrl="[varMapServerUrl]" POIs="[varPOIs]" RootFolderCached="c://temp" WhereClause="[varWhereClause]" />
+          <gwa1:Log sap:VirtualizedContainerService.HintSize="231,59" Message="GetQuickSearchCategoryCache.xaml: Done building the cache files." />
+        </Sequence>
+      </If.Else>
+    </If>
+    <gwa1:DynamicExternal ExternalId="POIDisplayCandidatePOIsActivityId" sap:VirtualizedContainerService.HintSize="509,162">
+      <gwa1:DynamicExternal.InArguments>
+        <gwa:ArgumentWrapper x:TypeArguments="InArgument" IsRequired="False" Name="POIs">
+          <gwa:ArgumentWrapper.Argument>
+            <InArgument x:TypeArguments="cw:PointsOfInterest">[varPOIs]</InArgument>
+          </gwa:ArgumentWrapper.Argument>
+        </gwa:ArgumentWrapper>
+      </gwa1:DynamicExternal.InArguments>
+    </gwa1:DynamicExternal>
+  </Sequence>
+</Activity>

@@ -1,0 +1,323 @@
+﻿<Activity mc:Ignorable="sap" x:Class="{x:Null}" sap:VirtualizedContainerService.HintSize="932,1466" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:eac="clr-namespace:ESRI.ArcGIS.Client;assembly=ESRI.ArcGIS.Client" xmlns:eacg="clr-namespace:ESRI.ArcGIS.Client.Geometry;assembly=ESRI.ArcGIS.Client" xmlns:eact="clr-namespace:ESRI.ArcGIS.Client.Tasks;assembly=ESRI.ArcGIS.Client" xmlns:esri="http://schemas.esri.com/arcgis/client/2009" xmlns:gcx="http://apis.geocortex.com/2009" xmlns:gfc="clr-namespace:Geocortex.Forms.Client;assembly=Geocortex.EssentialsWpfApi" xmlns:ggg="clr-namespace:Geocortex.Gis.Geometries;assembly=Geocortex.Gis" xmlns:gwa="clr-namespace:Geocortex.Workflow.Activities;assembly=Geocortex.Workflow" xmlns:gwa1="clr-namespace:Geocortex.Workflow.Activities;assembly=Geocortex.Workflow.Activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mv="clr-namespace:Microsoft.VisualBasic;assembly=Microsoft.VisualBasic" xmlns:mv1="clr-namespace:Microsoft.VisualBasic;assembly=System" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:mvc="clr-namespace:Microsoft.VisualBasic.CompilerServices;assembly=Microsoft.VisualBasic" xmlns:s="clr-namespace:System;assembly=System" xmlns:s1="clr-namespace:System;assembly=mscorlib" xmlns:s2="clr-namespace:System;assembly=System.Core" xmlns:s3="clr-namespace:System;assembly=System.ServiceModel" xmlns:s4="clr-namespace:System;assembly=System.DirectoryServices" xmlns:s5="clr-namespace:System;assembly=System.Web.Services" xmlns:s6="clr-namespace:System;assembly=System.AddIn" xmlns:s7="clr-namespace:System;assembly=System.Drawing.Design" xmlns:s8="clr-namespace:System;assembly=System.Numerics" xmlns:s9="clr-namespace:System;assembly=System.Design" xmlns:sa="clr-namespace:System.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:scg1="clr-namespace:System.Collections.Generic;assembly=System" xmlns:scg2="clr-namespace:System.Collections.Generic;assembly=System.Core" xmlns:scg3="clr-namespace:System.Collections.Generic;assembly=System.ServiceModel" xmlns:sw="clr-namespace:System.Windows;assembly=PresentationFramework" xmlns:sw1="clr-namespace:System.Windows;assembly=WindowsBase" xmlns:sw2="clr-namespace:System.Windows;assembly=PresentationCore" xmlns:sw3="clr-namespace:System.Windows;assembly=UIAutomationTypes" xmlns:swt="clr-namespace:System.Windows.Threading;assembly=WindowsBase" xmlns:swt1="clr-namespace:System.Windows.Threading;assembly=System.Windows.Presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Sequence sap:VirtualizedContainerService.HintSize="892,1426" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="pcl" />
+      <Variable x:TypeArguments="esri:FeatureSet" Name="legalquery_result" />
+      <Variable x:TypeArguments="x:String" Name="btnValue" />
+      <Variable x:TypeArguments="x:String" Name="lot" />
+      <Variable x:TypeArguments="x:String" Name="blk" />
+      <Variable x:TypeArguments="x:String" Name="plan" />
+      <Variable x:TypeArguments="esri:FeatureSet" Name="parcelquery_result" />
+      <Variable x:TypeArguments="scg:ICollection(esri:FeatureSet)" Name="querycollection" />
+      <Variable x:TypeArguments="x:String" Name="parcelquerystr" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Flowchart sap:VirtualizedContainerService.HintSize="870,1302">
+      <Flowchart.Variables>
+        <Variable x:TypeArguments="x:String" Name="ParcelLayerID" />
+        <Variable x:TypeArguments="x:String" Name="strMapServiceUrl" />
+      </Flowchart.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
+          <av:Size x:Key="ShapeSize">60,75</av:Size>
+          <x:Double x:Key="Width">855.52443316141762</x:Double>
+          <av:PointCollection x:Key="ConnectorLocation">300,77.5 280,77.5 280,95.5</av:PointCollection>
+          <x:Double x:Key="Height">1266</x:Double>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Flowchart.StartNode>
+        <FlowStep x:Name="__ReferenceID11">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">180,95.5</av:Point>
+              <av:Size x:Key="ShapeSize">200,49</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">280,144.5 280,155.5</av:PointCollection>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <gwa1:GetMapServiceInfo DisplayName="GetParcelsLayerInfo" sap:VirtualizedContainerService.HintSize="200,49" LayerId="[ParcelLayerID]" LayerName="Property" MapServiceId="0" MapServiceUrl="[strMapServiceUrl]" />
+          <FlowStep.Next>
+            <FlowStep x:Name="__ReferenceID0">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <av:Point x:Key="ShapeLocation">180,155.5</av:Point>
+                  <av:Size x:Key="ShapeSize">200,49</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">280,204.5 210,204.5 210,232.5</av:PointCollection>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <gwa1:DisplayForm ButtonResultValue="[btnValue]" DisplayName="Legal Description Search" FormDefinition="&lt;FormDefinition xmlns=&quot;http://schemas.datacontract.org/2004/07/Geocortex.Forms.Client&quot; xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;ContainerFormItem xmlns:a=&quot;http://schemas.datacontract.org/2004/07/Geocortex.Forms.Client.Items&quot;&gt;&lt;a:ArgumentName/&gt;&lt;a:ItemID&gt;Group1&lt;/a:ItemID&gt;&lt;a:ToolTip/&gt;&lt;a:ValidationItems xmlns:b=&quot;http://schemas.datacontract.org/2004/07/Geocortex.Forms.Client.Items.Validation&quot;/&gt;&lt;a:Description&gt;Enter the legal description of the parcel you are looking for, using % as a wildcard character where required.&lt;/a:Description&gt;&lt;a:FormItems&gt;&lt;a:FormItem i:type=&quot;a:TextBoxFormItem&quot;&gt;&lt;a:ArgumentName&gt;pcl&lt;/a:ArgumentName&gt;&lt;a:ItemID&gt;TextBox1&lt;/a:ItemID&gt;&lt;a:ToolTip&gt;Enter the parcel number&lt;/a:ToolTip&gt;&lt;a:ValidationItems xmlns:b=&quot;http://schemas.datacontract.org/2004/07/Geocortex.Forms.Client.Items.Validation&quot;/&gt;&lt;a:DefaultText/&gt;&lt;a:InputScope&gt;Default&lt;/a:InputScope&gt;&lt;a:Label&gt;&lt;a:ArgumentName/&gt;&lt;a:ItemID i:nil=&quot;true&quot;/&gt;&lt;a:ToolTip/&gt;&lt;a:ValidationItems xmlns:b=&quot;http://schemas.datacontract.org/2004/07/Geocortex.Forms.Client.Items.Validation&quot;/&gt;&lt;a:LabelForItemID&gt;TextBox1&lt;/a:LabelForItemID&gt;&lt;a:Text&gt;Parcel:&lt;/a:Text&gt;&lt;/a:Label&gt;&lt;a:TextboxWidth&gt;50&lt;/a:TextboxWidth&gt;&lt;/a:FormItem&gt;&lt;a:FormItem i:type=&quot;a:TextBoxFormItem&quot;&gt;&lt;a:ArgumentName&gt;lot&lt;/a:ArgumentName&gt;&lt;a:ItemID&gt;TextBox2&lt;/a:ItemID&gt;&lt;a:ToolTip&gt;Enter the lot number&lt;/a:ToolTip&gt;&lt;a:ValidationItems xmlns:b=&quot;http://schemas.datacontract.org/2004/07/Geocortex.Forms.Client.Items.Validation&quot;/&gt;&lt;a:DefaultText/&gt;&lt;a:InputScope&gt;Default&lt;/a:InputScope&gt;&lt;a:Label&gt;&lt;a:ArgumentName/&gt;&lt;a:ItemID/&gt;&lt;a:ToolTip/&gt;&lt;a:ValidationItems xmlns:b=&quot;http://schemas.datacontract.org/2004/07/Geocortex.Forms.Client.Items.Validation&quot;/&gt;&lt;a:LabelForItemID&gt;TextBox2&lt;/a:LabelForItemID&gt;&lt;a:Text&gt;Lot:&lt;/a:Text&gt;&lt;/a:Label&gt;&lt;a:TextboxWidth&gt;50&lt;/a:TextboxWidth&gt;&lt;/a:FormItem&gt;&lt;a:FormItem i:type=&quot;a:TextBoxFormItem&quot;&gt;&lt;a:ArgumentName&gt;blk&lt;/a:ArgumentName&gt;&lt;a:ItemID&gt;TextBox3&lt;/a:ItemID&gt;&lt;a:ToolTip&gt;Enter the block number&lt;/a:ToolTip&gt;&lt;a:ValidationItems xmlns:b=&quot;http://schemas.datacontract.org/2004/07/Geocortex.Forms.Client.Items.Validation&quot;/&gt;&lt;a:DefaultText/&gt;&lt;a:InputScope&gt;Default&lt;/a:InputScope&gt;&lt;a:Label&gt;&lt;a:ArgumentName/&gt;&lt;a:ItemID/&gt;&lt;a:ToolTip/&gt;&lt;a:ValidationItems xmlns:b=&quot;http://schemas.datacontract.org/2004/07/Geocortex.Forms.Client.Items.Validation&quot;/&gt;&lt;a:LabelForItemID&gt;TextBox3&lt;/a:LabelForItemID&gt;&lt;a:Text&gt;Block:&lt;/a:Text&gt;&lt;/a:Label&gt;&lt;a:TextboxWidth&gt;50&lt;/a:TextboxWidth&gt;&lt;/a:FormItem&gt;&lt;a:FormItem i:type=&quot;a:TextBoxFormItem&quot;&gt;&lt;a:ArgumentName&gt;plan&lt;/a:ArgumentName&gt;&lt;a:ItemID&gt;TextBox4&lt;/a:ItemID&gt;&lt;a:ToolTip&gt;Enter the plan definition document number&lt;/a:ToolTip&gt;&lt;a:ValidationItems xmlns:b=&quot;http://schemas.datacontract.org/2004/07/Geocortex.Forms.Client.Items.Validation&quot;/&gt;&lt;a:DefaultText/&gt;&lt;a:InputScope&gt;Default&lt;/a:InputScope&gt;&lt;a:Label&gt;&lt;a:ArgumentName/&gt;&lt;a:ItemID/&gt;&lt;a:ToolTip/&gt;&lt;a:ValidationItems xmlns:b=&quot;http://schemas.datacontract.org/2004/07/Geocortex.Forms.Client.Items.Validation&quot;/&gt;&lt;a:LabelForItemID&gt;TextBox4&lt;/a:LabelForItemID&gt;&lt;a:Text&gt;Plan:&lt;/a:Text&gt;&lt;/a:Label&gt;&lt;a:TextboxWidth&gt;50&lt;/a:TextboxWidth&gt;&lt;/a:FormItem&gt;&lt;/a:FormItems&gt;&lt;a:MaxWidth&gt;INF&lt;/a:MaxWidth&gt;&lt;a:Orientation&gt;Vertical&lt;/a:Orientation&gt;&lt;/ContainerFormItem&gt;&lt;KnownTypes xmlns:a=&quot;http://schemas.microsoft.com/2003/10/Serialization/Arrays&quot;&gt;&lt;a:string&gt;Geocortex.Forms.Client.Items.ContainerFormItem&lt;/a:string&gt;&lt;a:string&gt;Geocortex.Forms.Client.Items.TextBoxFormItem&lt;/a:string&gt;&lt;/KnownTypes&gt;&lt;MaxHeight&gt;800&lt;/MaxHeight&gt;&lt;MaxWidth&gt;300&lt;/MaxWidth&gt;&lt;Title&gt;Search for a property parcel by legal description&lt;/Title&gt;&lt;Version&gt;1.0&lt;/Version&gt;&lt;/FormDefinition&gt;" sap:VirtualizedContainerService.HintSize="200,49" WorkflowContainerName="DataRegion">
+                <gwa1:DisplayForm.Body>
+                  <ActivityAction x:TypeArguments="gcx:FormDefinition">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="gcx:FormDefinition" Name="form" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="RuntimeModifications" sap:VirtualizedContainerService.HintSize="200,49">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </Sequence>
+                  </ActivityAction>
+                </gwa1:DisplayForm.Body>
+                <gwa1:DisplayForm.Buttons>
+                  <gcx:FormButton CausesValidation="True" IsDefault="False" Label="Search" Value="Search" />
+                </gwa1:DisplayForm.Buttons>
+                <gwa1:DisplayForm.FormOutArguments>
+                  <gwa:ArgumentWrapper x:TypeArguments="OutArgument" IsRequired="False" Name="pcl">
+                    <gwa:ArgumentWrapper.Argument>
+                      <OutArgument x:TypeArguments="x:String">[pcl]</OutArgument>
+                    </gwa:ArgumentWrapper.Argument>
+                  </gwa:ArgumentWrapper>
+                  <gwa:ArgumentWrapper x:TypeArguments="OutArgument" IsRequired="False" Name="lot">
+                    <gwa:ArgumentWrapper.Argument>
+                      <OutArgument x:TypeArguments="x:String">[lot]</OutArgument>
+                    </gwa:ArgumentWrapper.Argument>
+                  </gwa:ArgumentWrapper>
+                  <gwa:ArgumentWrapper x:TypeArguments="OutArgument" IsRequired="False" Name="blk">
+                    <gwa:ArgumentWrapper.Argument>
+                      <OutArgument x:TypeArguments="x:String">[blk]</OutArgument>
+                    </gwa:ArgumentWrapper.Argument>
+                  </gwa:ArgumentWrapper>
+                  <gwa:ArgumentWrapper x:TypeArguments="OutArgument" IsRequired="False" Name="plan">
+                    <gwa:ArgumentWrapper.Argument>
+                      <OutArgument x:TypeArguments="x:String">[plan]</OutArgument>
+                    </gwa:ArgumentWrapper.Argument>
+                  </gwa:ArgumentWrapper>
+                </gwa1:DisplayForm.FormOutArguments>
+              </gwa1:DisplayForm>
+              <FlowStep.Next>
+                <FlowDecision x:Name="__ReferenceID2" Condition="[btnValue = &quot;Search&quot;]" sap:VirtualizedContainerService.HintSize="60,75">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <av:Point x:Key="ShapeLocation">180,232.5</av:Point>
+                      <av:Size x:Key="ShapeSize">60,75</av:Size>
+                      <av:PointCollection x:Key="FalseConnector">240,270 270,270 270,240 410,240</av:PointCollection>
+                      <av:PointCollection x:Key="TrueConnector">180,270 100,270 100,315.5</av:PointCollection>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <FlowDecision.True>
+                    <FlowStep x:Name="__ReferenceID5">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <av:Point x:Key="ShapeLocation">0,315.5</av:Point>
+                          <av:Size x:Key="ShapeSize">200,49</av:Size>
+                          <av:PointCollection x:Key="ConnectorLocation">100,364.5 100,394.5 100,429</av:PointCollection>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If Condition="[pcl like &quot;&quot;]" sap:VirtualizedContainerService.HintSize="200,49">
+                        <If.Then>
+                          <Assign sap:VirtualizedContainerService.HintSize="291,100">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[pcl]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">["%"]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </If.Then>
+                      </If>
+                      <FlowStep.Next>
+                        <FlowStep x:Name="__ReferenceID6">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <av:Point x:Key="ShapeLocation">0,429</av:Point>
+                              <av:Size x:Key="ShapeSize">200,49</av:Size>
+                              <av:PointCollection x:Key="ConnectorLocation">100,478 100,508 100,539</av:PointCollection>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <If Condition="[lot like &quot;&quot;]" sap:VirtualizedContainerService.HintSize="200,49">
+                            <If.Then>
+                              <Assign sap:VirtualizedContainerService.HintSize="291,100">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[lot]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">["%"]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                            </If.Then>
+                          </If>
+                          <FlowStep.Next>
+                            <FlowStep x:Name="__ReferenceID7">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <av:Point x:Key="ShapeLocation">0,539</av:Point>
+                                  <av:Size x:Key="ShapeSize">200,49</av:Size>
+                                  <av:PointCollection x:Key="ConnectorLocation">100,588 100,618 100,619</av:PointCollection>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <If Condition="[blk like &quot;&quot;]" sap:VirtualizedContainerService.HintSize="200,49">
+                                <If.Then>
+                                  <Assign sap:VirtualizedContainerService.HintSize="291,100">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:String">[blk]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:String">["%"]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                </If.Then>
+                              </If>
+                              <FlowStep.Next>
+                                <FlowStep x:Name="__ReferenceID8">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <av:Point x:Key="ShapeLocation">0,619</av:Point>
+                                      <av:Size x:Key="ShapeSize">200,49</av:Size>
+                                      <av:PointCollection x:Key="ConnectorLocation">100,668 100,698 230,698 230,428 430,428 430,451.5</av:PointCollection>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <If Condition="[plan like &quot;&quot;]" sap:VirtualizedContainerService.HintSize="200,49">
+                                    <If.Then>
+                                      <Assign sap:VirtualizedContainerService.HintSize="291,100">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:String">[plan]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:String">["%"]</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                    </If.Then>
+                                  </If>
+                                  <FlowStep.Next>
+                                    <FlowStep x:Name="__ReferenceID12">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <av:Point x:Key="ShapeLocation">309,451.5</av:Point>
+                                          <av:Size x:Key="ShapeSize">242,57</av:Size>
+                                          <av:PointCollection x:Key="ConnectorLocation">430,508.5 430,538.5 430,549</av:PointCollection>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <Assign sap:VirtualizedContainerService.HintSize="242,57">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:String">[parcelquerystr]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:String">["LTSA_PARCE like '" + pcl + "' AND LTSA_LOT like '" + lot + "' AND LTSA_BLOCK like '" + blk + "' AND LTSA_PLAN like '" + plan + "'"]</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                      <FlowStep.Next>
+                                        <FlowStep x:Name="__ReferenceID13">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <av:Point x:Key="ShapeLocation">330,549</av:Point>
+                                              <av:Size x:Key="ShapeSize">200,49</av:Size>
+                                              <av:PointCollection x:Key="ConnectorLocation">430,598 430,628 410,628 410,705.5</av:PointCollection>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <gwa1:Log sap:VirtualizedContainerService.HintSize="200,49" LogLevel="Debug" Message="[parcelquerystr + &quot; &quot; + strMapServiceUrl + &quot;/&quot; + parcelLayerID]" />
+                                          <FlowStep.Next>
+                                            <FlowStep x:Name="__ReferenceID10">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <av:Point x:Key="ShapeLocation">310,705.5</av:Point>
+                                                  <av:Size x:Key="ShapeSize">200,49</av:Size>
+                                                  <av:PointCollection x:Key="ConnectorLocation">410,754.5 410,784.5 185,784.5 185,892.5</av:PointCollection>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <gwa1:QueryTask DisplayName="Query Parcels" sap:VirtualizedContainerService.HintSize="200,49" OutFields="*" QueryServiceUrl="[strMapServiceUrl + &quot;/&quot; + ParcelLayerID + &quot;/query&quot;]" Results="[parcelquery_result]" ReturnGeometry="True" SpatialRelationship="esriSpatialRelIntersects" Where="[parcelquerystr]" />
+                                              <FlowStep.Next>
+                                                <FlowDecision x:Name="__ReferenceID4" Condition="[parcelquery_result.Features.Count &gt; 0]" sap:VirtualizedContainerService.HintSize="60,75">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <av:Point x:Key="ShapeLocation">140,892.5</av:Point>
+                                                      <av:Size x:Key="ShapeSize">60,75</av:Size>
+                                                      <av:PointCollection x:Key="TrueConnector">140,930 120,930 120,1075.5 150,1075.5 150,1105.5</av:PointCollection>
+                                                      <av:PointCollection x:Key="FalseConnector">200,930 489.5,930 489.5,1014</av:PointCollection>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <FlowDecision.True>
+                                                    <FlowStep x:Name="__ReferenceID9">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <av:Point x:Key="ShapeLocation">50,1105.5</av:Point>
+                                                          <av:Size x:Key="ShapeSize">200,49</av:Size>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                      <gwa1:SelectFeatures ClearCollectionFirst="True" CollectionName="Search parcels" FeatureSet="[parcelquery_result]" sap:VirtualizedContainerService.HintSize="200,49" LayerId="[ParcelLayerID]" MapServiceId="0" />
+                                                    </FlowStep>
+                                                  </FlowDecision.True>
+                                                  <FlowDecision.False>
+                                                    <FlowStep x:Name="__ReferenceID3">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <av:Point x:Key="ShapeLocation">389.5,1014</av:Point>
+                                                          <av:Size x:Key="ShapeSize">200,49</av:Size>
+                                                          <av:PointCollection x:Key="ConnectorLocation">589.5,1038.5 619.5,1038.5 619.5,180 380,180</av:PointCollection>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                      <gwa1:DisplayForm FormDefinition="&lt;FormDefinition xmlns=&quot;http://schemas.datacontract.org/2004/07/Geocortex.Forms.Client&quot; xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;ContainerFormItem xmlns:a=&quot;http://schemas.datacontract.org/2004/07/Geocortex.Forms.Client.Items&quot;&gt;&lt;a:ArgumentName/&gt;&lt;a:ItemID&gt;Group1&lt;/a:ItemID&gt;&lt;a:ToolTip/&gt;&lt;a:ValidationItems xmlns:b=&quot;http://schemas.datacontract.org/2004/07/Geocortex.Forms.Client.Items.Validation&quot;/&gt;&lt;a:Description&gt;No parcels have been found that match the specified criteria.&lt;/a:Description&gt;&lt;a:FormItems/&gt;&lt;a:MaxWidth&gt;INF&lt;/a:MaxWidth&gt;&lt;a:Orientation&gt;Vertical&lt;/a:Orientation&gt;&lt;/ContainerFormItem&gt;&lt;KnownTypes xmlns:a=&quot;http://schemas.microsoft.com/2003/10/Serialization/Arrays&quot;&gt;&lt;a:string&gt;Geocortex.Forms.Client.Items.ContainerFormItem&lt;/a:string&gt;&lt;/KnownTypes&gt;&lt;MaxHeight&gt;800&lt;/MaxHeight&gt;&lt;MaxWidth&gt;1000&lt;/MaxWidth&gt;&lt;Title&gt;No Features Found&lt;/Title&gt;&lt;Version&gt;1.0&lt;/Version&gt;&lt;/FormDefinition&gt;" sap:VirtualizedContainerService.HintSize="200,49" WorkflowContainerName="DataRegion">
+                                                        <gwa1:DisplayForm.Body>
+                                                          <ActivityAction x:TypeArguments="gcx:FormDefinition">
+                                                            <ActivityAction.Argument>
+                                                              <DelegateInArgument x:TypeArguments="gcx:FormDefinition" Name="form" />
+                                                            </ActivityAction.Argument>
+                                                            <Sequence DisplayName="RuntimeModifications" />
+                                                          </ActivityAction>
+                                                        </gwa1:DisplayForm.Body>
+                                                        <gwa1:DisplayForm.Buttons>
+                                                          <gcx:FormButton CausesValidation="False" IsDefault="False" Label="Back" Value="Back" />
+                                                        </gwa1:DisplayForm.Buttons>
+                                                      </gwa1:DisplayForm>
+                                                      <FlowStep.Next>
+                                                        <x:Reference>__ReferenceID0</x:Reference>
+                                                      </FlowStep.Next>
+                                                    </FlowStep>
+                                                  </FlowDecision.False>
+                                                </FlowDecision>
+                                              </FlowStep.Next>
+                                            </FlowStep>
+                                          </FlowStep.Next>
+                                        </FlowStep>
+                                      </FlowStep.Next>
+                                    </FlowStep>
+                                  </FlowStep.Next>
+                                </FlowStep>
+                              </FlowStep.Next>
+                            </FlowStep>
+                          </FlowStep.Next>
+                        </FlowStep>
+                      </FlowStep.Next>
+                    </FlowStep>
+                  </FlowDecision.True>
+                  <FlowDecision.False>
+                    <FlowStep x:Name="__ReferenceID1">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <av:Point x:Key="ShapeLocation">410,215.5</av:Point>
+                          <av:Size x:Key="ShapeSize">200,49</av:Size>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <gwa1:ServerPlaceHolder Description="User Cancelled" DisplayName="User Cancelled" sap:VirtualizedContainerService.HintSize="200,49" />
+                    </FlowStep>
+                  </FlowDecision.False>
+                </FlowDecision>
+              </FlowStep.Next>
+            </FlowStep>
+          </FlowStep.Next>
+        </FlowStep>
+      </Flowchart.StartNode>
+      <x:Reference>__ReferenceID0</x:Reference>
+      <x:Reference>__ReferenceID1</x:Reference>
+      <x:Reference>__ReferenceID2</x:Reference>
+      <x:Reference>__ReferenceID3</x:Reference>
+      <x:Reference>__ReferenceID4</x:Reference>
+      <x:Reference>__ReferenceID5</x:Reference>
+      <x:Reference>__ReferenceID6</x:Reference>
+      <x:Reference>__ReferenceID7</x:Reference>
+      <x:Reference>__ReferenceID8</x:Reference>
+      <x:Reference>__ReferenceID9</x:Reference>
+      <x:Reference>__ReferenceID10</x:Reference>
+      <x:Reference>__ReferenceID11</x:Reference>
+      <x:Reference>__ReferenceID12</x:Reference>
+      <x:Reference>__ReferenceID13</x:Reference>
+    </Flowchart>
+  </Sequence>
+</Activity>
