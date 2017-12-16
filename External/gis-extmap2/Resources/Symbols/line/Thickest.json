@@ -1,0 +1,111 @@
+
+[{
+	"name" : "Dashed Blue Line",
+    "color" : [76, 160, 216, 255],
+    "width" : 10,
+    "type" : "esriSLS",
+    "style" : "esriSLSDash"
+  }, {
+	"name" : "Dashed Green Line",
+    "color" : [45, 180, 89, 255],
+    "width" : 10,
+    "type" : "esriSLS",
+    "style" : "esriSLSDash"
+  }, {
+	"name" : "Dashed Purple Line",
+    "color" : [155, 130, 188, 255],
+    "width" : 10,
+    "type" : "esriSLS",
+    "style" : "esriSLSDash"
+  }, {
+	"name" : "Dashed Red Line",
+    "color" : [219, 90, 90, 255],
+    "width" : 10,
+    "type" : "esriSLS",
+    "style" : "esriSLSDash"
+  }, {
+	"name" : "Dashed Orange Line",
+    "color" : [243, 117, 33, 255],
+    "width" : 10,
+    "type" : "esriSLS",
+    "style" : "esriSLSDash"
+  }, {
+	"name" : "Dashed Yellow Line",
+    "color" : [253, 240, 104, 255],
+    "width" : 10,
+    "type" : "esriSLS",
+    "style" : "esriSLSDash"
+  }, {
+	"name" : "Solid Blue Line",
+    "color" : [76, 160, 216, 255],
+    "width" : 10,
+    "type" : "esriSLS",
+    "style" : "esriSLSSolid"
+  }, {
+	"name" : "Solid Green Line",
+    "color" : [45, 180, 89, 255],
+    "width" : 10,
+    "type" : "esriSLS",
+    "style" : "esriSLSSolid"
+  }, {
+	"name" : "Solid Purple Line",
+    "color" : [155, 130, 188, 255],
+    "width" : 10,
+    "type" : "esriSLS",
+    "style" : "esriSLSSolid"
+  }, {
+	"name" : "Solid Red Line",
+    "color" : [219, 90, 90, 255],
+    "width" : 10,
+    "type" : "esriSLS",
+    "style" : "esriSLSSolid"
+  }, {
+	"name" : "Solid Orange Line",
+    "color" : [243, 117, 33, 255],
+    "width" : 10,
+    "type" : "esriSLS",
+    "style" : "esriSLSSolid"
+  }, {
+	"name" : "Solid Yellow Line",
+    "color" : [253, 240, 104, 255],
+    "width" : 10,
+    "type" : "esriSLS",
+    "style" : "esriSLSSolid"
+  }, {
+	"name" : "Dotted Blue Line",
+    "color" : [76, 160, 216, 255],
+    "width" : 10,
+    "type" : "esriSLS",
+    "style" : "esriSLSDot"
+  }, {
+	"name" : "Dotted Green Line",
+    "color" : [45, 180, 89, 255],
+    "width" : 10,
+    "type" : "esriSLS",
+    "style" : "esriSLSDot"
+  }, {
+	"name" : "Dotted Purple Line",
+    "color" : [155, 130, 188, 255],
+    "width" : 10,
+    "type" : "esriSLS",
+    "style" : "esriSLSDot"
+  }, {
+	"name" : "Dotted Red Line",
+    "color" : [219, 90, 90, 255],
+    "width" : 10,
+    "type" : "esriSLS",
+    "style" : "esriSLSDot"
+  }, {
+	"name" : "Dotted Orange Line",
+    "color" : [243, 117, 33, 255],
+    "width" : 10,
+    "type" : "esriSLS",
+    "style" : "esriSLSDot"
+  }, {
+	"name" : "Dotted Yellow Line",
+    "color" : [253, 240, 104, 255],
+    "width" : 10,
+    "type" : "esriSLS",
+    "style" : "esriSLSDot"
+  }
+]

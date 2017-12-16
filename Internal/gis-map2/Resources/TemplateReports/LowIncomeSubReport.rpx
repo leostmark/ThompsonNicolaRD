@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ActiveReportsLayout Version="3.1" PrintWidth="7050" DocumentName="ARNet Document" ScriptLang="C#" MasterReport="0">
+  <StyleSheet>
+    <Style Name="Normal" Value="font-family: Arial; font-style: normal; text-decoration: none; font-weight: normal; font-size: 10pt; color: Black; " />
+    <Style Name="Heading1" Value="font-size: 16pt; font-weight: bold; " />
+    <Style Name="Heading2" Value="font-family: Times New Roman; font-size: 14pt; font-weight: bold; font-style: italic; " />
+    <Style Name="Heading3" Value="font-size: 13pt; font-weight: bold; " />
+  </StyleSheet>
+  <Sections>
+    <Section Type="ReportHeader" Name="reportHeader1" Height="419" BackColor="16777215">
+      <Control Type="AR.Label" Name="label2" Left="0" Top="0" Width="1728" Height="288" Caption="Project" Style="ddo-char-set: 0; font-size: 9.75pt; font-family: Tahoma; " />
+      <Control Type="AR.Label" Name="label3" Left="1872" Top="0" Width="2592" Height="288" Caption="Project Address" Style="ddo-char-set: 0; font-size: 9.75pt; font-family: Tahoma; " />
+      <Control Type="AR.Label" Name="label4" Left="4608" Top="0" Width="1296" Height="288" Caption="City" Style="ddo-char-set: 0; font-size: 9.75pt; font-family: Tahoma; " />
+      <Control Type="AR.Label" Name="label5" Left="6048" Top="0" Width="864.0001" Height="288" Caption="State ID" Style="ddo-char-set: 0; font-size: 9.75pt; font-family: Tahoma; " />
+      <Control Type="AR.Line" Name="line1" X1="90" Y1="360" X2="6912" Y2="360" />
+    </Section>
+    <Section Type="PageHeader" Name="pageHeader" Height="0" BackColor="16777215" />
+    <Section Type="Detail" Name="detail" Height="288" BackColor="16777215">
+      <Control Type="AR.Field" Name="City" DataField="City" Left="4608" Top="0" Width="1296" Height="288" Text="City" OutputFormat="MM/dd/yy" Style="ddo-char-set: 0; font-size: 9pt; font-family: Tahoma; " />
+      <Control Type="AR.Field" Name="Total" DataField="STATE_ID" Left="6048" Top="0" Width="864.0001" Height="288" Text="State ID" OutputFormat="" Style="ddo-char-set: 0; text-align: right; font-size: 9pt; font-family: Tahoma; " />
+      <Control Type="AR.Field" Name="textBox1" DataField="PROJECT" Left="0" Top="0" Width="1728" Height="288" Text="Project" Style="ddo-char-set: 0; font-size: 9pt; font-family: Tahoma; " />
+      <Control Type="AR.Field" Name="textBox2" DataField="Project Address" Left="1872" Top="0" Width="2592" Height="288" Text="Project Address" Style="ddo-char-set: 0; font-size: 9pt; font-family: Tahoma; " />
+    </Section>
+    <Section Type="PageFooter" Name="pageFooter" Height="29" BackColor="16777215" />
+    <Section Type="ReportFooter" Name="reportFooter1" Height="450" BackColor="16777215">
+      <Control Type="AR.Field" Name="textBox3" DataField="Zip Code" Left="6192" Top="0" Width="720" Height="288" Text="Total" OutputFormat="#,##0" Style="ddo-char-set: 0; text-align: right; font-weight: bold; font-size: 9.75pt; font-family: Tahoma; " SummaryType="1" SummaryFunc="2" />
+      <Control Type="AR.Label" Name="label6" Left="4032" Top="0" Width="2160" Height="288" Caption="Total # of Projects:" Style="ddo-char-set: 0; text-align: right; font-weight: bold; font-size: 9.75pt; font-family: Tahoma; " />
+    </Section>
+  </Sections>
+  <ReportComponentTray />
+  <CalculatedFields>
+    <Field Name="field1" FieldType="None" />
+  </CalculatedFields>
+  <PageSettings />
+  <Parameters />
+</ActiveReportsLayout>

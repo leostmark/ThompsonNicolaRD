@@ -1,0 +1,273 @@
+
+[{
+	"name" : "Hollow Blue Circle",
+    "color" : [76, 160, 216, 0],
+    "size" : 12,
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "type" : "esriSMS",
+    "style" : "esriSMSCircle",
+    "outline" : {
+      "color" : [76, 160, 216, 255],
+      "width" : 2,
+      "type" : "esriSLS",
+      "style" : "esriSLSSolid"
+    }
+  }, {
+	"name" : "Hollow Green Circle",
+    "color" : [45, 180, 89, 0],
+    "size" : 12,
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "type" : "esriSMS",
+    "style" : "esriSMSCircle",
+    "outline" : {
+      "color" : [45, 180, 89, 255],
+      "width" : 2,
+      "type" : "esriSLS",
+      "style" : "esriSLSSolid"
+    }
+  }, {
+	"name" : "Hollow Purple Circle",
+    "color" : [155, 130, 188, 0],
+    "size" : 12,
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "type" : "esriSMS",
+    "style" : "esriSMSCircle",
+    "outline" : {
+      "color" : [155, 130, 188, 255],
+      "width" : 2,
+      "type" : "esriSLS",
+      "style" : "esriSLSSolid"
+    }
+  }, {
+	"name" : "Hollow Red Circle",
+    "color" : [219, 90, 90, 0],
+    "size" : 12,
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "type" : "esriSMS",
+    "style" : "esriSMSCircle",
+    "outline" : {
+      "color" : [219, 90, 90, 255],
+      "width" : 2,
+      "type" : "esriSLS",
+      "style" : "esriSLSSolid"
+    }
+  }, {
+	"name" : "Hollow Orange Circle",
+    "color" : [243, 117, 33, 0],
+    "size" : 12,
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "type" : "esriSMS",
+    "style" : "esriSMSCircle",
+    "outline" : {
+      "color" : [243, 117, 33, 255],
+      "width" : 2,
+      "type" : "esriSLS",
+      "style" : "esriSLSSolid"
+    }
+  }, {
+	"name" : "Hollow Yellow Circle",
+    "color" : [253, 240, 104, 0],
+    "size" : 12,
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "type" : "esriSMS",
+    "style" : "esriSMSCircle",
+    "outline" : {
+      "color" : [253, 240, 104, 255],
+      "width" : 2,
+      "type" : "esriSLS",
+      "style" : "esriSLSSolid"
+    }
+  }, {
+	"name" : "Hollow Blue Square",
+    "color" : [76, 160, 216, 0],
+    "size" : 12,
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "type" : "esriSMS",
+    "style" : "esriSMSSquare",
+    "outline" : {
+      "color" : [76, 160, 216, 255],
+      "width" : 2,
+      "type" : "esriSLS",
+      "style" : "esriSLSSolid"
+    }
+  }, {
+	"name" : "Hollow Green Square",
+    "color" : [45, 180, 89, 0],
+    "size" : 12,
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "type" : "esriSMS",
+    "style" : "esriSMSSquare",
+    "outline" : {
+      "color" : [45, 180, 89, 255],
+      "width" : 2,
+      "type" : "esriSLS",
+      "style" : "esriSLSSolid"
+    }
+  }, {
+	"name" : "Hollow Purple Square",
+    "color" : [155, 130, 188, 0],
+    "size" : 12,
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "type" : "esriSMS",
+    "style" : "esriSMSSquare",
+    "outline" : {
+      "color" : [155, 130, 188, 255],
+      "width" : 2,
+      "type" : "esriSLS",
+      "style" : "esriSLSSolid"
+    }
+  }, {
+	"name" : "Hollow Red Square",
+    "color" : [219, 90, 90, 0],
+    "size" : 12,
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "type" : "esriSMS",
+    "style" : "esriSMSSquare",
+    "outline" : {
+      "color" : [219, 90, 90, 255],
+      "width" : 2,
+      "type" : "esriSLS",
+      "style" : "esriSLSSolid"
+    }
+  }, {
+	"name" : "Hollow Orange Square",
+    "color" : [243, 117, 33, 0],
+    "size" : 12,
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "type" : "esriSMS",
+    "style" : "esriSMSSquare",
+    "outline" : {
+      "color" : [243, 117, 33, 255],
+      "width" : 2,
+      "type" : "esriSLS",
+      "style" : "esriSLSSolid"
+    }
+  }, {
+	"name" : "Hollow Yellow Square",
+    "color" : [253, 240, 104, 0],
+    "size" : 12,
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "type" : "esriSMS",
+    "style" : "esriSMSSquare",
+    "outline" : {
+      "color" : [253, 240, 104, 255],
+      "width" : 2,
+      "type" : "esriSLS",
+      "style" : "esriSLSSolid"
+    }
+  }, {
+	"name" : "Hollow Blue Diamond",
+    "color" : [76, 160, 216, 0],
+    "size" : 12,
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "type" : "esriSMS",
+    "style" : "esriSMSDiamond",
+    "outline" : {
+      "color" : [76, 160, 216, 255],
+      "width" : 2,
+      "type" : "esriSLS",
+      "style" : "esriSLSSolid"
+    }
+  }, {
+	"name" : "Hollow Green Diamond",
+    "color" : [45, 180, 89, 0],
+    "size" : 12,
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "type" : "esriSMS",
+    "style" : "esriSMSDiamond",
+    "outline" : {
+      "color" : [45, 180, 89, 255],
+      "width" : 2,
+      "type" : "esriSLS",
+      "style" : "esriSLSSolid"
+    }
+  }, {
+	"name" : "Hollow Purple Diamond",
+    "color" : [155, 130, 188, 0],
+    "size" : 12,
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "type" : "esriSMS",
+    "style" : "esriSMSDiamond",
+    "outline" : {
+      "color" : [155, 130, 188, 255],
+      "width" : 2,
+      "type" : "esriSLS",
+      "style" : "esriSLSSolid"
+    }
+  }, {
+	"name" : "Hollow Red Diamond",
+    "color" : [219, 90, 90, 0],
+    "size" : 12,
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "type" : "esriSMS",
+    "style" : "esriSMSDiamond",
+    "outline" : {
+      "color" : [219, 90, 90, 255],
+      "width" : 2,
+      "type" : "esriSLS",
+      "style" : "esriSLSSolid"
+    }
+  }, {
+	"name" : "Hollow Orange Diamond",
+    "color" : [243, 117, 33, 0],
+    "size" : 12,
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "type" : "esriSMS",
+    "style" : "esriSMSDiamond",
+    "outline" : {
+      "color" : [243, 117, 33, 255],
+      "width" : 2,
+      "type" : "esriSLS",
+      "style" : "esriSLSSolid"
+    }
+  }, {
+	"name" : "Hollow Yellow Diamond",
+    "color" : [253, 240, 104, 0],
+    "size" : 12,
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "type" : "esriSMS",
+    "style" : "esriSMSDiamond",
+    "outline" : {
+      "color" : [253, 240, 104, 255],
+      "width" : 2,
+      "type" : "esriSLS",
+      "style" : "esriSLSSolid"
+    }
+  }
+]

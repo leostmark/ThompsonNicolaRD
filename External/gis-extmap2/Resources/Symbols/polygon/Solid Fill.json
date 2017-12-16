@@ -1,0 +1,201 @@
+
+[{
+	"name" : "Solid Blue",
+    "color" : [76, 160, 216, 255],
+    "outline" : {
+      "color" : [56, 140, 196, 255],
+      "width" : 2.25,
+      "type" : "esriSLS",
+      "style" : "esriSLSSolid"
+    },
+    "type" : "esriSFS",
+    "style" : "esriSFSSolid"
+  }, {
+	"name" : "Solid Green",
+    "color" : [45, 180, 89, 255],
+    "outline" : {
+      "color" : [25, 160, 69, 255],
+      "width" : 2.25,
+      "type" : "esriSLS",
+      "style" : "esriSLSSolid"
+    },
+    "type" : "esriSFS",
+    "style" : "esriSFSSolid"
+  }, {
+	"name" : "Solid Purple",
+    "color" : [155, 130, 188, 255],
+    "outline" : {
+      "color" : [135, 110, 168, 255],
+      "width" : 2.25,
+      "type" : "esriSLS",
+      "style" : "esriSLSSolid"
+    },
+    "type" : "esriSFS",
+    "style" : "esriSFSSolid"
+  }, {
+	"name" : "Solid Red", 
+    "color" : [219, 90, 90, 255],
+    "outline" : {
+      "color" : [199, 70, 70, 255],
+      "width" : 2.25,
+      "type" : "esriSLS",
+      "style" : "esriSLSSolid"
+    },
+    "type" : "esriSFS",
+    "style" : "esriSFSSolid"
+  }, {
+	"name" : "Solid Orange",
+    "color" : [243, 117, 33, 255],
+    "outline" : {
+      "color" : [223, 97, 13, 255],
+      "width" : 2.25,
+      "type" : "esriSLS",
+      "style" : "esriSLSSolid"
+    },
+    "type" : "esriSFS",
+    "style" : "esriSFSSolid"
+  }, {
+	"name" : "Solid Yellow",
+    "color" : [253, 240, 104, 255],
+    "outline" : {
+      "color" : [233, 220, 184, 255],
+      "width" : 2.25,
+      "type" : "esriSLS",
+      "style" : "esriSLSSolid"
+    },
+    "type" : "esriSFS",
+    "style" : "esriSFSSolid"
+  }, {
+	"name" : "Dash-Dot Solid Blue",
+    "color" : [76, 160, 216, 255],
+    "outline" : {
+      "color" : [56, 140, 196, 255],
+      "width" : 2.25,
+      "type" : "esriSLS",
+      "style" : "esriSLSDashDot"
+    },
+    "type" : "esriSFS",
+    "style" : "esriSFSSolid"
+  }, {
+	"name" : "Dash-Dot Solid Green",
+    "color" : [45, 180, 89, 255],
+    "outline" : {
+      "color" : [25, 160, 69, 255],
+      "width" : 2.25,
+      "type" : "esriSLS",
+      "style" : "esriSLSDashDot"
+    },
+    "type" : "esriSFS",
+    "style" : "esriSFSSolid"
+  }, {
+	"name" : "Dash-Dot Solid Purple",
+    "color" : [155, 130, 188, 255],
+    "outline" : {
+      "color" : [135, 110, 168, 255],
+      "width" : 2.25,
+      "type" : "esriSLS",
+      "style" : "esriSLSDashDot"
+    },
+    "type" : "esriSFS",
+    "style" : "esriSFSSolid"
+  }, {
+	"name" : "Dash-Dot Solid Red",
+    "color" : [219, 90, 90, 255],
+    "outline" : {
+      "color" : [199, 70, 70, 255],
+      "width" : 2.25,
+      "type" : "esriSLS",
+      "style" : "esriSLSDashDot"
+    },
+    "type" : "esriSFS",
+    "style" : "esriSFSSolid"
+  },{
+	"name" : "Dash-Dot Solid Orange",
+    "color" : [243, 117, 33, 255],
+    "outline" : {
+      "color" : [223, 97, 13, 255],
+      "width" : 2.25,
+      "type" : "esriSLS",
+      "style" : "esriSLSDashDot"
+    },
+    "type" : "esriSFS",
+    "style" : "esriSFSSolid"
+  }, {
+	"name" : "Dash-Dot Solid Yellow",
+    "color" : [253, 240, 104, 255],
+    "outline" : {
+      "color" : [233, 220, 84, 255],
+      "width" : 2.25,
+      "type" : "esriSLS",
+      "style" : "esriSLSDashDot"
+    },
+    "type" : "esriSFS",
+    "style" : "esriSFSSolid"
+  }, {
+	"name" : "Dotted Solid Blue",
+    "color" : [76, 160, 216, 255],
+    "outline" : {
+      "color" : [56, 140, 196, 255],
+      "width" : 2.25,
+      "type" : "esriSLS",
+      "style" : "esriSLSDot"
+    },
+    "type" : "esriSFS",
+    "style" : "esriSFSSolid"
+  }, {
+	"name" : "Dotted Solid Green",
+    "color" : [45, 180, 89, 255],
+    "outline" : {
+      "color" : [25, 160, 69, 255],
+      "width" : 2.25,
+      "type" : "esriSLS",
+      "style" : "esriSLSDot"
+    },
+    "type" : "esriSFS",
+    "style" : "esriSFSSolid"
+  }, {
+	"name" : "Dotted Solid Purple",
+    "color" : [155, 130, 188, 255],
+    "outline" : {
+      "color" : [135, 120, 168, 255],
+      "width" : 2.25,
+      "type" : "esriSLS",
+      "style" : "esriSLSDot"
+    },
+    "type" : "esriSFS",
+    "style" : "esriSFSSolid"
+  }, {
+	"name" : "Dotted Solid Red",
+    "color" : [219, 90, 90, 255],
+    "outline" : {
+      "color" : [199, 70, 70, 255],
+      "width" : 2.25,
+      "type" : "esriSLS",
+      "style" : "esriSLSDot"
+    },
+    "type" : "esriSFS",
+    "style" : "esriSFSSolid"
+  }, {
+	"name" : "Dotted Solid Orange",
+    "color" : [243, 117, 33, 255],
+    "outline" : {
+      "color" : [223, 97, 13, 255],
+      "width" : 2.25,
+      "type" : "esriSLS",
+      "style" : "esriSLSDot"
+    },
+    "type" : "esriSFS",
+    "style" : "esriSFSSolid"
+  }, {
+	"name" : "Dotted Solid Yellow",
+    "color" : [253, 240, 104, 255],
+    "outline" : {
+      "color" : [233, 220, 84, 255],
+      "width" : 2.25,
+      "type" : "esriSLS",
+      "style" : "esriSLSDot"
+    },
+    "type" : "esriSFS",
+    "style" : "esriSFSSolid"
+  }
+]

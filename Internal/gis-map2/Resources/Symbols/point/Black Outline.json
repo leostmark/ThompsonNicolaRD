@@ -1,0 +1,273 @@
+
+[{
+	"name" : "Black Outline Blue Circle",
+    "color" : [76, 160, 216, 255],
+    "size" : 12,
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "type" : "esriSMS",
+    "style" : "esriSMSCircle",
+    "outline" : {
+      "color" : [0, 0, 0, 255],
+      "width" : 2,
+      "type" : "esriSLS",
+      "style" : "esriSLSSolid"
+    }
+  }, {
+	"name" : "Black Outline Green Circle",
+    "color" : [45, 180, 89, 255],
+    "size" : 12,
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "type" : "esriSMS",
+    "style" : "esriSMSCircle",
+    "outline" : {
+      "color" : [0, 0, 0, 255],
+      "width" : 2,
+      "type" : "esriSLS",
+      "style" : "esriSLSSolid"
+    }
+  }, {
+	"name" : "Black Outline Purple Circle",
+    "color" : [155, 130, 188, 255],
+    "size" : 12,
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "type" : "esriSMS",
+    "style" : "esriSMSCircle",
+    "outline" : {
+      "color" : [0, 0, 0, 255],
+      "width" : 2,
+      "type" : "esriSLS",
+      "style" : "esriSLSSolid"
+    }
+  }, {
+	"name" : "Black Outline Red Circle",
+    "color" : [219, 90, 90, 255],
+    "size" : 12,
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "type" : "esriSMS",
+    "style" : "esriSMSCircle",
+    "outline" : {
+      "color" : [0, 0, 0, 255],
+      "width" : 2,
+      "type" : "esriSLS",
+      "style" : "esriSLSSolid"
+    }
+  }, {
+	"name" : "Black Outline Orange Circle",
+    "color" : [243, 117, 33, 255],
+    "size" : 12,
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "type" : "esriSMS",
+    "style" : "esriSMSCircle",
+    "outline" : {
+      "color" : [0, 0, 0, 255],
+      "width" : 2,
+      "type" : "esriSLS",
+      "style" : "esriSLSSolid"
+    }
+  }, {
+	"name" : "Black Outline Yellow Circle",
+    "color" : [253, 240, 104, 255],
+    "size" : 12,
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "type" : "esriSMS",
+    "style" : "esriSMSCircle",
+    "outline" : {
+      "color" : [0, 0, 0, 255],
+      "width" : 2,
+      "type" : "esriSLS",
+      "style" : "esriSLSSolid"
+    }
+  }, {
+	"name" : "Black Outline Blue Square",
+    "color" : [76, 160, 216, 255],
+    "size" : 12,
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "type" : "esriSMS",
+    "style" : "esriSMSSquare",
+    "outline" : {
+      "color" : [0, 0, 0, 255],
+      "width" : 2,
+      "type" : "esriSLS",
+      "style" : "esriSLSSolid"
+    }
+  }, {
+	"name" : "Black Outline Green Square",
+    "color" : [45, 180, 89, 255],
+    "size" : 12,
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "type" : "esriSMS",
+    "style" : "esriSMSSquare",
+    "outline" : {
+      "color" : [0, 0, 0, 255],
+      "width" : 2,
+      "type" : "esriSLS",
+      "style" : "esriSLSSolid"
+    }
+  }, {
+	"name" : "Black Outline Purple Square",
+    "color" : [155, 130, 188, 255],
+    "size" : 12,
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "type" : "esriSMS",
+    "style" : "esriSMSSquare",
+    "outline" : {
+      "color" : [0, 0, 0, 255],
+      "width" : 2,
+      "type" : "esriSLS",
+      "style" : "esriSLSSolid"
+    }
+  }, {
+	"name" : "Black Outline Red Square",
+    "color" : [219, 90, 90, 255],
+    "size" : 12,
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "type" : "esriSMS",
+    "style" : "esriSMSSquare",
+    "outline" : {
+      "color" : [0, 0, 0, 255],
+      "width" : 2,
+      "type" : "esriSLS",
+      "style" : "esriSLSSolid"
+    }
+  }, {
+	"name" : "Black Outline Orange Square",
+    "color" : [243, 117, 33, 255],
+    "size" : 12,
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "type" : "esriSMS",
+    "style" : "esriSMSSquare",
+    "outline" : {
+      "color" : [0, 0, 0, 255],
+      "width" : 2,
+      "type" : "esriSLS",
+      "style" : "esriSLSSolid"
+    }
+  }, {
+	"name" : "Black Outline Yellow Square",
+    "color" : [253, 240, 104, 255],
+    "size" : 12,
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "type" : "esriSMS",
+    "style" : "esriSMSSquare",
+    "outline" : {
+      "color" : [0, 0, 0, 255],
+      "width" : 2,
+      "type" : "esriSLS",
+      "style" : "esriSLSSolid"
+    }
+  }, {
+	"name" : "Black Outline Blue Diamond",
+    "color" : [76, 160, 216, 255],
+    "size" : 12,
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "type" : "esriSMS",
+    "style" : "esriSMSDiamond",
+    "outline" : {
+      "color" : [0, 0, 0, 255],
+      "width" : 2,
+      "type" : "esriSLS",
+      "style" : "esriSLSSolid"
+    }
+  }, {
+	"name" : "Black Outline Green Diamond",
+    "color" : [45, 180, 89, 255],
+    "size" : 12,
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "type" : "esriSMS",
+    "style" : "esriSMSDiamond",
+    "outline" : {
+      "color" : [0, 0, 0, 255],
+      "width" : 2,
+      "type" : "esriSLS",
+      "style" : "esriSLSSolid"
+    }
+  }, {
+	"name" : "Black Outline Purple Diamond",
+    "color" : [155, 130, 188, 255],
+    "size" : 12,
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "type" : "esriSMS",
+    "style" : "esriSMSDiamond",
+    "outline" : {
+      "color" : [0, 0, 0, 255],
+      "width" : 2,
+      "type" : "esriSLS",
+      "style" : "esriSLSSolid"
+    }
+  }, {
+	"name" : "Black Outline Red Diamond",
+    "color" : [219, 90, 90, 255],
+    "size" : 12,
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "type" : "esriSMS",
+    "style" : "esriSMSDiamond",
+    "outline" : {
+      "color" : [0, 0, 0, 255],
+      "width" : 2,
+      "type" : "esriSLS",
+      "style" : "esriSLSSolid"
+    }
+  }, {
+	"name" : "Black Outline Orange Diamond",
+    "color" : [243, 117, 33, 255],
+    "size" : 12,
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "type" : "esriSMS",
+    "style" : "esriSMSDiamond",
+    "outline" : {
+      "color" : [0, 0, 0, 255],
+      "width" : 2,
+      "type" : "esriSLS",
+      "style" : "esriSLSSolid"
+    }
+  }, {
+	 "name" : "Black Outline Yellow Diamond",
+    "color" : [253, 240, 104, 255],
+    "size" : 12,
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "type" : "esriSMS",
+    "style" : "esriSMSDiamond",
+    "outline" : {
+      "color" : [0, 0, 0, 255],
+      "width" : 2,
+      "type" : "esriSLS",
+      "style" : "esriSLSSolid"
+    }
+  }
+]

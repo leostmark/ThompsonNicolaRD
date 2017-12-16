@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ActiveReportsLayout Version="3.1" PrintWidth="12240" DocumentName="ARNet Document" ScriptLang="C#" MasterReport="0">
+  <StyleSheet>
+    <Style Name="Normal" Value="font-family: Arial; font-style: normal; text-decoration: none; font-weight: normal; font-size: 10pt; color: Black; ddo-char-set: 204; " />
+    <Style Name="Heading1" Value="font-size: 16pt; font-weight: bold; " />
+    <Style Name="Heading2" Value="font-family: Times New Roman; font-size: 14pt; font-weight: bold; font-style: italic; " />
+    <Style Name="Heading3" Value="font-size: 13pt; font-weight: bold; " />
+  </StyleSheet>
+  <Sections>
+    <Section Type="PageHeader" Name="PageHeader1" Height="0" BackColor="16777215" />
+    <Section Type="Detail" Name="MailingLabelDetail" Height="1440" ColumnCount="3" ColumnDirection="1" ColumnSpacing="180" BackColor="16777215" CanGrow="0">
+      <Control Type="AR.Field" Name="OwnerName" DataField="Name" Left="0" Top="0" Width="3888" Height="259.2" Text="OwnerName" Multiline="0" CanGrow="0" Style="font-weight: bold; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="Address" DataField="MailingAddressCalc" Left="0" Top="270" Width="3888" Height="259.2" Text="Address" CanGrow="0" Style="white-space: nowrap; " />
+      <Control Type="AR.Field" Name="City" DataField="CITY" Left="0" Top="518.4" Width="3888" Height="259.2" Text="City" />
+      <Control Type="AR.Field" Name="State" DataField="STATE" Left="0" Top="777.6" Width="3888" Height="259.2" Text="State" />
+      <Control Type="AR.Field" Name="ZipCode" DataField="ZIPCODE" Left="0" Top="1036.8" Width="3888" Height="259.2" Text="ZipCode" />
+    </Section>
+    <Section Type="PageFooter" Name="PageFooter1" Height="0" BackColor="16777215" />
+  </Sections>
+  <ReportComponentTray />
+  <CalculatedFields>
+    <Field Name="MailingAddressCalc" Formula="(HOUSENO.ToString().Trim() != &quot;&quot; ? HOUSENO + &quot; &quot; : &quot;&quot;) + (STDIR.ToString().Trim() != &quot;&quot; ? STDIR + &quot; &quot; : &quot;&quot;) + STNAME + &quot; &quot; + (STTYPE.ToString().Trim() != &quot;&quot; ? STTYPE : &quot;&quot;)" FieldType="String" DefaultValue=" " />
+    <Field Name="Name" Formula="OWNERFIRST + &quot; &quot; +  OWNERLASTN" FieldType="String" />
+  </CalculatedFields>
+  <PageSettings LeftMargin="261" RightMargin="261" TopMargin="720" BottomMargin="720" GutterMargin="14" Orientation="1" />
+  <Parameters />
+</ActiveReportsLayout>

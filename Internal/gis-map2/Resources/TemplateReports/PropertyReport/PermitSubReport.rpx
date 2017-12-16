@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ActiveReportsLayout Version="3.1" PrintWidth="10035" DocumentName="ARNet Document" ScriptLang="C#" MasterReport="0">
+  <StyleSheet>
+    <Style Name="Normal" Value="font-family: Arial; font-style: normal; text-decoration: none; font-weight: normal; color: Black; font-size: 7pt; ddo-char-set: 186; " />
+    <Style Name="Heading1" Value="font-size: 16pt; font-weight: bold; " />
+    <Style Name="Heading2" Value="font-family: Times New Roman; font-size: 14pt; font-weight: bold; font-style: italic; " />
+    <Style Name="Heading3" Value="font-size: 13pt; font-weight: bold; " />
+  </StyleSheet>
+  <Sections>
+    <Section Type="PageHeader" Name="PageHeader1" Height="0" BackColor="16777215" />
+    <Section Type="Detail" Name="Detail1" Height="1108" BackColor="16777215">
+      <Control Type="AR.Label" Name="AssessFolioUseLabel" Left="0" Top="0" Width="1530" Height="270" Caption="Folio:" Style="font-weight: bold; font-size: 6.75pt; " />
+      <Control Type="AR.Field" Name="Folio" DataField="folio" Left="0" Top="270" Width="1530" Height="270" Text="" OutputFormat="" />
+      <Control Type="AR.Field" Name="PermitNumber" DataField="folder_number" Left="1620" Top="270" Width="1440" Height="270" Text="" />
+      <Control Type="AR.Field" Name="CreateDate" DataField="created_date" Left="3150" Top="270" Width="1710" Height="270" Text="" OutputFormat="dd/MM/yyyy" />
+      <Control Type="AR.Label" Name="PermitLabel" Left="1620" Top="0" Width="1440" Height="285" Caption="File Number:" Style="font-weight: bold; font-size: 6.75pt; " />
+      <Control Type="AR.Label" Name="ApplicationDateLabel" Left="3150" Top="0" Width="1710" Height="270" Caption="Application Date:" Style="font-weight: bold; font-size: 6.75pt; " />
+      <Control Type="AR.Label" Name="IssueDateLabel" Left="4950" Top="0" Width="1710" Height="270" Caption="Issued Date:" Style="font-weight: bold; font-size: 6.75pt; " />
+      <Control Type="AR.Label" Name="ComletionLabel" Left="6750" Top="0" Width="1710" Height="270" Caption="Completion Date:" Style="font-weight: bold; font-size: 6.75pt; " />
+      <Control Type="AR.Field" Name="IssueDate" DataField="issued_date" Left="4950" Top="270" Width="1710" Height="270" Text="" OutputFormat="dd/MM/yyyy" />
+      <Control Type="AR.Field" Name="CompletedDate" DataField="completed_date" Left="6750" Top="270" Width="1710" Height="270" Text="" OutputFormat="dd/MM/yyyy" />
+      <Control Type="AR.Label" Name="PurposeLabel" Left="1620" Top="540" Width="8370" Height="270" Caption="Type of Construction:" Style="font-weight: bold; font-size: 6.75pt; " />
+      <Control Type="AR.Field" Name="Purpose" DataField="purpose" Left="1620" Top="810" Width="8370" Height="270" Text="" />
+    </Section>
+    <Section Type="PageFooter" Name="PageFooter1" Height="0" BackColor="16777215" />
+  </Sections>
+  <ReportComponentTray />
+  <PageSettings LeftMargin="0" RightMargin="0" TopMargin="0" BottomMargin="0" />
+  <Parameters />
+</ActiveReportsLayout>

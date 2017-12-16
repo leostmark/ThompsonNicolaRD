@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ActiveReportsLayout Version="3.1" PrintWidth="9300" DocumentName="ARNet Document" ScriptLang="C#" MasterReport="0">
+  <StyleSheet>
+    <Style Name="Normal" Value="font-family: Arial; font-style: normal; text-decoration: none; font-weight: normal; font-size: 10pt; color: Black; " />
+    <Style Name="Heading1" Value="font-size: 16pt; font-weight: bold; " />
+    <Style Name="Heading2" Value="font-family: Times New Roman; font-size: 14pt; font-weight: bold; font-style: italic; " />
+    <Style Name="Heading3" Value="font-size: 13pt; font-weight: bold; " />
+  </StyleSheet>
+  <Sections>
+    <Section Type="PageHeader" Name="PageHeader1" Height="360" BackColor="16777215" />
+    <Section Type="Detail" Name="Detail1" Height="1125" ColumnCount="2" BackColor="16777215">
+      <Control Type="AR.Field" Name="TextBox1" DataField="PrimaryId" Left="360" Top="90" Width="1080" Height="270" Text="PrimaryId" Style="ddo-char-set: 0; font-size: 8.25pt; " />
+      <Control Type="AR.Field" Name="TextBox2" DataField="LocationInfo" Left="810" Top="90" Width="2880" Height="450" Text="Location Info" CanShrink="1" Style="ddo-char-set: 0; font-size: 6.75pt; " />
+    </Section>
+    <Section Type="PageFooter" Name="PageFooter1" Height="360" BackColor="16777215" />
+  </Sections>
+  <ReportComponentTray />
+  <DataSources DataMember="LocationSubReportDataTable" />
+  <PageSettings />
+  <Parameters />
+</ActiveReportsLayout>

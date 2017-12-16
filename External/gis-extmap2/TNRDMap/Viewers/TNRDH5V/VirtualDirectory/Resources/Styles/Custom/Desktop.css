@@ -1,0 +1,6 @@
+﻿/* Put custom desktop styling in this file. Put custom images in the Custom subfolder of the Images directory. */
+/* Result Pane Title - Teal */
+.panel-header h2 {
+color: #0054A4;
+font-weight: bold;
+}

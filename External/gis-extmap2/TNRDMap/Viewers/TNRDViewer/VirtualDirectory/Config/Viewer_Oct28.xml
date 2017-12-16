@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Configuration Version="1.7">
+  <Globals xmlns="http://www.geocortex.com/Viewer/Configuration/PreProcessor">
+    <ApplicationTitle Value="                                    THOMPSON-NICOLA REGIONAL DISTRICT     Interactive Mapping" />
+    <AttributeEditing Value="False" />
+    <BannerBackgroundImageUri Value="{ViewerConfigUri}../Resources/Images/BackgroundRepeat.png" />
+    <BannerLeftImageUri Value="{ViewerConfigUri}../Resources/Images/myRegionView_Small_RGB_png.png" />
+    <BannerRightImageUri Value="" />
+    <BannerShow Value="True" />
+    <BaseMapControlShow Value="True" />
+    <BookmarksShow Value="True" />
+    <BrowserTitle Value="Thompson-Nicola Regional District Web Map Viewer" />
+    <BufferingProjectionWkid Value="" />
+    <BufferingProjectionWkt Value="" />
+    <DataFrameDefaultWidth Value="360" />
+    <DataFrameMaxWidth Value="650" />
+    <DataFrameMinWidth Value="360" />
+    <DataFrameOpenByDefault Value="True" />
+    <DataFramePosition Value="Left" />
+    <DataFrameResizable Value="True" />
+    <DefaultFeatureDetailsTab Value="Attributes" />
+    <GeometryServiceUri Value="http://tnrdmap.tnrd.ca/arcgis/rest/services/Utilities/Geometry/GeometryServer" />
+    <IdentifyIncludeGraphicsLayers Value="true" />
+    <IdentifyPixelTolerance Value="2" />
+    <IdentifyVisibleAtCurrentScaleOnly Value="False" />
+    <IdentifyVisibleLayersOnly Value="False" />
+    <ManagedViewerDefaultsXml Value="" />
+    <MapTipsDisplayOnClick Value="False" />
+    <MapTipsEnabled Value="False" />
+    <MapTipsIgnorePixelToleranceForPolygons Value="False" />
+    <MeasurementAreaUnitDefault Value="squareMeters" />
+    <MeasurementOverrideUnits Value="" />
+    <MeasurementPredictionEnabled Value="True" />
+    <MeasurementProjectionUnits Value="" />
+    <MeasurementProjectionWkid Value="3005" />
+    <MouseCoordinatesShow Value="True" />
+    <OptimizerDataRelayUri Value="http://tnrdmap.tnrd.ca/Geocortex/Optimizer/Rest/DataRelay/LogData.ashx?f=json" />
+    <OptimizerEnabled Value="True" />
+    <OptimizerUserName Value="DefaultUser" />
+    <OverviewMapExtentScaleFactor Value="3" />
+    <OverviewMapMode Value="Dynamic" />
+    <OverviewMapOpenByDefault Value="False" />
+    <OverviewMapShow Value="True" />
+    <ProgressIndicatorShow Value="True" />
+    <ProjectCanSaveToClient Value="True" />
+    <ProjectCanSaveToServer Value="False" />
+    <ProjectCategory Value="Common" />
+    <ResultsViewMode Value="List" />
+    <ResultsViewRegion Value="DataRegion" />
+    <ScaleBarShow Value="True" />
+    <ScaleSliderShow Value="True" />
+    <ShellFlowDirection Value="LeftToRight" />
+    <SiteUri Value="{ViewerConfigUri}../../../../../TNRDMap" />
+    <ToolbarOpenByDefault Value="True" />
+    <MeasurementUnitDefault Value="meters" />
+    <Insert__Menus-IWantTo-Items>
+      <Item Command="LaunchQuickSearchViewCommand" Description="Find a location or facility" Text="Create Points of Interest Map" ImageUri="/Resources/Images/QuickSearch.png" />
+    </Insert__Menus-IWantTo-Items>
+  </Globals>
+  <ExternalConfigs>
+    <ExternalConfig Uri="../../../../../../Templates/SilverlightViewer_2_2/VirtualDirectory/Viewer.Defaults.xml" />
+  </ExternalConfigs>
+  <Libraries Default="Core">
+    <Library Id="KamloopsTempest" AssemblyName="Geocortex.Projects.CoLG.Tempest.SilverlightViewer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=46831d89f96ec1e7" ClassNameTemplate="Geocortex.Projects.CoLG.TempestConnector.Modules.{_ModuleName}.{_ModuleName}{_Type}" Uri="http://gis-extmap1.admin.tnrd.bc.ca/Geocortex/Essentials/REST/sites/TNRDMap/viewers/TNRDViewer/VirtualDirectory/ClientBin/Geocortex.Projects.CoLG.Tempest.SilverlightViewer.xap" />
+    <Library Id="TNRD" Uri="http://tnrdmap.tnrd.ca/Geocortex/Essentials/REST/sites/TNRDMap/viewers/TNRDViewer/VirtualDirectory/ClientBin/Geocortex.Services.CityOfKamloops.Silverlight.Modules.xap" AssemblyName="Geocortex.Services.CityOfKamloops.Silverlight.Modules, Version={_Version}, Culture=neutral, PublicKeyToken=null" ClassNameTemplate="Geocortex.Services.CityOfKamloops.Silverlight.Modules.{_ModuleName}.{_ModuleName}{_Type}" />
+    <Library Id="QuickSearchId" Uri="http://tnrdmap.tnrd.ca/Geocortex/Essentials/REST/sites/TNRDMap/viewers/TNRDViewer/VirtualDirectory/ClientBin/Geocortex.Projects.CityOfKamloops.SilverlightViewer.xap" AssemblyName="Geocortex.Projects.CityOfKamloops.SilverlightViewer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=46831d89f96ec1e7" ClassNameTemplate="CityOfKamloops.SilverlightViewer.Modules.{_ModuleName}.{_ModuleName}{_Type}" />
+  </Libraries>
+  <Modules>
+    <QuickSearch LibraryId="QuickSearchId">
+      <Configuration>
+        <GeometryService url="http://sampleserver3.arcgisonline.com/ArcGIS/rest/services/Geometry/GeometryServer" />
+        <DownloadPopupInstructions>The report has successfully completed. Please click "Download" to view the Quick Search Report</DownloadPopupInstructions>
+      </Configuration>
+      <Views>
+        <View Id="QuickSearchView" Region="DataRegion">
+          <Configuration>
+            <CalloutSymbol BorderBrushColor="#0000FF" ForegroundColor="#FFFFFF" FillColor="#0000FF" FillOpacity="0.90" />
+            <OutlineSymbol Color="#0000FF" Width="1" />
+          </Configuration>
+        </View>
+      </Views>
+    </QuickSearch>
+    <!--
+    <Tempest LibraryId="KamloopsTempest">
+      <Configuration>
+        <TempestSessionIdName>tempest_wi_sessionid</TempestSessionIdName>
+-->
+    <!-- Buffer is in map units-->
+    <!--
+        <TempestSelectionBuffer>50</TempestSelectionBuffer>
+        <TempestToEssentialsWorkflowId>TempestToEssentials</TempestToEssentialsWorkflowId>
+        <EssentialsToTempestWorkflowId>EssentialsToTempest</EssentialsToTempestWorkflowId>
+        <TempestApplicationName>Geocortex Silverlight Tempest Connector</TempestApplicationName>
+        <BaseMapUrl>http://gis-extmap1.admin.tnrd.bc.ca:6080/arcgis/rest/services/ReportSource/MapServer</BaseMapUrl>
+      </Configuration>
+    </Tempest>
+-->
+    <VisibleLayers LibraryId="TNRD">
+    </VisibleLayers>
+    <Toolbar>
+      <Views>
+        <View Id="ToolbarView" Region="ToolbarRegion" Visible="false" AssociatedHelpTopicKey="Toolbar" />
+      </Views>
+      <Configuration>
+        <Toolbar StickyTools="True">
+          {Insert__Toolbar-Tabs}
+        <Tab DisplayName="Getting Around"><Group DisplayName="Navigation"><Tool Name="Pan" DisplayName="Pan" DrawMode="None" ImageUri="/Resources/Images/Pan.png" ToolTip="Pan" HelpText="Drag the map around to pan." /><Tool Name="ZoomIn" DisplayName="Zoom In" DrawMode="Rectangle" Command="ZoomInToExtent" ImageUri="/Resources/Images/ZoomIn.png" ToolTip="Zoom in" HelpText="Drag a rectangle or click the map to zoom in. A large rectangle zooms less. A small rectangle zooms more. To reverse zoom, hold CTRL." /><Tool Name="ZoomOut" DisplayName="Zoom Out" DrawMode="Rectangle" Command="ZoomOutToExtent" ImageUri="/Resources/Images/ZoomOut.png" ToolTip="Zoom out" HelpText="Drag a rectangle or click the map to zoom out. A large rectangle zooms less. A small rectangle zooms more. To reverse zoom, hold CTRL." /><Button Name="Full Extent" Command="ZoomToFullExtent" ImageUri="/Resources/Images/ZoomFullExtent.png" ToolTip="Zoom to full extent" /><Button Name="Previous Extent" Command="ZoomToPreviousExtent" ImageUri="/Resources/Images/ExtentPrevious.png" ToolTip="Zoom to previous extent" /><Button Name="Next Extent" Command="ZoomToNextExtent" ImageUri="/Resources/Images/ExtentNext.png" ToolTip="Zoom to next extent" /></Group><Group DisplayName="Map Layers"><Button Name="Show Layers" Command="SwitchToLayerView" ImageUri="/Resources/Images/Layers.png" ToolTip="Show layer list" /></Group><Group DisplayName="Location Info"><Tool Name="PointIdentify" DisplayName="What's Here?" ToolTip="Locate what is at this point" DrawMode="Point" Command="Identify" ImageUri="{ViewerConfigUri}../Resources/Images/Location-icon.png" HelpText="Click on the map to identify features at that point. Select from the Layers drop-down list to change which layers display." /><Tool ImageUri="/Resources/Images/IdentifyPolygon.png" DisplayName="What's in this Area?" ToolTip="Locate information about this area" Name="IdentifyPolygon" Command="Identify" DrawMode="Polygon" /></Group><Group DisplayName="Reports"><Button Name="Property Report" Command="RunWorkflowById" ImageUri="/Resources/Images/Reports.png" ToolTip="Create a property report" CommandParameter="PropertyReport" /></Group><Group DisplayName="Printing"><Button Name="Print Map" Command="PrintMap" ImageUri="/Resources/Images/Print.png" ToolTip="Print a map" /><Button Name="Export Map" Command="ShowExportMapDialog" ImageUri="/Resources/Images/ExportMapImage.png" ToolTip="Export a map image" /></Group><Group DisplayName="External Mapping"><Button ImageUri="{ViewerConfigUri}../Resources/Images/X_in_box_blue.png" DisplayName="TNRD Voting Location Map" ToolTip="View Voting Locations in the TNRD" Name="TNRD Voting Locations" Command="OpenWebPage" CommandParameter="http://tnrd.maps.arcgis.com/apps/PublicInformation/index.html?appid=983f398906f24ff4bb60c434fda65b75" /><Button DisplayName="Google Maps™" Command="OpenWebPage" CommandParameter="../WMI/GoogleMaps.html" ImageUri="{ViewerConfigUri}../Resources/Images/GoogleMaps.jpg" ToolTip="View the current location in Google Maps / Street View" Name="Google Maps" /><Button DisplayName="Kamloops Maps" Command="OpenWebPage" CommandParameter="http://geoprodsvr.kamloops.ca/SilverlightViewer/Viewer.html?ViewerConfig=http://geoprodsvr.kamloops.ca/Geocortex/Essentials/REST/sites/KamloopsWebMap/viewers/KamloopsWebMapGVS/virtualdirectory/Config/Viewer.xml&amp;disclaimer=yes" ImageUri="{ViewerConfigUri}../Resources/Images/kamloops-maps-logo.jpg" ToolTip="View Kamloops CityMap" Name="Kamloops CityMap" /><Button ImageUri="{ViewerConfigUri}../Resources/Images/DataBC_logo.JPG" DisplayName="BC Maps" ToolTip="View iMapBC" Name="iMapBC" Command="OpenWebPage" CommandParameter="http://maps.gov.bc.ca/ess/sv/imapbc/" /></Group><Group DisplayName="Map Scales &amp; Bookmarks"><Region RegionName="AdvancedControlsRegion" /></Group></Tab><Tab DisplayName="Search &amp; Query"><Group DisplayName="Search For Parcel"><Button ImageUri="{ViewerConfigUri}../Resources/Images/SearchAddress.png" DisplayName="Search by Address" ToolTip="Search for parcel by address" Name="SearchParcelByAddress" Command="RunWorkflowById" CommandParameter="SearchParcelByAddress" /><Button ImageUri="{ViewerConfigUri}../Resources/Images/ParcelByID.png" DisplayName="Search by PID" ToolTip="Search for parcel by Land Titles property identifier (PID)" Name="SearchParcelByPid" Command="RunWorkflowById" CommandParameter="SearchParcelByPid" /><Button ImageUri="{ViewerConfigUri}../Resources/Images/ParcelByRoll.png" DisplayName="Search by Folio" ToolTip="Search for parcel by BC Assessment Authority jurisdiction and roll number" Name="SearchParcelByFolio" Command="RunWorkflowById" CommandParameter="SearchParcelByFolio" /><Button DisplayName="Search by Legal Description" ToolTip="Search for parcel by legal description" Name="SearchLegal" Command="RunWorkflowById" CommandParameter="SearchLegal" ImageUri="{ViewerConfigUri}../Resources/Images/ParcelLegal.png" /></Group><Group DisplayName="Other Search Tools"><Button DisplayName="Search by Road Name" ToolTip="Search for a road by name" Name="SearchRoad" Command="RunWorkflowById" CommandParameter="SearchRoad" ImageUri="{ViewerConfigUri}../Resources/Images/road3.png" /><Button ImageUri="{ViewerConfigUri}../Resources/Images/place.png" DisplayName="Search by Place Name" ToolTip="Search for a place by name" Name="SearchPlace" Command="RunWorkflowById" CommandParameter="SearchPlace" /><Button ImageUri="{ViewerConfigUri}../Resources/Images/QuickSearch.png" DisplayName="Find a Facility or Point of Interest" ToolTip="Find a facility or point of interest" Name="Find a Facility / Point of Interest" Command="LaunchQuickSearchViewCommand" /></Group><Group DisplayName="Query Data"><Button Name="Simple Query" Command="ActivateView" CommandParameter="SimpleQueryBuilderView" ImageUri="/Resources/Images/QueryBuilderSimple.png" ToolTip="Show simple query builder" /><Button Name="Advanced Query" Command="ActivateView" CommandParameter="QueryBuilderView" ImageUri="/Resources/Images/QueryBuilderAdvanced.png" ToolTip="Show advanced query builder" /></Group><Group DisplayName="Location Information"><Region RegionName="IdentifyRegion" /></Group><Group DisplayName="Add Data"><Button DisplayName="Add Shapefile" Command="OpenShapefileDialog" ImageUri="/Resources/Images/FileSHP.png" ToolTip="Open a shapefile and add it to the map" /><Button DisplayName="Add CSV file" Command="OpenCsvDialog" ImageUri="/Resources/Images/FileCSV.png" ToolTip="Open a CSV file and add it to the map" /></Group><Group DisplayName="Export Data"><Button ImageUri="{ViewerConfigUri}../Resources/Images/ExtractLayers.png" DisplayName="Extract Layers" ToolTip="Extract and download map layers" Name="ExtractLayers" Command="RunWorkflowById" CommandParameter="ExtractLayers" /></Group></Tab><Tab DisplayName="Draw &amp; Measure"><Group DisplayName="Drawing Tools"><Region RegionName="DrawingToolsRegion" /></Group><Group DisplayName="Measurement Tools"><Region RegionName="MeasurementToolsRegion" /></Group><Group DisplayName="Coordinate Tools"><Region RegionName="CoordinateToolsRegion" /></Group></Tab><Tab DisplayName="Help"><Group DisplayName="Help"><Button Name="LaunchDefaultHelp" DisplayName="Help" Command="ShowHelpTopic" CommandParameter="" ImageUri="/Resources/Images/Help.png" ToolTip="Show help topics" /><Button Name="ClickForHelp" DisplayName="What's This?" Command="InvokeClickHelp" ImageUri="/Resources/Images/HelpClickCursor.png" ToolTip="Enable click help" /></Group></Tab></Toolbar>
+      </Configuration>
+    </Toolbar>
+    <IWantToMenu>
+      <Views>
+        <View Region="TopLeftMapRegion" Type="Geocortex.EssentialsSilverlightViewer.CoreModules.IWantToMenu.MenuFloatingView" AssociatedHelpTopicKey="IWantToMenu" />
+      </Views>
+      <Configuration>
+        <MenuRef MenuId="IWantTo" />
+        <Menus>
+          <Menu Id="IWantTo" Title="I want to...">
+            <Items>
+              <Item Command="OpenWebPage" CommandParameter="http://tnrd.maps.arcgis.com/apps/PublicInformation/index.html?appid=983f398906f24ff4bb60c434fda65b75" Description="Voting Locations in the TNRD" ImageUri="{ViewerConfigUri}../Resources/Images/X_in_box_blue.png" Text="*New* Voting Locations in the TNRD" />
+              <Item Command="RunWorkflowById" CommandParameter="PropertyReport" ImageUri="{ViewerConfigUri}../Resources/Images/Reports.png" Text="Create property report" />
+              <Item Text="Create a printable map" Command="PrintMap" ImageUri="/Resources/Images/Print.png" Description="Create a printable map." />
+              <Item Command="RunWorkflowById" CommandParameter="SearchParcelByAddress" ImageUri="{ViewerConfigUri}../Resources/Images/SearchAddress.png" Text="Search by Address" />
+              <Item Command="RunWorkflowById" CommandParameter="SearchParcelByPid" ImageUri="{ViewerConfigUri}../Resources/Images/ParcelByID.png" Text="Search by PID (Land Titles)" Description="Search for parcel by Land Titles property identifier (PID)" />
+              <Item Command="RunWorkflowById" CommandParameter="SearchParcelByFolio" ImageUri="{ViewerConfigUri}../Resources/Images/ParcelByID.png" Text="Search by Folio (BC Assessment)" />
+              <Item Command="RunWorkflowById" CommandParameter="SearchLegal" Description="Search for a property parcel by its legal description" ImageUri="{ViewerConfigUri}../Resources/Images/ParcelLegal.png" Text="Search by Legal Description" />
+              <Item Command="RunWorkflowById" CommandParameter="SearchRoad" Description="Search for a road by name" ImageUri="{ViewerConfigUri}../Resources/Images/road3.png" Text="Search by Road Name" />
+              <Item Command="RunWorkflowById" CommandParameter="SearchPlace" Description="Search for a place by name" ImageUri="{ViewerConfigUri}../Resources/Images/place.png" Text="Search by Place Name" />
+              <Item Command="LaunchQuickSearchViewCommand" Description="Find a location or facility" Text="Find a Facility  / Point of Interest" ImageUri="{ViewerConfigUri}../Resources/Images/QuickSearch.png" />
+              <Item Text="Turn map data on/off" ImageUri="/Resources/Images/Layers.png" Description="Open the layer list to modify layer visibilities.">
+                <Batch>
+                  <BatchItem Command="SwitchToLayerView" />
+                  <BatchItem Command="OpenDataFrame" />
+                </Batch>
+              </Item>
+              <Item Text="Draw on the map" ImageUri="/Resources/Images/MarkupFreehand.png" Description="Draw freehand on the map surface.">
+                <Batch>
+                  <BatchItem Command="ShowAdvancedTools" />
+                  <BatchItem Command="SetCurrentTab" CommandParameter="Draw &amp; Measure" />
+                  <BatchItem Command="ActivateTool" CommandParameter="MarkupFreehand" />
+                </Batch>
+              </Item>
+              <Item Text="Measure distance" ImageUri="/Resources/Images/MeasureDistance.png" Description="Measure length using a polyline tool.">
+                <Batch>
+                  <BatchItem Command="ShowAdvancedTools" />
+                  <BatchItem Command="SetCurrentTab" CommandParameter="Draw &amp; Measure" />
+                  <BatchItem Command="ActivateTool" CommandParameter="MeasureDistance" />
+                </Batch>
+              </Item>
+            </Items>
+          </Menu>
+        </Menus>
+      </Configuration>
+    </IWantToMenu>
+    <Workflow>
+      <Configuration>
+        <RunAtStartup>
+          <!--<Workflow Id="YourWorkflowId" />-->
+		{Insert__Workflow_RunAtStartup_Workflows}
+        <!--<Workflow Id="TempestToEssentials" />--><Workflow Id="StartupDisclaimer" /></RunAtStartup>
+        <WorkflowContainers DefaultTitle="Workflow" DefaultRegion="DataRegion" DefaultIconUri="/Resources/Images/Form.png">
+          <WorkflowContainer Name="Default" Title="Workflow" RegionName="DataRegion" IconUri="/Resources/Images/Form.png" />
+          <WorkflowContainer Name="Extract" Title="Extract Data" RegionName="DataRegion" IconUri="/Resources/Images/LayersExtract.png" />
+          <WorkflowContainer Name="ModalWindow" Title="Workflow" RegionName="ModalWindowRegion" />
+          <WorkflowContainer Name="ModalWindowNoCloseButton" Title="Workflow" RegionName="ModalWindowNoCloseButtonRegion" />
+        </WorkflowContainers>
+      </Configuration>
+    </Workflow>
+    <LayerList>
+      <Views>
+        <View Region="DataRegion" Id="LayerListView" Visible="false" AssociatedHelpTopicKey="LayerList">
+          <Configuration>
+            <LayerThemes Visible="true" />
+            <Filter Location="bottom" />
+            <LayerList ExpandFolders="true" ExpandMapServices="true" ExpandGroupLayers="true" IncludeLegendSwatches="false" AutoExpandSwatches="false" DisableAutoExpandSwatchThreshold="0" FilterLegendSwatchesInLayerList="true" ToggleParentOnCheck="false" ToggleChildrenOnCheck="false" ToggleChildrenOnUncheck="false" ToggleRecursively="false" ShowTransparencySlider="true" />
+            <Legend VisibleLayersOnly="true" VisibleAtCurrentScaleOnly="true" VisibleWithinCurrentExtentOnly="false" LegendSwatchSize="20" />
+            <LayerTypeIcons>
+              <LayerTypeIcon LayerType="Group" ImageUri="/Geocortex.EssentialsSilverlightViewer.Infrastructure;component/Resources/Images/GroupLayer.png" />
+              <LayerTypeIcon LayerType="Line" ImageUri="/Geocortex.EssentialsSilverlightViewer.Infrastructure;component/Resources/Images/Line.png" />
+              <LayerTypeIcon LayerType="Polygon" ImageUri="/Geocortex.EssentialsSilverlightViewer.Infrastructure;component/Resources/Images/Polygon.png" />
+              <LayerTypeIcon LayerType="Point" ImageUri="/Geocortex.EssentialsSilverlightViewer.Infrastructure;component/Resources/Images/Point.png" />
+              <LayerTypeIcon LayerType="Graphics" ImageUri="/Geocortex.EssentialsSilverlightViewer.Infrastructure;component/Resources/Images/GraphicsLayer.png" />
+              <LayerTypeIcon LayerType="None" ImageUri="" />
+            </LayerTypeIcons>
+            <Menus>
+              <Menu Id="LayerActions">
+                <Items>
+                  <Item Text="Zoom To Visible Scale">
+                    <Batch>
+                      <BatchItem Command="ZoomToLayerVisible" />
+                      <BatchItem Command="ZoomToEsriLayerVisible" />
+                    </Batch>
+                  </Item>
+                  <Item Text="Zoom To Extent" Command="ZoomToExtent" />
+                  <Item Text="Symbolize Layer" Command="ShowSymbolizeDynamicLayer" HideWhenDisabled="true" />
+                  <Item Text="Symbolize Layer" Command="ShowSymbolizeGraphicsLayerDialog" HideWhenDisabled="true" />
+                  <Item Text="Copy Layer" Command="DuplicateLayer" HideWhenDisabled="true" />
+                  <Item Text="Remove Layer" Command="RemoveDuplicatedLayer" HideWhenDisabled="true" />
+                  <Item Text="Remove Layer" Command="RemoveEsriLayer" HideWhenDisabled="true" />
+                  <Item Text="Remove Layer" Command="RemoveEssentialsLayer" HideWhenDisabled="true" />
+                  <Item Text="Rename Layer" Command="ShowLayerOptions" HideWhenDisabled="true" />
+                  <Item Text="Reset Symbolization" Command="ResetCustomRendererCommand" HideWhenDisabled="true" />
+                  <Item Text="List Items" Command="ListFeatureSet" HideWhenDisabled="true" />
+                  <Item Text="Update" Command="UpdateLayer" HideWhenDisabled="true" />
+                </Items>
+              </Menu>
+              <Menu Id="LayerListSelectionActionsMenu">
+                <Items>
+                  <Item Text="List Features">
+                    <Batch>
+                      <BatchItem Command="SetActiveFeatureSet" />
+                      <BatchItem Command="SwitchToResultsView" />
+                    </Batch>
+                  </Item>
+                  <Item IsSeparator="true" />
+                  <Item Text="Zoom To All" Command="ZoomToAllFeatures" />
+                  <Item Text="Highlight Features" Command="HighlightFSMFeatureSet" HideWhenDisabled="true" />
+                  <Item Text="Unhighlight Features" Command="UnhighlightFSMFeatureSet" HideWhenDisabled="true" />
+                  <Item Text="Buffer Features">
+                    <Batch>
+                      <BatchItem Command="ZoomToAllFeatures" />
+                      <BatchItem Command="IdentifyBufferedFeatureSet" />
+                    </Batch>
+                  </Item>
+                  <Item IsSeparator="true" />
+                  <Item Text="Generate Report" Command="RunFeaturesReport" />
+                  <Item Text="Export To CSV" Command="ExportFeaturesToCsvWithExtras" />
+                  <Item IsSeparator="true" />
+                  <Item Text="Remove From Selected" Command="RemoveFeatureSetFromSelection" HideWhenDisabled="true" />
+                </Items>
+              </Menu>
+            </Menus>
+            <LayerSelectionMenuRef MenuId="LayerListSelectionActionsMenu" />
+            <DialogSelectionMenuRef MenuId="LayerListSelectionActionsMenu" />
+          </Configuration>
+        </View>
+      </Views>
+    </LayerList>
+    <Map>
+      <Views>
+        <View Region="MapRegion" AssociatedHelpTopicKey="MapNavigation" />
+      </Views>
+      <Configuration GeometryServiceUri="{GeometryServiceUri}" SnapToLevels="false" PanDuration="0.5" ZoomDuration="0.5" DefaultPointFeatureZoomScales="5000" MinimumResolution="" MaximumResolution="">
+        <Menus>
+          <Menu Id="MapMenu">
+            <Items>
+              <Item Text="Center Map Here" Command="PanToPoint" />
+              <Item Text="What's Here" Command="Identify" />
+              <Item Text="Draw a Point" Command="AddMarkup" />
+              <Item Text="Add Some Text" Command="AddTextMarkup" />
+              <Item Text="Export a Map Image" Command="ShowExportMapDialog" />
+              <Item Text="Open Google Street View Here">
+                <Batch>
+                  <BatchItem Command="PanToPoint" />
+                  <BatchItem Command="OpenWebPage" CommandParameter="../WMI/GoogleMaps.html" />
+                </Batch>
+              </Item>
+            </Items>
+          </Menu>
+        </Menus>
+        <ContextMenuRef MenuId="MapMenu" />
+      </Configuration>
+    </Map>
+    <!--
+    <Tempest Remove="True" />
+-->
+  </Modules>
+  <Resources>
+    <Xaml Uri="{ViewerConfigUri}../../../../../../Templates/SilverlightViewer_1_7/VirtualDirectory/Themes/DarkGray.xaml" />
+  </Resources>
+</Configuration>

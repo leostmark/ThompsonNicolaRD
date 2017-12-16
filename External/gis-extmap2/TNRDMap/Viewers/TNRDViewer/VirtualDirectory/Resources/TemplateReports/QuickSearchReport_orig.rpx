@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ActiveReportsLayout Version="3.1" PrintWidth="12510" DocumentName="ARNet Document" ScriptLang="C#" MasterReport="0">
+  <StyleSheet>
+    <Style Name="Normal" Value="font-family: Arial; font-style: normal; text-decoration: none; font-weight: normal; font-size: 10pt; color: Black; ddo-char-set: 204; " />
+    <Style Name="Heading1" Value="font-size: 16pt; font-weight: bold; ddo-char-set: 204; " />
+    <Style Name="Heading2" Value="font-family: Times New Roman; font-size: 14pt; font-weight: bold; font-style: italic; ddo-char-set: 204; " />
+    <Style Name="Heading3" Value="font-size: 13pt; font-weight: bold; ddo-char-set: 204; " />
+  </StyleSheet>
+  <Sections>
+    <Section Type="PageHeader" Name="pageHeader" Height="1440" BackColor="16777215">
+      <Control Type="AR.Label" Name="label1" Left="1440" Top="360" Width="6030" Height="900" Caption="Thompson-Nicola Regional District Quick Search Report" Style="ddo-char-set: 0; background-color: window; font-size: 15.75pt; font-family: Tahoma; vertical-align: bottom; " />
+      <Control Type="AR.Line" Name="line1" X1="1440" Y1="1350" X2="10800" Y2="1350" LineWeight="2" />
+    </Section>
+    <Section Type="Detail" Name="detail" Height="12960" BackColor="16777215">
+      <Control Type="AR.Image" Name="Picture2" DataField="FeatureMap" BorderLeftStyle="13" BorderTopStyle="13" BorderRightStyle="13" BorderBottomStyle="13" Left="1440" Top="810" Width="9360" Height="5130" LineColor="16777215" LineWeight="4" HyperLink="" />
+      <Control Type="AR.Line" Name="Line2" X1="1530" Y1="6930" X2="10980" Y2="6930" LineWeight="3" />
+      <Control Type="AR.Label" Name="Label10" Left="7290" Top="90" Width="1800" Height="270" Caption="Report generated" Style="ddo-char-set: 1; text-align: left; font-weight: normal; background-color: window; font-size: 9.75pt; font-family: Tahoma; " />
+      <Control Type="AR.Field" Name="TextBox9" DataField="=System.DateTime.Now.ToString()" Left="8820" Top="90" Width="3420" Height="270" Text="" Style="ddo-char-set: 1; font-weight: normal; font-size: 9.75pt; font-family: Tahoma; " />
+      <Control Type="AR.Label" Name="Label11" Left="1530" Top="6300" Width="2790" Height="450" Caption="Locations" Style="text-decoration: none; ddo-char-set: 1; text-align: left; background-color: window; font-size: 14.25pt; font-family: Tahoma; " />
+      <Control Type="AR.Subreport" Name="QuickSearchLocationSubReport" Tag="QuickSearchLocationSubReport.rpx" Left="1620" Top="7110" Width="9270" Height="2430" ReportName="QuickSearchLocationSubReport" />
+    </Section>
+    <Section Type="PageFooter" Name="pageFooter" Height="1440" BackColor="16777215">
+      <Control Type="AR.Line" Name="Line3" X1="1440" Y1="0" X2="10800" Y2="0" LineWeight="2" />
+      <Control Type="AR.Field" Name="TextBox2" Left="1440" Top="144" Width="6624" Height="576" Text="This map is a user generated static output from an Internet mapping site and is for reference only.  Data layers that appear on this map may or may not be accurate, current, or otherwise reliable." Style="font-size: 8pt; font-family: Tahoma; " />
+    </Section>
+  </Sections>
+  <ReportComponentTray />
+  <DataSources DataMember="QuickSearchReportDataTable" />
+  <CalculatedFields>
+    <Field Name="MailingAddressCalc" Formula="(HOUSENO.ToString().Trim() != &quot;&quot; ? HOUSENO + &quot; &quot; : &quot;&quot;) + (STDIR.ToString().Trim() != &quot;&quot; ? STDIR + &quot; &quot; : &quot;&quot;) + (STNAME.ToString().Trim() != &quot;&quot; ? STNAME + &quot; &quot; : &quot;&quot;) + (STTYPE.ToString().Trim() != &quot;&quot; ? STTYPE : &quot;&quot;)" FieldType="String" />
+  </CalculatedFields>
+  <PageSettings LeftMargin="0" RightMargin="0" TopMargin="0" BottomMargin="0" />
+  <Parameters />
+</ActiveReportsLayout>

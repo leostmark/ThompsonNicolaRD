@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ActiveReportsLayout Version="3.1" PrintWidth="9360" DocumentName="ARNet Document" ScriptLang="C#" MasterReport="0">
+  <StyleSheet>
+    <Style Name="Normal" Value="font-family: Arial; font-style: normal; text-decoration: none; font-weight: normal; font-size: 10pt; color: Black; " />
+    <Style Name="Heading1" Value="font-size: 16pt; font-weight: bold; " />
+    <Style Name="Heading2" Value="font-family: Times New Roman; font-size: 14pt; font-weight: bold; font-style: italic; " />
+    <Style Name="Heading3" Value="font-size: 13pt; font-weight: bold; " />
+  </StyleSheet>
+  <Sections>
+    <Section Type="PageHeader" Name="pageHeader" Height="0" BackColor="16777215" />
+    <Section Type="Detail" Name="detail" Height="272" BackColor="16777215">
+      <Control Type="AR.Field" Name="_CategoryName" DataField="_CategoryName" Left="720" Top="0" Width="3330.72" Height="216" Style="ddo-char-set: 0; font-size: 6pt; " />
+      <Control Type="AR.Field" Name="_LayerName" DataField="_LayerName" Visible="0" Left="360" Top="0" Width="3600" Height="216" Style="ddo-char-set: 0; font-size: 8.25pt; " />
+      <Control Type="AR.Image" Name="_LayerSymbol" DataField="_LayerSymbol" Left="0" Top="0" Width="216" Height="216" LineColor="16777215" LineWeight="0" HyperLink="" SizeMode="1" />
+      <Control Type="AR.Image" Name="_CategorySymbol" DataField="_CategorySymbol" Left="360" Top="0" Width="216" Height="216" LineColor="16777215" LineWeight="0" HyperLink="" SizeMode="1" />
+      <Control Type="AR.Image" Name="_BigLayerSymbol" DataField="_BigLayerSymbol" Left="360" Top="270" Width="3690" Height="90" LineColor="16777215" LineWeight="0" HyperLink="" SizeMode="2" PictureAlignment="0" />
+    </Section>
+    <Section Type="PageFooter" Name="pageFooter" Height="15" BackColor="16777215" />
+  </Sections>
+  <ReportComponentTray />
+  <Script><![CDATA[using System.Drawing;
+using System.IO;
+using System.Diagnostics;
+
+public void detail_Format()
+{
+    ARControl layerName = rpt.Sections["detail"].Controls["_LayerName"];
+    ARControl layerSymbol = rpt.Sections["detail"].Controls["_LayerSymbol"];
+    ARControl categoryName = rpt.Sections["detail"].Controls["_CategoryName"];
+    ARControl categorySymbol = rpt.Sections["detail"].Controls["_CategorySymbol"];
+    ARControl bigLayerSymbol = rpt.Sections["detail"].Controls["_BigLayerSymbol"];
+
+    bool isCategory = !String.IsNullOrEmpty(rpt.Fields["_CategoryName"].Value as string);
+    layerName.Visible = layerSymbol.Visible = !isCategory;
+    categoryName.Visible = categorySymbol.Visible = isCategory;
+    
+    // Auto-size the big layer symbol
+    Image bigImage = rpt.Fields["_BigLayerSymbol"].Value as Image;
+    if (bigImage == null)
+    {
+        bigLayerSymbol.Visible = false;
+        bigLayerSymbol.Height = 0;
+    }
+    else
+    {
+        bigLayerSymbol.Visible = true;
+        bigLayerSymbol.Height = bigImage.Height / 96f;
+    }
+}]]></Script>
+  <PageSettings LeftMargin="0" RightMargin="0" TopMargin="0" BottomMargin="0" />
+  <Parameters />
+</ActiveReportsLayout>

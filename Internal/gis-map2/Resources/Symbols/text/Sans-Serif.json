@@ -1,0 +1,363 @@
+
+[{
+	"name" : "Black Sans-Serif Small",
+    "color" : [0, 0, 0, 255],
+    "type" : "esriTS",
+    "haloSize" : 0.75,
+    "haloColor" : [255, 255, 255, 255],
+    "horizontalAlignment" : "center",
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "text" : "",
+    "rotated" : false,
+    "kerning" : true,
+    "font" : {
+      "size" : 14,
+      "style" : "normal",
+      "variant" : "normal",
+      "weight" : "bold",
+      "family" : "Calibri,Arial,sans-serif"
+    }
+  }, {
+	"name" : "Black Sans-Serif Medium",
+    "color" : [0, 0, 0, 255],
+    "type" : "esriTS",
+    "haloSize" : 0.75,
+    "haloColor" : [255, 255, 255, 255],
+    "horizontalAlignment" : "center",
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "text" : "",
+    "rotated" : false,
+    "kerning" : true,
+    "font" : {
+      "size" : 18,
+      "style" : "normal",
+      "variant" : "normal",
+      "weight" : "bold",
+      "family" : "Calibri,Arial,sans-serif"
+    }
+  }, {
+	"name" : "Black Sans-Serif Large",
+    "color" : [0, 0, 0, 255],
+    "type" : "esriTS",
+    "haloSize" : 1.5,
+    "haloColor" : [255, 255, 255, 255],
+    "horizontalAlignment" : "center",
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "text" : "",
+    "rotated" : false,
+    "kerning" : true,
+    "font" : {
+      "size" : 24,
+      "style" : "normal",
+      "variant" : "normal",
+      "weight" : "bold",
+      "family" : "Calibri,Arial,sans-serif"
+    }
+  }, {
+	"name" : "White Sans-Serif Small",
+    "color" : [255, 255, 255, 255],
+    "type" : "esriTS",
+    "haloSize" : 0.75,
+    "haloColor" : [0, 0, 0, 255],
+    "horizontalAlignment" : "center",
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "text" : "",
+    "rotated" : false,
+    "kerning" : true,
+    "font" : {
+      "size" : 14,
+      "style" : "normal",
+      "variant" : "normal",
+      "weight" : "bold",
+      "family" : "Calibri,Arial,sans-serif"
+    }
+  }, {
+	"name" : "White Sans-Serif Medium",
+    "color" : [255, 255, 255, 255],
+    "type" : "esriTS",
+    "haloSize" : 0.75,
+    "haloColor" : [0, 0, 0, 255],
+    "horizontalAlignment" : "center",
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "text" : "",
+    "rotated" : false,
+    "kerning" : true,
+    "font" : {
+      "size" : 18,
+      "style" : "normal",
+      "variant" : "normal",
+      "weight" : "bold",
+      "family" : "Calibri,Arial,sans-serif"
+    }
+  }, {
+	"name" : "White Sans-Serif Large",
+    "color" : [255, 255, 255, 255],
+    "type" : "esriTS",
+    "haloSize" : 1.5,
+    "haloColor" : [0, 0, 0, 255],
+    "horizontalAlignment" : "center",
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "text" : "",
+    "rotated" : false,
+    "kerning" : true,
+    "font" : {
+      "size" : 24,
+      "style" : "normal",
+      "variant" : "normal",
+      "weight" : "bold",
+      "family" : "Calibri,Arial,sans-serif"
+    }
+  }, {
+	"name" : "Red Sans-Serif Small",
+    "color" : [244, 66, 66, 255],
+    "type" : "esriTS",
+    "haloSize" : 0.75,
+    "haloColor" : [255, 214, 214, 255],
+    "horizontalAlignment" : "center",
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "text" : "",
+    "rotated" : false,
+    "kerning" : true,
+    "font" : {
+      "size" : 14,
+      "style" : "normal",
+      "variant" : "normal",
+      "weight" : "bold",
+      "family" : "Calibri,Arial,sans-serif"
+    }
+  }, {
+	"name" : "Red Sans-Serif Medium",
+    "color" : [244, 66, 66, 255],
+    "type" : "esriTS",
+    "haloSize" : 0.75,
+    "haloColor" : [255, 214, 214, 255],
+    "horizontalAlignment" : "center",
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "text" : "",
+    "rotated" : false,
+    "kerning" : true,
+    "font" : {
+      "size" : 18,
+      "style" : "normal",
+      "variant" : "normal",
+      "weight" : "bold",
+      "family" : "Calibri,Arial,sans-serif"
+    }
+  }, {
+	"name" : "Red Sans-Serif Large",
+    "color" : [244, 66, 66, 255],
+    "type" : "esriTS",
+    "haloSize" : 1.5,
+    "haloColor" : [255, 214, 214, 255],
+    "horizontalAlignment" : "center",
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "text" : "",
+    "rotated" : false,
+    "kerning" : true,
+    "font" : {
+      "size" : 24,
+      "style" : "normal",
+      "variant" : "normal",
+      "weight" : "bold",
+      "family" : "Calibri,Arial,sans-serif"
+    }
+  }, {
+	"name" : "Blue Sans-Serif Small",
+    "color" : [31, 64, 226, 255],
+    "type" : "esriTS",
+    "haloSize" : 0.75,
+    "haloColor" : [214, 221, 255, 255],
+    "horizontalAlignment" : "center",
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "text" : "",
+    "rotated" : false,
+    "kerning" : true,
+    "font" : {
+      "size" : 14,
+      "style" : "normal",
+      "variant" : "normal",
+      "weight" : "bold",
+      "family" : "Calibri,Arial,sans-serif"
+    }
+  }, {
+	"name" : "Blue Sans-Serif Medium",
+    "color" : [31, 64, 226, 255],
+    "type" : "esriTS",
+    "haloSize" : 0.75,
+    "haloColor" : [214, 221, 255, 255],
+    "horizontalAlignment" : "center",
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "text" : "",
+    "rotated" : false,
+    "kerning" : true,
+    "font" : {
+      "size" : 18,
+      "style" : "normal",
+      "variant" : "normal",
+      "weight" : "bold",
+      "family" : "Calibri,Arial,sans-serif"
+    }
+  }, {
+	"name" : "Blue Sans-Serif Large",
+    "color" : [31, 64, 226, 255],
+    "type" : "esriTS",
+    "haloSize" : 1.5,
+    "haloColor" : [214, 221, 255, 255],
+    "horizontalAlignment" : "center",
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "text" : "",
+    "rotated" : false,
+    "kerning" : true,
+    "font" : {
+      "size" : 24,
+      "style" : "normal",
+      "variant" : "normal",
+      "weight" : "bold",
+      "family" : "Calibri,Arial,sans-serif"
+    }
+  }, {
+	"name" : "Green Sans-Serif Small",
+    "color" : [35, 135, 48, 255],
+    "type" : "esriTS",
+    "haloSize" : 0.75,
+    "haloColor" : [218, 237, 220, 255],
+    "horizontalAlignment" : "center",
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "text" : "",
+    "rotated" : false,
+    "kerning" : true,
+    "font" : {
+      "size" : 14,
+      "style" : "normal",
+      "variant" : "normal",
+      "weight" : "bold",
+      "family" : "Calibri,Arial,sans-serif"
+    }
+  }, {
+	"name" : "Green Sans-Serif Medium",
+    "color" : [35, 135, 48, 255],
+    "type" : "esriTS",
+    "haloSize" : 0.75,
+    "haloColor" : [218, 237, 220, 255],
+    "horizontalAlignment" : "center",
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "text" : "",
+    "rotated" : false,
+    "kerning" : true,
+    "font" : {
+      "size" : 18,
+      "style" : "normal",
+      "variant" : "normal",
+      "weight" : "bold",
+      "family" : "Calibri,Arial,sans-serif"
+    }
+  }, {
+	"name" : "Green Sans-Serif Large",
+    "color" : [35, 135, 48, 255],
+    "type" : "esriTS",
+    "haloSize" : 1.5,
+    "haloColor" : [218, 237, 220, 255],
+    "horizontalAlignment" : "center",
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "text" : "",
+    "rotated" : false,
+    "kerning" : true,
+    "font" : {
+      "size" : 24,
+      "style" : "normal",
+      "variant" : "normal",
+      "weight" : "bold",
+      "family" : "Calibri,Arial,sans-serif"
+    }
+  }, {
+	"name" : "Yellow Sans-Serif Small",
+    "color" : [247, 240, 32, 255],
+    "type" : "esriTS",
+    "haloSize" : 0.75,
+    "haloColor" : [53, 51, 5, 255],
+    "horizontalAlignment" : "center",
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "text" : "",
+    "rotated" : false,
+    "kerning" : true,
+    "font" : {
+      "size" : 14,
+      "style" : "normal",
+      "variant" : "normal",
+      "weight" : "bold",
+      "family" : "Calibri,Arial,sans-serif"
+    }
+  }, {
+	"name" : "Yellow Sans-Serif Medium",
+    "color" : [247, 240, 32, 255],
+    "type" : "esriTS",
+    "haloSize" : 0.75,
+    "haloColor" : [53, 51, 5, 255],
+    "horizontalAlignment" : "center",
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "text" : "",
+    "rotated" : false,
+    "kerning" : true,
+    "font" : {
+      "size" : 18,
+      "style" : "normal",
+      "variant" : "normal",
+      "weight" : "bold",
+      "family" : "Calibri,Arial,sans-serif"
+    }
+  }, {
+	"name" : "Yellow Sans-Serif Large",
+    "color" : [247, 240, 32, 255],
+    "type" : "esriTS",
+    "haloSize" : 1.5,
+    "haloColor" : [53, 51, 5, 255],
+    "horizontalAlignment" : "center",
+    "angle" : 0,
+    "xoffset" : 0,
+    "yoffset" : 0,
+    "text" : "",
+    "rotated" : false,
+    "kerning" : true,
+    "font" : {
+      "size" : 24,
+      "style" : "normal",
+      "variant" : "normal",
+      "weight" : "bold",
+      "family" : "Calibri,Arial,sans-serif"
+    }
+  }
+]

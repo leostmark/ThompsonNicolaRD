@@ -1,0 +1,201 @@
+
+[{
+	"name" : "Solid Transparent Fill Blue",
+    "color" : [76, 160, 216, 77],
+    "outline" : {
+      "color" : [76, 160, 216, 255],
+      "width" : 2.25,
+      "type" : "esriSLS",
+      "style" : "esriSLSSolid"
+    },
+    "type" : "esriSFS",
+    "style" : "esriSFSSolid"
+  }, {
+	"name" : "Solid Transparent Fill Green",
+    "color" : [45, 180, 89, 77],
+    "outline" : {
+      "color" : [45, 180, 89, 255],
+      "width" : 2.25,
+      "type" : "esriSLS",
+      "style" : "esriSLSSolid"
+    },
+    "type" : "esriSFS",
+    "style" : "esriSFSSolid"
+  }, {
+	"name" : "Solid Transparent Fill Purple",
+    "color" : [155, 130, 188, 77],
+    "outline" : {
+      "color" : [155, 130, 188, 255],
+      "width" : 2.25,
+      "type" : "esriSLS",
+      "style" : "esriSLSSolid"
+    },
+    "type" : "esriSFS",
+    "style" : "esriSFSSolid"
+  }, {
+	"name" : "Solid Transparent Fill Red", 
+    "color" : [219, 90, 90, 77],
+    "outline" : {
+      "color" : [219, 90, 90, 255],
+      "width" : 2.25,
+      "type" : "esriSLS",
+      "style" : "esriSLSSolid"
+    },
+    "type" : "esriSFS",
+    "style" : "esriSFSSolid"
+  }, {
+	"name" : "Solid Transparent Fill Orange",
+    "color" : [243, 117, 33, 77],
+    "outline" : {
+      "color" : [243, 117, 33, 255],
+      "width" : 2.25,
+      "type" : "esriSLS",
+      "style" : "esriSLSSolid"
+    },
+    "type" : "esriSFS",
+    "style" : "esriSFSSolid"
+  }, {
+	"name" : "Solid Transparent Fill Yellow",
+    "color" : [253, 240, 104, 77],
+    "outline" : {
+      "color" : [253, 240, 104, 255],
+      "width" : 2.25,
+      "type" : "esriSLS",
+      "style" : "esriSLSSolid"
+    },
+    "type" : "esriSFS",
+    "style" : "esriSFSSolid"
+  }, {
+	"name" : "Dash-Dot Transparent Fill Blue",
+    "color" : [76, 160, 216, 77],
+    "outline" : {
+      "color" : [76, 160, 216, 255],
+      "width" : 2.25,
+      "type" : "esriSLS",
+      "style" : "esriSLSDashDot"
+    },
+    "type" : "esriSFS",
+    "style" : "esriSFSSolid"
+  }, {
+	"name" : "Dash-Dot Transparent Fill Green",
+    "color" : [45, 180, 89, 77],
+    "outline" : {
+      "color" : [45, 180, 89, 255],
+      "width" : 2.25,
+      "type" : "esriSLS",
+      "style" : "esriSLSDashDot"
+    },
+    "type" : "esriSFS",
+    "style" : "esriSFSSolid"
+  }, {
+	"name" : "Dash-Dot Transparent Fill Purple",
+    "color" : [155, 130, 188, 77],
+    "outline" : {
+      "color" : [155, 130, 188, 255],
+      "width" : 2.25,
+      "type" : "esriSLS",
+      "style" : "esriSLSDashDot"
+    },
+    "type" : "esriSFS",
+    "style" : "esriSFSSolid"
+  }, {
+	"name" : "Dash-Dot Transparent Fill Red",
+    "color" : [219, 90, 90, 77],
+    "outline" : {
+      "color" : [219, 90, 90, 255],
+      "width" : 2.25,
+      "type" : "esriSLS",
+      "style" : "esriSLSDashDot"
+    },
+    "type" : "esriSFS",
+    "style" : "esriSFSSolid"
+  },{
+	"name" : "Dash-Dot Transparent Fill Orange",
+    "color" : [243, 117, 33, 77],
+    "outline" : {
+      "color" : [243, 117, 33, 255],
+      "width" : 2.25,
+      "type" : "esriSLS",
+      "style" : "esriSLSDashDot"
+    },
+    "type" : "esriSFS",
+    "style" : "esriSFSSolid"
+  }, {
+	"name" : "Dash-Dot Transparent Fill Yellow",
+    "color" : [253, 240, 104, 77],
+    "outline" : {
+      "color" : [253, 240, 104, 255],
+      "width" : 2.25,
+      "type" : "esriSLS",
+      "style" : "esriSLSDashDot"
+    },
+    "type" : "esriSFS",
+    "style" : "esriSFSSolid"
+  }, {
+	"name" : "Dotted Transparent Fill Blue",
+    "color" : [76, 160, 216, 77],
+    "outline" : {
+      "color" : [76, 160, 216, 255],
+      "width" : 2.25,
+      "type" : "esriSLS",
+      "style" : "esriSLSDot"
+    },
+    "type" : "esriSFS",
+    "style" : "esriSFSSolid"
+  }, {
+	"name" : "Dotted Transparent Fill Green",
+    "color" : [45, 180, 89, 77],
+    "outline" : {
+      "color" : [45, 180, 89, 255],
+      "width" : 2.25,
+      "type" : "esriSLS",
+      "style" : "esriSLSDot"
+    },
+    "type" : "esriSFS",
+    "style" : "esriSFSSolid"
+  }, {
+	"name" : "Dotted Transparent Fill Purple",
+    "color" : [155, 130, 188, 77],
+    "outline" : {
+      "color" : [155, 130, 188, 255],
+      "width" : 2.25,
+      "type" : "esriSLS",
+      "style" : "esriSLSDot"
+    },
+    "type" : "esriSFS",
+    "style" : "esriSFSSolid"
+  }, {
+	"name" : "Dotted Transparent Fill Red",
+    "color" : [219, 90, 90, 77],
+    "outline" : {
+      "color" : [219, 90, 90, 255],
+      "width" : 2.25,
+      "type" : "esriSLS",
+      "style" : "esriSLSDot"
+    },
+    "type" : "esriSFS",
+    "style" : "esriSFSSolid"
+  }, {
+	"name" : "Dotted Transparent Fill Orange",
+    "color" : [243, 117, 33, 77],
+    "outline" : {
+      "color" : [243, 117, 33, 255],
+      "width" : 2.25,
+      "type" : "esriSLS",
+      "style" : "esriSLSDot"
+    },
+    "type" : "esriSFS",
+    "style" : "esriSFSSolid"
+  }, {
+	"name" : "Dotted Transparent Fill Yellow",
+    "color" : [253, 240, 104, 77],
+    "outline" : {
+      "color" : [253, 240, 104, 255],
+      "width" : 2.25,
+      "type" : "esriSLS",
+      "style" : "esriSLSDot"
+    },
+    "type" : "esriSFS",
+    "style" : "esriSFSSolid"
+  }
+]
